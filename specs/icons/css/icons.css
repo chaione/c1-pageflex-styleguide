@@ -15,11 +15,11 @@ $gray-md: #868686;
 
 @font-face {
     font-family: 'pageflex';
-    src:    url('../fonts/pageflex-icons.eot?xhjpc');
-    src:    url('../fonts/pageflex-icons.eot?xhjpc#iefix') format('embedded-opentype'),
-        url('../fonts/pageflex-icons.ttf?xhjpc') format('truetype'),
-        url('../fonts/pageflex-icons.woff?xhjpc') format('woff'),
-        url('../fonts/pageflex-icons.svg?xhjpc#icomoon') format('svg');
+    src:    url('/assets/fonts/pageflex-icons.eot?xhjpc');
+    src:    url('/assets/fonts/pageflex-icons.eot?xhjpc#iefix') format('embedded-opentype'),
+        url('/assets/fonts/pageflex-icons.ttf?xhjpc') format('truetype'),
+        url('/assets/fonts/pageflex-icons.woff?xhjpc') format('woff'),
+        url('/assets/fonts/pageflex-icons.svg?xhjpc#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
