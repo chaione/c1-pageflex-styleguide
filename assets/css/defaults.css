@@ -3,3 +3,43 @@
 * Overriding core styles
 *
 */
+body {
+    background-color: #fff;
+}
+@media (min-width: 990px) {
+  .source__scrolled-down .source_header {
+    opacity: 0.95;
+  }
+}
+footer .source_footer_copy {
+  margin-top: 20px;
+  /*line-height: 2;*/
+}
+footer .source_col__23 {
+  margin-top: 20px;
+  border-top: 1px dashed #222;
+}
+sup {
+  font-size: 1rem;
+}
+
+body .source_section > h2:first-child {
+    font-weight: 700;
+}
+.source_info {
+    background: rgba(12,12,12,0.1) !important;
+    padding: 15px 25px !important;
+    min-height: 50px !important;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+}
+
+/* from prism.css */
+:not(pre) > code[class*="src-"], pre[class*="src-"] {
+    /*background: rgba(0, 158, 220, .6) !important;*/
+    background:#ebebeb;
+    border: 1px solid #dfe2e4;
+    border-color: rgba(0, 0,0, .1) !important;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
