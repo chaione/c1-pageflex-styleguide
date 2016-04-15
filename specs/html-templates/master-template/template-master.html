@@ -1,0 +1,493 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link rel="apple-touch-icon" href="apple-touch-icon.png">-->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/pageflex-icons.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <style>
+    body {
+      padding-top: 50px;
+      padding-bottom: 20px;
+    }
+  </style>
+  <link rel="stylesheet" href="css/bootstrap-theme.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body>
+  <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+  <header>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+          aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <p class="nav navbar-text"><span class="icon-pf_icn_menu"></span><span class="start-text"> START</span> </p>
+          </button>
+          <!--<a class="navbar-brand" href="#"><i class="icon-pf_icn_menu"></i>START</a>-->
+          <ul class="list-inline right-align" style="padding-top: 23px;">
+            <li>
+              <button type="button" class="icon-lt-blue icon-pf_icn_notifications" data-html=true data-toggle="popover" data-placement=bottom
+              title="RECENT ORDERS" data-template='<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content" style="width:350px;"></div></div>'
+              data-content="<h4 class='notification-order-title'>ORDER NAME HERE...</h4>
+              <p>$ 300.00 USD<br>
+              30 ITEMS<br>
+              FEBRUARY 12, 2016</p><p><span class='notification-pending'>PENDING APPROVAL</span></p>
+              <HR>
+              <h4 class='notification-order-title'>ORDER NAME HERE...</h4>
+              <p>$ 300.00 USD<br>
+              30 ITEMS<br>
+              FEBRUARY 12, 2016</p><p><span class='notification-shipped'>SHIPPED</span></p>
+              <hr>
+              <h4 class='notification-order-title'>ORDER NAME HERE...</h4>
+              <p>$ 300.00 USD<br>
+              30 ITEMS<br>
+              FEBRUARY 12, 2016</p><p><span class='notification-pending'>PENDING APPROVAL</span></p>">
+              </button>
+            </li>
+            <li><i class="icon-lt-blue icon-pf_icn_cart"></i></li>
+          </ul>
+          <div class="popover show-menu-arrow" role="popover" data-placement='top'>
+            <div class="arrow"></div>
+            <h3 class="popover-title"></h3>
+            <div class="popover-content">
+
+            </div>
+          </div>
+        </div>
+        <div id="navbar" class="navbar-toggle collapse dropdown">
+          <ul class="navbar-top-dropdown" style="list-style:none;">
+            <li><a href="">START</a></li>
+            <li><a href="">FILES</a></li>
+            <li><a href="">ORDERS</a></li>
+            <li><a href="">APPROVALS</a></li>
+            <li><a href="">PROFILE</a></li>
+          </ul>
+        </div>
+        <!--/.navbar-collapse -->
+      </div>
+    </nav>
+  </header>
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <main class="container" style="padding-top:75px;">
+    <aside class="col-lg-3">
+      <div class="search">
+        <label class="sr-only" for="form-control">Search</label>
+        <input type="text" class="form-control" id="search-sidebar" aria-label="Search" placeholder="SEARCH" data-live-search="true"
+        data-tokens="brochure flyer presentation">
+        <div id="results"></div>
+      </div>
+
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a role="button" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOne" href="#collapseOne">
+          <span class="glyphicon glyphicon-minus"></span>
+                Categories
+                </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+              <ul class="list-group categories-list">
+                <li class="list-group-item"><a href="">Email Campaigns</a></li>
+                <li class="list-group-item"><a href="">Digital Products</a></li>
+                <li class="list-group-item"><a href="">Kits</a></li>
+                <li class="list-group-item">
+                  <!--<span class="badge">14</span>--><a href="">Brochures</a></li>
+                <li class="list-group-item"><a href="">Flyers</a></li>
+                <li class="list-group-item"><a href="">Calendars</a></li>
+                <li class="list-group-item"><a href="">Business Cards</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+                <a role="button" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseTwo" href="#collapseTwo">
+          <span class="glyphicon glyphicon-plus"></span>
+                Filters
+                </a>
+            </h4>
+
+
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">
+              <form>
+                <div class="form-group">
+                  <ul class="input-group filter-set1">
+                    <li>
+                      <label>
+                        <input type="checkbox"> Filter 1
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="checkbox"> Filter 2
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="checkbox"> Filter 3
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="checkbox"> Filter 4
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <!-- /input-group -->
+              </form>
+              <!-- /form -->
+            </div>
+          </div>
+        </div>
+    </aside>
+    
+    <!-- body -->
+    <div class="col-lg-9 col-sm-12">
+      <div class="container">
+        <div class="row pad-title-align-to-sidebar">
+          <div class="col-lg-6 col-sm-6">
+            <h2 class="section-title">Order it Again</h2>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <ul class="pager" style="float:right;">
+              
+            </ul>
+          </div>
+        </div>
+        <div class="row products-row ">
+          <div class="col-lg-9 col-sm-12">
+            <ul class="list-inline product-slider">
+              <li class="slide">
+                <a href="#">
+                  <img class="img-responsive" src="img/product01.jpg">
+                  <h3 class="product-title">Double-Sided Flyer</h3>
+                  <p class="production-description">Short product description</p>
+                  <h3 class="product-price">$50.00 USD</h3>
+                  <p class="product-price-per-piece">$0.05 each</p>
+                </a>
+              </li>
+              <li class="slide">
+                <a href="#">
+                  <img class="img-responsive" src="img/product02.jpg">
+                  <h3 class="product-title">Business Cards</h3>
+                  <p class="production-description">Short product description</p>
+                  <h3 class="product-price">$30.00 USD</h3>
+                  <p class="product-price-per-piece">$0.10 each</p>
+                </a>
+              </li>
+              <li class="slide">
+                <a href="#">
+                  <img class="img-responsive" src="img/product03.jpg">
+                  <h3 class="product-title">Brochure</h3>
+                  <p class="production-description">Short product description</p>
+                  <h3 class="product-price">$120.00 USD</h3>
+                  <p class="product-price-per-piece">$0.30 each</p>
+                </a>
+              </li>
+              <li class="slide">
+                <a href="#">
+                  <img class="img-responsive" src="img/product03.jpg">
+                  <h3 class="product-title">Brochure</h3>
+                  <p class="production-description">Short product description</p>
+                  <h3 class="product-price">$120.00 USD</h3>
+                  <p class="product-price-per-piece">$0.30 each</p>
+                </a>
+              </li>
+              <li class="slide">
+                <a href="#">
+                  <img class="img-responsive" src="img/product03.jpg">
+                  <h3 class="product-title">Brochure</h3>
+                  <p class="production-description">Short product description</p>
+                  <h3 class="product-price">$120.00 USD</h3>
+                  <p class="product-price-per-piece">$0.30 each</p>
+                </a>
+              </li>
+              <li class="slide">
+                <a href="#">
+                  <img class="img-responsive" src="img/product03.jpg">
+                  <h3 class="product-title">Brochure</h3>
+                  <p class="production-description">Short product description</p>
+                  <h3 class="product-price">$120.00 USD</h3>
+                  <p class="product-price-per-piece">$0.30 each</p>
+                </a>
+              </li>
+          </ul>
+        </div>
+       </div>
+        <div class="row products-row">
+          <div class="col-lg-6 col-md-8 col-sm-12">
+            <a class="primary-links primary-links1" href="#"><div class="module mid img-email-blasts">
+              <h3><span>Email Blasts</span></h3>
+            </div></a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-12">
+            <a class="primary-links primary-links2" href="#">
+                <div class="module mid img-brochures">
+              <h3><span>Brochures</span></h3>
+            </div></a>
+          </div>
+        </div>
+
+        <!-- row with other items -->
+        <div class="row products-row">
+          <div class="col-lg-3 col-md-4 col-sm-4">
+            <div class="product-module">
+              <h3>Double Sided Flyer<a data-toggle="collapse" href="#productText1"><i class="icon-pf_icn_info"></i></a></h3>
+              <a href="hello"><div id="productText1" class="product-text-overlay collapse">Short text description here...
+                <p class="strong-text">Short text description should go right here for more information.</p>
+                <p>Build Time: ~30min
+                  <br> Print: Paper Type</p>
+                <p>$ 0.15 @ 100 QTY
+                  <br> $ 0.10 @ 200 QTY
+                  <br> $ 0.08 @ 300 QTY
+                  <br>
+                </p>
+              </div></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-4">
+            <a href="#"><div class="product-module">
+              <h3>Double Sided Flyer<a data-toggle="collapse" href="#productText2"><i class="icon-pf_icn_info"></i></a></h3>
+              <a href="hello"><div id="productText2" class="product-text-overlay collapse">Short text description here...
+                <p class="strong-text">Short text description should go right here for more information.</p>
+                <p>Build Time: ~30min
+                  <br> Print: Paper Type</p>
+                <p>$ 0.15 @ 100 QTY
+                  <br> $ 0.10 @ 200 QTY
+                  <br> $ 0.08 @ 300 QTY
+                  <br>
+                </p>
+              </div>
+            </div></a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-4">
+            <a href="#"><div class="product-module">
+              <h3>Double Sided Flyer<a data-toggle="collapse" href="#productText3"><i class="icon-pf_icn_info"></i></a></h3>
+              <a href="hello"><div id="productText3" class="product-text-overlay collapse">
+                <p class="strong-text">Short text description should go right here for more information.</p>
+                <p>Build Time: ~30min
+                  <br> Print: Paper Type</p>
+                <p>$ 0.15 @ 100 QTY
+                  <br> $ 0.10 @ 200 QTY
+                  <br> $ 0.08 @ 300 QTY
+                  <br>
+                </p>
+              </div>
+            </div><!-- /.product-module -->
+            </a>
+          </div><!-- /col -->
+        </div>
+      </div>
+  </main>
+  <div class="container">
+    <!-- Example row of columns -->
+
+    <hr>
+
+    <footer>
+      <p>&copy; Company 2015</p>
+    </footer>
+  </div>
+  <!-- /container -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+  </script>
+
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/vendor/bootstrap-select.min.js"></script>
+  <script src="js/vendor/slick.min.js"></script>
+
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+      
+      //toggle plus,minus icons for sidebar accordion headers
+      $('.collapse').on('shown.bs.collapse', function(){
+          $(this).parent().find(".glyphicon-plus").removeClass("glyphicon-plus").addClass("glyphicon-minus");
+      })
+      .on('hidden.bs.collapse', function(){
+          $(this).parent().find(".glyphicon-minus").removeClass("glyphicon-minus").addClass("glyphicon-plus");
+      });
+      //toggle class for special image links - this is a placeholder,need better solution
+      $('.primary-links').hover(function() {
+        $('.primary-links1>h3>span').toggleClass('hover-effect')
+      });
+        $('.primary-links2').hover(function() {
+        $('.primary-links2>h3>span').toggleClass('hover-effect')
+      });
+      
+      //display popover when notifications icon clicked
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+      });
+      
+      //load json data and parse for live search functionality
+      $(window).load(function(){
+        $('#search-sidebar').keyup(function(){
+            var searchField = $('#search-sidebar').val();
+            var regex = new RegExp(searchField, "i");
+            var output = '<div class="row">';
+            var count = 1;
+            $.getJSON('data.json', function(data) {
+              $.each(data, function(key, val){
+                if ((val.name.search(regex) != -1) || (val.location.search(regex) != -1)) {
+                  output += '<a href=""><h5>' + val.name + '</h5></a>';
+                  if(count%8 == 0){
+                    output += '</div><div class="row">'
+                  }
+                  count++;
+                }
+              });
+              output += '</div>';
+              $('#results').html(output);
+            }); 
+            if (searchField == "") {
+              
+                $("#results").css("display", "none");
+                $(".search").css("padding-bottom",7);
+            }
+            else {
+                $("#results").css("display", "block");
+                $(".search").css("padding-bottom",0);
+            }
+        });
+      });
+      
+      $(document).ready(function(){
+        $('.product-slider').slick({
+    
+          prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button"><i class="glyphicon glyphicon-chevron-left"></i></button>',
+          nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="glyphicon glyphicon-chevron-right"></i></button>',
+          autoplay: false,
+          infinite:true,
+          //slide:$('.slide'),
+          variableWidth:true,
+          slidesToShow: 3,
+          slidesToScroll:3,
+          slidesPerRow: 3,
+          centerMode: false,
+          centerPadding: '50px',
+          appendArrows: $('.pager'),
+          speed:200,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ]
+        });
+      });
+  </script>
+</body>
+
+</html>
+
+
+<!-- DEFAULTS AND ALL AVAILABLE SETTINGS FOR SLICK SLIDER ///////////////////////
+accessibility: true,
+adaptiveHeight: false,
+appendArrows: $(element),
+appendDots: $(element),
+arrows: true,
+asNavFor: null,
+prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button"><i class="glyphicon glyphicon-chevron-left"></i></button>',
+nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="glyphicon glyphicon-chevron-right"></i></button>',
+autoplay: false,
+autoplaySpeed: 3000,
+centerMode: false,
+centerPadding: '50px',
+cssEase: 'ease',
+customPaging: function(slider, i) {
+    return '<button type="button" data-role="none" role="button" aria-required="false" tabindex="0">' + (i + 1) + '</button>';
+},
+dots: false,
+dotsClass: 'slick-dots',
+draggable: true,
+easing: 'linear',
+edgeFriction: 0.35,
+fade: false,
+focusOnSelect: false,
+infinite: true,
+initialSlide: 0,
+lazyLoad: 'ondemand',
+mobileFirst: false,
+pauseOnHover: true,
+pauseOnDotsHover: false,
+respondTo: 'window',
+responsive: null,
+rows: 1,
+rtl: false,
+slide: '',
+slidesPerRow: 1,
+slidesToShow: 1,
+slidesToScroll: 1,
+speed: 500,
+swipe: true,
+swipeToSlide: false,
+touchMove: true,
+touchThreshold: 5,
+useCSS: true,
+useTransform: false,
+variableWidth: false,
+vertical: false,
+verticalSwiping: false,
+waitForAnimate: true,
+zIndex: 1000
+
+-->

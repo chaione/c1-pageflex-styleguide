@@ -1,0 +1,132 @@
+﻿<link rel="stylesheet" href="css/starting.css">
+
+<h1>Starting Spec Page Template</h1>
+
+<div class="source_info">
+    <markdown>This spec covers styling for the header and top nav.
+      </markdown>
+</div>
+
+<section class="source_section">
+    <h2>Header</h2>
+
+    <code class="src-html source_visible">
+      <header>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+          aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <p class="nav navbar-text"><span class="icon-pf_icn_menu"></span><span class="start-text"> START</span> </p>
+          </button>
+          <!--<a class="navbar-brand" href="#"><i class="icon-pf_icn_menu"></i>START</a>-->
+          
+          <div class="popover show-menu-arrow" role="popover" data-placement='top'>
+            <div class="arrow"></div>
+            <h3 class="popover-title"></h3>
+            <div class="popover-content">
+
+            </div>
+          </div>
+        </div>
+        <div id="navbar" class="navbar-toggle collapse dropdown">
+          <ul class="navbar-top-dropdown" style="list-style:none;">
+            <li><a href="">START</a></li>
+            <li><a href="">FILES</a></li>
+            <li><a href="">ORDERS</a></li>
+            <li><a href="">APPROVALS</a></li>
+            <li><a href="">PROFILE</a></li>
+          </ul>
+        </div>
+        <!--/.navbar-collapse -->
+      </div>
+    </nav>
+  </header>
+     
+    </code>
+
+    <div class="source_example">
+        
+    </div>
+
+</section>
+
+<section class="source_section">
+    <h2>Notifications drop down</h2>
+
+    <markdown>
+        Example of notifications dropdown <br>
+        <img src="img/notifications-screenshot.png" width="200">
+    </markdown>
+
+    <code class="src-html source_visible">
+<ul class="list-inline right-align" style="padding-top: 23px;">
+  <li>
+    <button type="button" 
+    class="icon-lt-blue icon-pf_icn_notifications" 
+    data-html=true 
+    data-toggle="popover" 
+    data-placement=bottom
+    title="RECENT ORDERS" 
+    data-template="<div class="popover" role="tooltip"><div class="arrow"></div>
+    <h3 class="popover-title"></h3>
+    <div class="popover-content" style="width:350px;"></div></div>'
+    data-content="<h4 class='notification-order-title'>ORDER NAME HERE...</h4>
+    <p>$ 300.00 USD<br>
+    30 ITEMS<br>
+    FEBRUARY 12, 2016</p><p><span class='notification-pending'>PENDING APPROVAL</span></p>
+    <HR>
+    <h4 class='notification-order-title'>ORDER NAME HERE...</h4>
+    <p>$ 300.00 USD<br>
+    30 ITEMS<br>
+    FEBRUARY 12, 2016</p><p><span class='notification-shipped'>SHIPPED</span></p>
+    <hr>
+    <h4 class='notification-order-title'>ORDER NAME HERE...</h4>
+    <p>$ 300.00 USD<br>
+    30 ITEMS<br>
+    FEBRUARY 12, 2016</p><p><span class='notification-pending'>PENDING APPROVAL</span></p>">
+    </button>
+  </li>
+  <li>
+    <i class="icon-lt-blue icon-pf_icn_cart"></i>
+  </li>
+</ul>
+    </code>
+    <div class="source_example">
+
+    </div>
+</section>
+
+<section class="source_section">
+  <h2>Pagination Nav</h2>
+
+    <markdown>
+        Styled version of bootstrap pagination
+    </markdown>
+
+    <div class="source_example">
+        <nav>
+          <ul class="pagination">
+            <li>
+              <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+              <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+      </nav>
+        </div>
+    </div>
+</section>
+
+

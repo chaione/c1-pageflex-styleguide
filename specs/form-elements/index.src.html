@@ -1,0 +1,177 @@
+﻿<link rel="stylesheet" href="css/form-elements.css">
+
+<h1>Form Element Specs</h1>
+
+<div class="source_info">
+    <p>
+        Developer: Chaione / Pageflex <br>
+        Designer: Chaione / Pageflex <br>
+        Spec Release: 1.0<br>
+        Release Date: 04.06.16
+    </p>
+
+    <markdown>
+        Form element specs.
+    </markdown>
+</div>
+
+<section class="source_section">
+    <h2>Form inputs. </h2>
+    <markdown>
+      Code for creating text input boxes for forms.
+    </markdown>
+    <code class="src-html source_visible">
+    </code>
+    <h3>Text Input Boxes</h3>
+    <markdown>
+      Code for creating text input boxes for forms.
+    </markdown>
+    <code class="src-html source_visible">
+    </code>
+    <div class="source_example">
+        <form class="form-inline"><!-- bootstrap class that inlines a form -->
+            <div class="form-group"><!-- bootstrap class to group form items together -->
+                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+            </div>
+        </form>
+    </div>
+    
+    <h3>Text Input Boxes - Filled(not active)</h3>
+
+    <markdown>
+        Change class to `<a class="btn btn-primary-gray">` to get the gray button with blue hover.
+    </markdown>
+      <code class="src-html source_visible">
+      </code>
+     <div class="source_example">
+        <form class="form-inline"><!-- bootstrap class that inlines a form -->
+            <div class="form-group"><!-- bootstrap class to group form items together -->
+                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+            </div>
+        </form>
+    </div>
+    
+    <h3>Text Input Box - Error</h3>
+    <markdown>
+      Bootstrap includes validation styles for error, warning, and success states on form controls. To use, add `.has-warning`, `.has-error`, or `.has-success` to the parent element. Any `.control-label`, `.form-control`, and `.help-block` within that element will receive the validation styles. 
+    </markdown>
+    <code class="src-html source_visible">
+        
+    </code>
+    <div class="source_example"> 
+        <form class="form-inline">    
+            <div class="form-group has-error">
+                <label class="sr-only" for="inputError1">Input with error</label>
+                <input type="text" class="form-control" id="inputError1" placeholder="Error Message">
+            </div>
+        </form>
+</div>
+    </div>
+</section>
+
+<!-- Radio and Checkbox Inputs -->
+<section class="source_section">
+    <h2>Radio and Checkbox Inputs</h2>
+     <markdown>
+        Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
+
+        Disabled checkboxes and radios are supported, but to provide a "not-allowed" cursor on hover of the parent `<label>`, you'll need to add the `.disabled` class to the parent `.radio`, `.radio-inline`, `.checkbox`, or `.checkbox-inline`. 
+    </markdown>
+    
+    </div>
+    <h3>Checkbox Input Types</h3>
+
+    <markdown>
+        Note: Use the `.checkbox-inline` class on a series of checkboxes for controls that appear on the same line. 
+    </markdown>
+      <code class="src-html source_visible">
+      </code>
+     <div class="source_example">
+        <div class="checkbox">
+            <label>
+                <input class="pf-checkbox" type="checkbox" value="">
+                Option one is this and that&mdash;be sure to include why it's great
+            </label>
+        </div>
+        <div class="checkbox disabled">
+            <label>
+                <input class="pf-checkbox" type="checkbox" value="" disabled>
+                Option two is disabled
+            </label>
+        </div>
+    </div>
+    
+    <h3>Radio Input Types</h3>
+
+    <markdown>
+        Code for creating radio buttons. Use the `.radio-inline` classes on a series of radios for controls that appear on the same line.
+    </markdown>
+      <code class="src-html source_visible">
+      </code>
+     <div class="source_example">
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                Option one is this and that&mdash;be sure to include why it's great
+            </label>
+            </div>
+            <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                Option two can be something else and selecting it will deselect option one
+            </label>
+            </div>
+            <div class="radio disabled">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                Option three is disabled
+            </label>
+        </div>
+    </div>
+</section>
+
+<!-- using primary/secondary code on a button element -->
+<section class="source_section">
+    <h2>Selects</h2>
+     <markdown>
+        Holding place for dropdowns specs.
+    </markdown>
+    
+    </div>
+    <h3>Select Box Sample Code</h3>
+
+    <markdown>
+        Sample select box code from bootstrap documentation. 
+    </markdown>
+      <code class="src-html source_visible">
+      </code>
+     <div class="source_example">
+     <select class="form-control">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+    </div>
+    
+    <h3>Multi-Select Box</h3>
+
+    <markdown>
+        Sample code for making your single select box a multi-select. Simply add a `.multiple` class to your select element.
+    </markdown>
+      <code class="src-html source_visible">
+      </code>
+     <div class="source_example">
+        <select multiple class="form-control">
+            <option>Select your numbers</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+</section>

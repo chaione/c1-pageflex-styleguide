@@ -1,0 +1,153 @@
+﻿<link rel="stylesheet" href="css/starting.css">
+
+<h1>Sidebar Component</h1>
+
+<div class="source_info">
+    <markdown>This spec covers styling for the header and top nav.
+      </markdown>
+</div>
+
+<section class="source_section">
+    <h2>Live Search</h2>
+
+    <code class="src-html source_visible">
+      <div class="search">
+        <label class="sr-only" for="form-control">Search</label>
+        <input type="text" class="form-control" id="search-sidebar" aria-label="Search" placeholder="SEARCH" data-live-search="true"
+        data-tokens="brochure flyer presentation">
+        <div id="results"></div>
+      </div>
+     
+     ************** JAVASCRIPT CODE ***************
+     
+     //load json data and parse for live search functionality
+      $(window).load(function(){
+        $('#search-sidebar').keyup(function(){
+            var searchField = $('#search-sidebar').val();
+            var regex = new RegExp(searchField, "i");
+            var output = '<div class="row">';
+            var count = 1;
+            $.getJSON('data.json', function(data) {
+              $.each(data, function(key, val){
+                if ((val.name.search(regex) != -1) || (val.location.search(regex) != -1)) {
+                  output += '<a href=""><h5>' + val.name + '</h5></a>';
+                  if(count%8 == 0){
+                    output += '</div><div class="row">'
+                  }
+                  count++;
+                }
+              });
+              output += '</div>';
+              $('#results').html(output);
+            }); 
+        });
+      });
+    </code>
+
+    <div class="source_example">
+        
+    </div>
+
+</section>
+
+<section class="source_section">
+    <h2>Sidebar Navigation</h2>
+
+    <markdown>
+        Example of the sidebar navigation code. <br>
+        <img src="img/sidenav.png" width="200">
+    </markdown>
+
+    <code class="src-html source_visible">
+<main class="container" style="padding-top:75px;">
+    <aside class="col-lg-3">
+      <div class="search">
+        <label class="sr-only" for="form-control">Search</label>
+        <input type="text" class="form-control" id="search-sidebar" aria-label="Search" placeholder="SEARCH" data-live-search="true"
+        data-tokens="brochure flyer presentation">
+        <div id="results"></div>
+      </div>
+
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a role="button" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOne" href="#collapseOne">
+          <span class="glyphicon glyphicon-minus"></span>
+                Categories
+                </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+              <ul class="list-group categories-list">
+                <li class="list-group-item"><a href="">Email Campaigns</a></li>
+                <li class="list-group-item"><a href="">Digital Products</a></li>
+                <li class="list-group-item"><a href="">Kits</a></li>
+                <li class="list-group-item">
+                  <!--<span class="badge">14</span>--><a href="">Brochures</a></li>
+                <li class="list-group-item"><a href="">Flyers</a></li>
+                <li class="list-group-item"><a href="">Calendars</a></li>
+                <li class="list-group-item"><a href="">Business Cards</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+                <a role="button" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseTwo" href="#collapseTwo">
+          <span class="glyphicon glyphicon-plus"></span>
+                Filters
+                </a>
+            </h4>
+
+
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">
+              <form>
+                <div class="form-group">
+                  <ul class="input-group filter-set1">
+                    <li>
+                      <label>
+                        <input type="checkbox"> Filter 1
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="checkbox"> Filter 2
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="checkbox"> Filter 3
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="checkbox"> Filter 4
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <!-- /input-group -->
+              </form>
+              <!-- /form -->
+            </div>
+          </div>
+        </div>
+    </aside>
+</main>
+    </code>
+    <div class="source_example">
+
+    </div>
+
+</section>
+
+
+
+
+
+
