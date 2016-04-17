@@ -449,6 +449,67 @@ button.slick-prev.slick-arrow {
     color:#57585b;
 }
 
+
+
+
+
+
+/* ==========================================================================
+   Pageflex Photography and Image Link Styles
+   ========================================================================== */
+.primary-links1, .primary-links2 {
+    display: block;
+    height: 100%;
+    background-color: rgba(255,255,255,0);
+    color: #fff;
+    opacity: 1;
+}
+
+.img-email-blasts,
+.img-brochures {
+     -webkit-transition: background linear 1s;
+  -moz-transition: background linear 1s;
+  transition: background linear 1s;
+}
+.img-email-blasts {
+  background: 
+    linear-gradient(
+      rgba(0, 158, 220, 0.9),
+      rgba(0, 158, 220, 0.9)
+    ),
+    url(../img/product-email-blasts.jpg);
+  background-size: cover;
+  width: 540px;
+  height: 300px;
+}
+.img-email-blasts:hover {
+    background-color: rgba(0,158,220,0.3);
+}
+.img-brochures {
+  background: 
+    linear-gradient(
+      rgba(143,198,62,0.8),
+      rgba(143, 198, 62, 0.9)
+    ),
+    url(../img/product-brochures.jpg);
+  background-size: cover;
+  width: 255px;
+  height: 300px;
+  -webkit-transition: background-color linear .25s;
+  -moz-transition: background-color linear .25s;
+  transition: background-color linear .25s;
+}
+.img-brochures:hover {
+    background-color: rgba(143,198,62,0.3);
+}
+
+/* /Photography and Image Links styles
+---------------------------------------------------------------------------------- */
+
+
+
+
+
 /* ==========================================================================
    Pageflex Icon Styles
    ========================================================================== */

@@ -1,116 +1,49 @@
-<link rel="stylesheet" href="css/photography.css">
+<link rel="stylesheet" href="/assets/css/main.css">
 
 
-<h1>Icon Specs</h1>
+<h1>Photography & Image Specs</h1>
 
 <div class="source_info">
     <p>
         Developer: Chaione / Pageflex <br>
         Designer: Chaione / Pageflex <br>
         Spec Release: 1.0<br>
-        Release Date: 04.13.16
+        Release Date: 04.15.16
     </p>
 
     <markdown>
-        Cheat sheet for adding icons. Copy the code in the textbox next to the icon you want to include.
+         Usage specs for images, including POPs with text links over images, product images, and thumbnails.
     </markdown>
 </div>
 
 <section class="source_section">
-    <h2>Icon Specs</h2>
+    <h2>Product Photos</h2>
 
     <markdown>
-        To add icon simply use `<div class="icon icon-pf_icn_info">` and replace with icon class you would like to use.
+        Product Photos should be 255x275 px. Use `.img-responsive` class to add Bootstrap's responsive image class.
     </markdown>
-
+<code class="src-html source_visible">
+    <img class="img-responsive" src="img/product01.jpg">
+</code>
      <div class="source_example">
-              <ul class="glyphs css-mapping">
-        <li>
-          <div class="icon icon-pf_btn_checkbox">
-              <span class="path1"></span><span class="path2"></span>
-          </div>
-          <input type="text" readonly="readonly" value="icon-pf_btn_checkbox">
-        </li>
-        <li>
-          <div class="icon icon-pf_btn_checkbox_selected">
-              <span class="path1"></span><span class="path2"></span>
-          </div>
-          <input type="text" readonly="readonly" value="icon-pf_btn_checkbox_selected">
-        </li>
-        <li>
-          <div class="icon icon-pf_btn_radio">
-              <span class="path1"></span><span class="path2"></span>
-          </div>
-          <input type="text" readonly="readonly" value="icon-pf_btn_checkbox">
-        </li>
-        <li>
-          <div class="icon icon-pf_btn_radio_selected">
-              <span class="path1"></span><span class="path2"></span><span class="path3"></span>
-          </div>
-          <input type="text" readonly="readonly" value="icon-pf_btn_checkbox_selected">
-        </li>
-        <li>
-          <div class="icon icon-pf_btn_prv_arrow"></div>
-          <input type="text" readonly="readonly" value="icon-pf_btn_prv_arrow">
-        </li>
-        <li>
-          <div class="icon icon-pf_btn_next_arrow"></div>
-          <input type="text" readonly="readonly" value="icon-pf_btn_next_arrow">
-        </li>
-        <li>
-          <div class="icon icon-pf_btn_remove"></div>
-          <input type="text" readonly="readonly" value="icon-pf_btn_remove">
-        </li>
-        <li>
-          <div class="icon icon-pf_icn_cart"></div>
-          <input type="text" readonly="readonly" value="icon-pf_icn_cart">
-        </li>
-        <li>
-          <div class="icon icon-pf_icn_cart_hover"></div>
-          <input type="text" readonly="readonly" value="icon-pf_icn_cart_hover">
-        </li>
-        <li>
-          <div class="icon icon-pf_icn_collapse"></div>
-          <input type="text" readonly="readonly" value="icon-pf_icn_collapse">
-        </li>
-        <li>
-          <div class="icon icon-pf_icn_delete"></div>
-          <input type="text" readonly="readonly" value="icon-pf_icn_delete">
-        </li>
-        <li>
-          <div class="icon icon-pf_icn_download"></div>
-          <input type="text" readonly="readonly" value="icon-pf_icn_download">
-        </li>
-        <li>
-          <div class="icon icon-pf_icn_upload"></div>
-          <input type="text" readonly="readonly" value="icon-pf_icn_upload">
-        </li>
-        <li>
-          <div class="icon icon-pf_icn_rename"></div>
-          <input type="text" readonly="readonly" value="icon-pf_icn_rename">
-        </li>
-        <li>
-          <div class="icon icon-pf_icn_notifications"></div>
-          <input type="text" readonly="readonly" value="icon-pf_icn_notifications">
-        </li>
-        <li>
-          <div class="icon icon-pf_icn_menu"></div>
-          <input type="text" readonly="readonly" value="icon-pf_icn_menu">
-        </li>
-        <li>
-          <div class="icon icon-pf_icn_info"></div>
-          <input type="text" readonly="readonly" value="icon-pf_icn_info">
-        </li>
-        <li>
-          <div class="icon icon-pf_icn_hide_files"></div>
-          <input type="text" readonly="readonly" value="icon-pf_icn_hide_files">
-        </li>
-        <li>
-          <div class="icon icon-pf_icn_expand"></div>
-          <input type="text" readonly="readonly" value="icon-pf_icn_expand">
-        </li>
-      </ul>
-    </div>
+       <img class="img-responsive" src="img/product01.jpg">
+     </div>
     
-    
+</section>
+
+<section class="source_section">
+  <h2>Text Links with Image Backgrounds</h2>
+  
+  <markdown>
+    Sample code for creating text links with image backgrounds.
+  </markdown>
+  
+  <code class="src-html source_visible">
+  </code>
+  
+  <div class="source_example">
+            <a class="primary-links primary-links1" href="#"><div class="module mid img-email-blasts">
+              <h3><span><a href="#">Email Blasts</a></span></h3>
+            </div></a>    
+  </div>
 </section>
