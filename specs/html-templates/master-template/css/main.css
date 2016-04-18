@@ -288,26 +288,10 @@ input[type=checkbox] {
   background-color: rgba(143,198,62,0.8);
 }
 /*text over image for products */
-.product-module {
-    background-image: url(../img/product01.jpg);
-    background-size: 255px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-clip: border-box;
-    transition: background-size 0.2s;
-    transition-timing-function: cubic-bezier(.07,1.41,.82,1.41);
-    display: block;
-    width: 255px;
-    height: 275px;
-    text-decoration: none;
-    cursor: pointer;
-    overflow: hidden;
-    /*text-indent: 100%;*/
-    white-space:nowrap;
-}
-/*
+
 .product-module {
   position: relative;
+  display:block;
   margin: 0;
   width: 255px;
   height: 275px;
@@ -315,7 +299,7 @@ input[type=checkbox] {
   background-size: cover;
   
 }
-*/
+
 .product-module h3 {
   z-index: 999;
   position: absolute;
