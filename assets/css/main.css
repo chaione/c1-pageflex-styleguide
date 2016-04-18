@@ -353,17 +353,7 @@ input[type=checkbox] {
   background-color: rgba(143,198,62,0.8);
 }
 /*text over image for products */
-/*a.product-module {
-  background: url(../img/product01.jpg);
-  background-size: cover;
-  display: block;
-  margin: 0;
-  position: relative;
-  width: 255px;
-  height: 275px;*/
-  
-  
-}
+
 .product-module {
     background-image: url(../img/product01.jpg);
     background-size: 255px;
