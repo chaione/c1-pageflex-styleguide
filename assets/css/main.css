@@ -354,12 +354,14 @@ input[type=checkbox] {
 }
 /*text over image for products */
 .product-module {
-  position: relative;
-  margin: 0;
-  width: 255px;
-  height: 275px;
   background: url(../img/product01.jpg);
   background-size: cover;
+  display: block;
+  margin: 0;
+  position: relative;
+  width: 255px;
+  height: 275px;
+  
   
 }
 
