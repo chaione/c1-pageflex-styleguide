@@ -30,14 +30,13 @@ a:hover {
 button, .btn {
   font-family: 'Open Sans',Arial,Helvetica,sans-serif;
   font-size: 1.6rem;
-  line-height: 1;
+  line-height: 1.2;
   text-decoration: none;
   text-transform: uppercase;
   height: 4rem;
   padding: 10px 15px;
-  transition:All .7s ease;
+  transition: All .7s ease;
   border-radius: 0;
-
 }
 .btn-primary {
   color: #009edc;
