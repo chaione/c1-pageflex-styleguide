@@ -293,7 +293,6 @@ input[type=checkbox] {
     background-size: 255px;
     background-repeat: no-repeat;
     background-position: center;
-    border-radius: 50%;
     background-clip: border-box;
     transition: background-size 0.2s;
     transition-timing-function: cubic-bezier(.07,1.41,.82,1.41);
