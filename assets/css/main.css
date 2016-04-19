@@ -709,7 +709,7 @@ button.slick-prev.slick-arrow {
 [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'pageflex' !important;
-    font-size: 2.4rem;
+    font-size: 2rem;
     color: #009edc;
     speak: none;
     font-style: normal;
