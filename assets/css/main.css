@@ -16,6 +16,10 @@ body {
 /*GLOBAL */
 a {
   color:#009edc;
+  outline: 0;
+}
+a:focus {
+  outline:0;
 }
 a:hover {
   text-decoration: none;
