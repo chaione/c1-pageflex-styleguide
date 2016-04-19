@@ -418,21 +418,20 @@ input[type=checkbox] {
     background-blend-mode: darken;
 }
 .pop-image-large {
-    width:100%;
-    max-width: 540px;
-    height:auto;
-    margin: auto;
-    text-align:center;
-    position:relative;
-    background-color:#009edc;
+  width:100%;
+  max-width: 540px;
+  height:auto;
+  margin: auto;
+  text-align:center;
+  position:relative;
+  background-color:#009edc;
 }
 .pop-image-large:first-child {
   float:left;
 }
 .pop-image-large > a,
 .pop-image-small > a {
-   font-size: 2.1rem;
-   font-weight: 700;
+
 }
 .pop-image-large > a:hover,
 .pop-image-small > a:hover {
@@ -440,45 +439,49 @@ input[type=checkbox] {
 }
 .pop-image-large > a > img,
 .pop-image-small > a > img {
-    opacity: 0.2;
-    transition: opacity .5s ease-out;
-    -moz-transition: opacity .5s ease-out;
-    -webkit-transition: opacity .5s ease-out;
-    -o-transition: opacity .5s ease-out;
+  opacity: 0.2;
+  transition: opacity .5s ease-out;
+  -moz-transition: opacity .5s ease-out;
+  -webkit-transition: opacity .5s ease-out;
+  -o-transition: opacity .5s ease-out;
 }
 .pop-image-large > a:hover > img,
 .pop-image-small > a:hover > img{
-        opacity: 0.5;
+  opacity: 0.5;
 }
 
 .pop-image-small {
-    width: 100%;
-    max-width: 255px;
-    height:auto;
-    margin: auto;
-    text-align:center;
-    position:relative;
-    background-color:#8fc63e;
+  width: 100%;
+  max-width: 255px;
+  height:auto;
+  margin: auto;
+  text-align:center;
+  position:relative;
+  background-color:#8fc63e;
 }
 
   
 .link-over-image {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    color: #fff;
-    height: 30px;
-    text-decoration: none;
-    text-transform: uppercase;
-    background: none;
-    cursor: default;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  height: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: none;
+  cursor: default;
 }
-
+.linked-image {
+  
+}
 .link-over-image > span {
   border: 1px solid #fff;
+  font-size: 2.1rem;
+  font-weight: 700;
   padding: 5px 30px;
 }
 /*menu change - take off box shadow */
