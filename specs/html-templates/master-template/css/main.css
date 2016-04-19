@@ -259,7 +259,7 @@ input[type=checkbox] {
   background: rgba(255,255,255,0.75);
   height: 100%;
   max-height: 275px;
-  transition: all linear .25s;
+  /*transition: all linear .25s;*/
 }
 
 /*.product-module .product-text-overlay.collapse.in {
@@ -314,6 +314,7 @@ input[type=checkbox] {
   text-transform: uppercase;
   background: none;
   cursor: default;
+  z-index: -99;
 }
 .product-module {
   position: relative;
