@@ -615,22 +615,33 @@ button.slick-prev.slick-arrow {
     background-blend-mode: darken;
 }
 .pop-image-large {
-    width: 540px;
+    width:100%;
+    max-width: 540px;
     height:auto;
     margin: auto;
     text-align:center;
     position:relative;
     background-color:#009edc;
 }
+.pop-image-large:first-child {
+  float:left;
+}
 .pop-image-large > a,
 .pop-image-small > a {
-   -webkit-transition: all linear 1s;
-  -moz-transition: all linear 1s;
-  transition: all linear 1s;
+   font-size: 2.1rem;
+   font-weight: 700;
+}
+.pop-image-large > a:hover,
+.pop-image-small > a:hover {
+  color:#fff;
 }
 .pop-image-large > a > img,
 .pop-image-small > a > img {
     opacity: 0.2;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
 }
 .pop-image-large > a:hover > img,
 .pop-image-small > a:hover > img{
@@ -638,7 +649,8 @@ button.slick-prev.slick-arrow {
 }
 
 .pop-image-small {
-    width: 255px;
+    width: 100%;
+    max-width: 255px;
     height:auto;
     margin: auto;
     text-align:center;
@@ -656,66 +668,15 @@ button.slick-prev.slick-arrow {
     bottom: 0;
     color: #fff;
     height: 30px;
-    max-width: 150px;
-    border: 1px solid #fff;
-    line-height: 1.9;
     text-decoration: none;
     text-transform: uppercase;
     background: none;
     cursor: default;
 }
-.img-email-blasts,
-.img-brochures {
-  -webkit-transition: background linear 1s;
-  -moz-transition: background linear 1s;
-  transition: background linear 1s;
-}
-.img-email-blasts {
-  background: 
-    linear-gradient(
-      rgba(0, 158, 220, 0.9),
-      rgba(0, 158, 220, 0.9)
-    ),
-    url(../img/product-email-blasts.jpg);
-  background-size: cover;
-  width: 540px;
-  height: 300px;
-}
-.img-email-blasts:hover {
-    background-color: rgba(0,158,220,0.1);
-}
-.img-brochures {
-  background: 
-    linear-gradient(
-      rgba(143,198,62,0.8),
-      rgba(143, 198, 62, 0.9)
-    ),
-    url(../img/product-brochures.jpg);
-  background-size: cover;
-  width: 255px;
-  height: 300px;
-  -webkit-transition: background-color linear .25s;
-  -moz-transition: background-color linear .25s;
-  transition: background-color linear .25s;
-}
-.img-brochures:hover {
-    background-color: rgba(143,198,62,0.3);
-}
-.mid h3 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin:0;
-}
-.mid h3 span {
-  color: rgba(255,255,255,1);
+
+.link-over-image > span {
   border: 1px solid #fff;
-  font-size: 2.1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 5px 10px;
+  padding: 5px 30px;
 }
 
 /* /Photography and Image Links styles
