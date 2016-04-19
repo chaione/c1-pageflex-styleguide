@@ -614,6 +614,56 @@ button.slick-prev.slick-arrow {
     opacity: 0.8;
     background-blend-mode: darken;
 }
+.pop-image-large {
+    width: 540px;
+    height:auto;
+    margin: auto;
+    text-align:center;
+    position:relative;
+    background-color:#009edc;
+}
+.pop-image-large > a,
+.pop-image-small > a {
+   -webkit-transition: all linear 1s;
+  -moz-transition: all linear 1s;
+  transition: all linear 1s;
+}
+.pop-image-large > a > img,
+.pop-image-small > a > img {
+    opacity: 0.2;
+}
+.pop-image-large > a:hover > img,
+.pop-image-small > a:hover > img{
+        opacity: 0.5;
+}
+
+.pop-image-small {
+    width: 255px;
+    height:auto;
+    margin: auto;
+    text-align:center;
+    position:relative;
+    background-color:#8fc63e;
+}
+
+  
+.link-over-image {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    height: 30px;
+    max-width: 150px;
+    border: 1px solid #fff;
+    line-height: 1.9;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: none;
+    cursor: default;
+}
 .img-email-blasts,
 .img-brochures {
   -webkit-transition: background linear 1s;
