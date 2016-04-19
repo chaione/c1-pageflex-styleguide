@@ -113,7 +113,7 @@ input[type=checkbox] {
 }
 .has-error .form-control {
     background-color:#fcf0f0;
-    border-color: #d9443f;
+    border: 1px solid #d9443f;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
 }
