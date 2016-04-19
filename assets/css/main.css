@@ -613,8 +613,18 @@ button.slick-prev.slick-arrow {
     background-color: #e5e5e5;
     border-radius: 4px;
 }
-
-
+.tooltip.right .tooltip-arrow {
+    border-right-color: #e5e5e5;
+}
+.tooltip.bottom .tooltip-arrow {
+  border-bottom-color: #e5e5e5;
+}
+.tooltip.top .tooltip-arrow {
+  border-top-color: #e5e5e5;
+}
+.tooltip.left .tooltip-arrow {
+    border-left-color: #e5e5e5;
+}
 /* ==========================================================================
    Pageflex Photography and Image Link Styles
    ========================================================================== */
