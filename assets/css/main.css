@@ -583,15 +583,20 @@ button.slick-prev.slick-arrow {
 }
 /* /Product pagination styles
 ---------------------------------------------------------------------------------- */
+
+
+/* ==========================================================================
+   Pageflex Tooltip Styles
+   ========================================================================== */
 .tooltip {
     position: absolute;
     z-index: 1070;
     display: block;
     font-size: 1.2rem;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.42857143;
-    text-align: left;
+    text-align: center;
     text-align: start;
     text-decoration: none;
     text-shadow: none;
@@ -625,6 +630,10 @@ button.slick-prev.slick-arrow {
 .tooltip.left .tooltip-arrow {
     border-left-color: #e5e5e5;
 }
+/* /Tooltip styles
+---------------------------------------------------------------------------------- */
+
+
 /* ==========================================================================
    Pageflex Photography and Image Link Styles
    ========================================================================== */
