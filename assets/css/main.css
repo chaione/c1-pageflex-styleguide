@@ -554,6 +554,11 @@ button.slick-prev.slick-arrow {
     background-color: #009edc;
     color:#fff;
 }
+.pagination > li > a:active,
+.pagination > li > a:active .icon {
+    background-color: #009edc;
+    color:#fff;
+}
 .pagination .icon {
   font-size:2rem;
 }
