@@ -162,11 +162,7 @@ input[type=checkbox] {
 .navbar-header {
   width:100%;
 }
-.primary-links1,.primary-links2 {
-  background-color:rgba(255,255,255,0);
-  color:#fff;
-  opacity: 1;
-}
+
 .hover-effect {
   background: rgba(255,255,255,0.3);
   color: #009edc;
@@ -420,44 +416,8 @@ input[type=checkbox] {
   position: relative;
   float: left;
 }
-.img-email-blasts {
-  background: 
-    linear-gradient(
-      rgba(0, 158, 220, 0.9),
-      rgba(0, 158, 220, 0.9)
-    ),
-    url(../img/product-email-blasts.jpg);
-  background-size: cover;
-  width: 540px;
-  height: 300px;
-}
-.img-brochures {
-  background: 
-    linear-gradient(
-      rgba(143,198,62,0.8),
-      rgba(143, 198, 62, 0.9)
-    ),
-    url(../img/product-brochures.jpg);
-  background-size: cover;
-  width: 255px;
-  height: 300px;
-}
-.mid h3 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin:0;
-}
-.mid h3 span {
-  color: rgba(255,255,255,1);
-  border: 1px solid #fff;
-  font-size: 2.1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 5px 10px;
-}
+
+
 /*menu change - take off box shadow */
 #accordion .list-group {
   -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .075);
@@ -650,6 +610,10 @@ button.slick-prev.slick-arrow {
     opacity: 1;
 }
 
+.primary-links:hover {
+    opacity: 0.8;
+    background-blend-mode: darken;
+}
 .img-email-blasts,
 .img-brochures {
   -webkit-transition: background linear 1s;
@@ -668,7 +632,7 @@ button.slick-prev.slick-arrow {
   height: 300px;
 }
 .img-email-blasts:hover {
-    background-color: rgba(0,158,220,0.3);
+    background-color: rgba(0,158,220,0.1);
 }
 .img-brochures {
   background: 
@@ -686,6 +650,22 @@ button.slick-prev.slick-arrow {
 }
 .img-brochures:hover {
     background-color: rgba(143,198,62,0.3);
+}
+.mid h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin:0;
+}
+.mid h3 span {
+  color: rgba(255,255,255,1);
+  border: 1px solid #fff;
+  font-size: 2.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 5px 10px;
 }
 
 /* /Photography and Image Links styles
