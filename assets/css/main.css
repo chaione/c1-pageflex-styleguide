@@ -535,13 +535,14 @@ button.slick-prev.slick-arrow {
     color:#57585b;
 }
 
+/* ==========================================================================
+   Pageflex Product Pagination Styles
+   ========================================================================== */
 
-
-/* ========= pagination ======== */
 .pagination>li>a, .pagination>li>span {
     position: relative;
     float: left;
-    margin-left: -1px;
+    margin: 6px;
     line-height: 1.5;
     color: #868686;
     background-color: #e6e7e8;
@@ -556,6 +557,18 @@ button.slick-prev.slick-arrow {
 .pagination .icon {
   font-size:2rem;
 }
+
+.pagination > li:first-child > a, 
+.pagination > li:first-child > span,
+.pagination > li:last-child > a, 
+.pagination > li:last-child > span {
+  padding:5px;
+}
+/* /Product pagination styles
+---------------------------------------------------------------------------------- */
+
+
+
 /* ==========================================================================
    Pageflex Photography and Image Link Styles
    ========================================================================== */
@@ -569,7 +582,7 @@ button.slick-prev.slick-arrow {
 
 .img-email-blasts,
 .img-brochures {
-     -webkit-transition: background linear 1s;
+  -webkit-transition: background linear 1s;
   -moz-transition: background linear 1s;
   transition: background linear 1s;
 }
@@ -631,7 +644,7 @@ button.slick-prev.slick-arrow {
 [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'pageflex' !important;
-    font-size: 24px;
+    font-size: 2.4rem;
     color: #009edc;
     speak: none;
     font-style: normal;
@@ -704,7 +717,7 @@ button.slick-prev.slick-arrow {
 .icon-pf_icn_menu:before {
     content: "\e906";
         color:#009edc;
-    font-size:18px;
+    font-size:1.8rem;
 }
 .icon-pf_btn_next_arrow:before {
     content: "\e900";
