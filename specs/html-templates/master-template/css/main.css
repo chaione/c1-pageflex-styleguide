@@ -411,7 +411,8 @@ input[type=checkbox] {
     background-blend-mode: darken;
 }
 .pop-image-large {
-    width: 540px;
+    width:100%;
+    max-width: 540px;
     height:auto;
     margin: auto;
     text-align:center;
@@ -420,9 +421,9 @@ input[type=checkbox] {
 }
 .pop-image-large > a,
 .pop-image-small > a {
-   -webkit-transition: all linear 1s;
-  -moz-transition: all linear 1s;
-  transition: all linear 1s;
+   -webkit-transition: all linear .2s;
+  -moz-transition: all linear .2s;
+  transition: all linear .2s;
 }
 .pop-image-large > a > img,
 .pop-image-small > a > img {
@@ -434,7 +435,8 @@ input[type=checkbox] {
 }
 
 .pop-image-small {
-    width: 255px;
+    width: 100%;
+    max-width: 255px;
     height:auto;
     margin: auto;
     text-align:center;
