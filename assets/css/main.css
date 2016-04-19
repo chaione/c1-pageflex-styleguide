@@ -114,7 +114,10 @@ input[type="checkbox"]:not(:disabled):hover {
     border-color:#009edc;
     box-shadow:none;
 }
-
+.pf-checkbox:hover,
+.pf-radio:hover {
+  border: 1px solid #009edc;
+}
 /* active state */
 input[type="radio"]:active:not(:disabled),
 input[type="checkbox"]:active:not(:disabled) {
