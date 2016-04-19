@@ -324,7 +324,7 @@ input[type=checkbox] {
   background-size: cover;
   
 }
-.product-module a {
+.product-module a .product-overlay-image {
   opacity:1;
   transition: opacity .5s ease-out;
   -moz-transition: opacity .5s ease-out;
@@ -332,7 +332,7 @@ input[type=checkbox] {
   -o-transition: opacity .5s ease-out;
   cursor: default;
 }
-.product-module a:hover {
+.product-module a:hover .product-overlay-image {
   opacity:0.5;
 }
 .product-module h3 {
