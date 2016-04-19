@@ -41,7 +41,14 @@ input[type=checkbox] {
   -webkit-box-shadow:0;
   margin-bottom: 0;
 }
-
+.radio label, .checkbox label {
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+    line-height: 2;
+}
 
 /* nav bar top */
 #navbar a {
@@ -295,7 +302,19 @@ input[type=checkbox] {
   background-color: rgba(143,198,62,0.8);
 }
 /*text over image for products */
-
+.product-overlay-image {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: none;
+  cursor: default;
+}
 .product-module {
   position: relative;
   display:block;
