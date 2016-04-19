@@ -15,10 +15,7 @@
 Tooltips with zero-length titles are never displayed.
     </markdown>
     <code class="src-html  source_visible">
-      <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
-      <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
-      <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
-      <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+     
 
     </code>
     <div class="source_example">
@@ -27,7 +24,10 @@ Tooltips with zero-length titles are never displayed.
       <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
       <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
     </div>
-    
+    <script>
+    $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})</script>
     <h3>Tooltip Markup</h3>
 
     <markdown>
