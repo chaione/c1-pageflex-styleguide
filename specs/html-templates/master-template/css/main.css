@@ -424,9 +424,6 @@ input[type=checkbox] {
 .pop-image-small > a {
    font-size: 2.1rem;
    font-weight: 700;
-   -webkit-transition: all linear .5s;
-  -moz-transition: all linear .5s;
-  transition: all linear .5s;
 }
 .pop-image-large > a:hover,
 .pop-image-small > a:hover {
@@ -435,6 +432,10 @@ input[type=checkbox] {
 .pop-image-large > a > img,
 .pop-image-small > a > img {
     opacity: 0.2;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
 }
 .pop-image-large > a:hover > img,
 .pop-image-small > a:hover > img{
@@ -461,15 +462,16 @@ input[type=checkbox] {
     bottom: 0;
     color: #fff;
     height: 30px;
-    max-width: 150px;
-    border: 1px solid #fff;
-    line-height: 1.9;
     text-decoration: none;
     text-transform: uppercase;
     background: none;
     cursor: default;
 }
 
+.link-over-image > span {
+  border: 1px solid #fff;
+  padding: 5px 30px;
+}
 /*menu change - take off box shadow */
 #accordion .list-group {
   -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .075);
