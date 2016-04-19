@@ -553,7 +553,9 @@ button.slick-prev.slick-arrow {
     background-color: #009edc;
     color:#fff;
 }
-
+.pagination .icon {
+  font-size:2rem;
+}
 /* ==========================================================================
    Pageflex Photography and Image Link Styles
    ========================================================================== */
