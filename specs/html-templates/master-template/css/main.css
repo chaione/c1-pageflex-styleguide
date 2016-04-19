@@ -420,6 +420,9 @@ input[type=checkbox] {
     position:relative;
     background-color:#009edc;
 }
+.pop-image-large:first-child {
+  float:left;
+}
 .pop-image-large > a,
 .pop-image-small > a {
    font-size: 2.1rem;
