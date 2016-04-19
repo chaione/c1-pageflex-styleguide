@@ -541,13 +541,12 @@ button.slick-prev.slick-arrow {
 .pagination>li>a, .pagination>li>span {
     position: relative;
     float: left;
-    padding: 6px 12px;
     margin-left: -1px;
-    line-height: 1.8;
+    line-height: 1.5;
     color: #868686;
-    text-decoration: none;
     background-color: #e6e7e8;
     border: 0 solid #ddd;
+    height: 3rem;
 }
 .pagination > li > a:hover,
 .pagination > li > a:hover .icon {
