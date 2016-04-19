@@ -316,9 +316,7 @@ input[type=checkbox] {
   cursor: default;
 }
 
-.product-overlay-image:hover {
-  opacity:0.8;
-}
+
 .product-module {
   position: relative;
   display:block;
