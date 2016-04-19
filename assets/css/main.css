@@ -737,6 +737,11 @@ button.slick-prev.slick-arrow {
     font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
+/* custom image size */
+.icon-pf_btn_checkbox,
+.icon-pf_btn_checkbox_selected {
+  font-size: 2rem;
+}
 
 .icon-pf_btn_checkbox_selected .path1:before {
     content: "\e90e";
