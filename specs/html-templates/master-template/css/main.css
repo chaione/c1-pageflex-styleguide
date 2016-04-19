@@ -314,7 +314,10 @@ input[type=checkbox] {
   text-transform: uppercase;
   background: none;
   cursor: default;
-  z-index: -99;
+}
+
+.product-overlay-image:hover {
+  opacity:0.8;
 }
 .product-module {
   position: relative;
