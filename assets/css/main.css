@@ -549,6 +549,10 @@ button.slick-prev.slick-arrow {
     background-color: #e6e7e8;
     border: 0 solid #ddd;
 }
+.pagination > li > a:hover {
+    background-color: #009edc;
+    color:#fff;
+}
 
 /* ==========================================================================
    Pageflex Photography and Image Link Styles
