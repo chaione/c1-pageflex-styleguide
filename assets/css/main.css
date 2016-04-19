@@ -738,8 +738,7 @@ button.slick-prev.slick-arrow {
     text-rendering: optimizeLegibility;
 }
 /* custom image size */
-.icon-pf_btn_checkbox,
-.icon-pf_btn_checkbox_selected {
+.icon-pf_icn_delete {
   font-size: 2rem;
 }
 
