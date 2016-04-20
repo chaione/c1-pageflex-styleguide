@@ -272,10 +272,10 @@ input[type=checkbox] {
   .products-row .col-xs-12 {
     padding:0;
   }
-  .products-row.col-1-2 {
+  .products-row .col-1-2 {
     padding-left:0;
   }
-  .products-row.col-2-2 {
+  .products-row .col-2-2 {
     padding-right:0;
   }
 .section-title {
