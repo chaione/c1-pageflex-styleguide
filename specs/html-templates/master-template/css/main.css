@@ -52,16 +52,7 @@ input[type=checkbox] {
   border: 1px solid #58595b;
   border-radius: 4px;
   text-indent: 30px;
-	-webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
-	-moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
-	box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4);
-
-	background: -webkit-linear-gradient(top, #fff 0%, #fff 100%);
-	background: -moz-linear-gradient(top, #fff 0%, #fff 100%);
-	background: -o-linear-gradient(top, #fff 0%, #fff 100%);
-	background: -ms-linear-gradient(top, #fff 0%, #fff 100%);
-	background: linear-gradient(top, #fff 0%, #fff 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#fff',GradientType=0 );
+	background-color: #fff;
 }
 
 .squaredThree label:after {
