@@ -38,8 +38,8 @@ input[type=checkbox] {
 }
 /* SQUARED THREE */
 .squaredThree {
-	width: 20px;	
-	margin: 20px auto;
+	/*width: 20px;	
+	margin: 20px auto;*/
 	position: relative;
 }
 
