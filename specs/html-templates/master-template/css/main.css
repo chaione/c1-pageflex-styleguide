@@ -269,6 +269,9 @@ input[type=checkbox] {
     margin-right: auto;
   } 
   }
+  .products-row .col-xs-12 {
+    padding:0;
+  }
 .section-title {
   font-size: 1.6rem;
   color:#009edc;
