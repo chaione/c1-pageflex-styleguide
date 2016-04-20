@@ -729,12 +729,12 @@ button.slick-prev.slick-arrow {
 button.slick-arrow:hover {
     color: #009edc;
 }
-@media screen and (min-width:992px) {
+@media (min-width: 768px) {
   .product-module h3 {
     width: 100%;
   }
 }
-@media screen and (min-width:768px) {
+@media (max-width:768px) {
   .products-row .col-sm-4 {
     overflow: hidden;
   }
