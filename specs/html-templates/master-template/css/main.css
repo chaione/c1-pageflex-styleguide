@@ -708,6 +708,9 @@ input[type=checkbox] {
 .slick-slide.slick-current {
     padding-left:10px;
 }
+.slick-slide.slick-current[first-child] {
+  padding-left:0;
+}
 .slick-slide img:hover {
     cursor: pointer;
     opacity: .65;
