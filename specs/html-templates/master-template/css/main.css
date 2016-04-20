@@ -5,7 +5,7 @@
    AUTHOR: PAUL CONN
    LAST UPDATE: 04/19/2016
    
-   V 0.0.1 - current build, very messy. clean up and move to sass syntax
+   V 1.1 - current build, very messy. clean up and move to sass syntax
    in next version
    ========================================================================== */
 body {
@@ -301,6 +301,7 @@ input[type=checkbox] {
   z-index:0;
   background-color: rgba(143,198,62,0.8);
 }
+
 /*text over image for products */
 .product-overlay-image {
   position: absolute;
@@ -326,32 +327,6 @@ input[type=checkbox] {
   background-size: cover;
   
 }
-.well {
-    min-height: 20px;
-    padding: 19px;
-    margin-bottom: 20px;
-    background-color: rgba(255,255,255,0.8);
-    border: none;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-    box-shadow: 0;
-    position: absolute;
-    margin-top: 49px;
-    transition: background .45s ease-in-out;
-    -moz-transition: background .45s ease-in-out;
-    -webkit-transition: background .45s ease-in-out;
-}
-/*.product-module a .product-overlay-image {
-  opacity:1;
-  transition: opacity .5s ease-out;
-  -moz-transition: opacity .5s ease-out;
-  -webkit-transition: opacity .5s ease-out;
-  -o-transition: opacity .5s ease-out;
-  cursor: default;
-}
-.product-module a:hover .product-overlay-image {
-  opacity:0.5;
-}*/
 .product-module h3 {
   z-index: 999;
   position: absolute;
@@ -369,6 +344,37 @@ input[type=checkbox] {
   font-size: 2rem;
   float:right;
 }
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    margin-top: 49px;
+    background-image: none;
+    background-color: rgba(255,255,255,0.75);
+    border: none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    position: absolute;
+    z-index: 999;
+    
+    /*transition: background .45s ease-in-out;
+    -moz-transition: background .45s ease-in-out;
+    -webkit-transition: background .45s ease-in-out;
+    z-index: 99;*/
+}
+/*.product-module a .product-overlay-image {
+  opacity:1;
+  transition: opacity .5s ease-out;
+  -moz-transition: opacity .5s ease-out;
+  -webkit-transition: opacity .5s ease-out;
+  -o-transition: opacity .5s ease-out;
+  cursor: default;
+}
+.product-module a:hover .product-overlay-image {
+  opacity:0.5;
+}*/
+
 
 .dropdown {
   background-color: rgba(0, 158, 220, 0.9);
