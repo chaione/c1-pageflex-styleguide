@@ -326,6 +326,21 @@ input[type=checkbox] {
   background-size: cover;
   
 }
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: rgba(255,255,255,0.8);
+    border: none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: 0;
+    position: absolute;
+    margin-top: 49px;
+    transition: background .45s ease-in-out;
+    -moz-transition: background .45s ease-in-out;
+    -webkit-transition: background .45s ease-in-out;
+}
 /*.product-module a .product-overlay-image {
   opacity:1;
   transition: opacity .5s ease-out;
