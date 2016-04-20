@@ -23,9 +23,11 @@ a {
   color:#009edc;
 }
 a:hover, a:focus {
+  color: #868686;
   text-decoration: none;
   outline: 0;
 }
+
 /*input[type=checkbox] {
   margin-right: 10px;
   font-size: 20px;
@@ -730,5 +732,8 @@ button.slick-arrow:hover {
 @media screen and (min-width:768px) {
   .products-row .col-sm-4 {
     overflow: hidden;
+  }
+  .product-module h3 {
+    width: 93%;
   }
 }
