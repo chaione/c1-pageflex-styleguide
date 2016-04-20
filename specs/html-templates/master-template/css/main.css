@@ -46,12 +46,22 @@ input[type=checkbox] {
 .squaredThree label {
 	cursor: pointer;
 	position: absolute;
-	width: 20px;
+	width: 120px;
 	height: 20px;
 	top: 0;
   border: 1px solid #58595b;
   border-radius: 4px;
   text-indent: 30px;
+	background-color: #fff;
+}
+.squaredThree label:before {
+	cursor: pointer;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 0;
+  border: 1px solid #58595b;
+  border-radius: 4px;
 	background-color: #fff;
 }
 
