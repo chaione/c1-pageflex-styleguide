@@ -103,7 +103,7 @@ input[type=checkbox] {
 	opacity: 1;
 }
 .form-control {
-  border: none;
+  border: 1px solid #d1d3d4;
   border-radius: 0;
   box-shadow: none;
   -webkit-box-shadow:0;

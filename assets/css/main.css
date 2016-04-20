@@ -126,7 +126,7 @@ input[type="checkbox"]:active:not(:disabled) {
     border-color:#009edc;
 }
 .form-control {
-  border: none;
+  border: 1px solid #d1d3d4;
   border-radius: 0;
   box-shadow: none;
   -webkit-box-shadow:0;
