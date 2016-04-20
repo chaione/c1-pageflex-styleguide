@@ -722,6 +722,9 @@ button.slick-arrow:hover {
     color: #009edc;
 }
 @media (min-width: 768px) {
+  .navbar-inverse .navbar-text {
+    margin-left:0;
+  }
   .product-module h3 {
     width: 100%;
   }
