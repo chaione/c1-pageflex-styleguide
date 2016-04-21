@@ -22,6 +22,10 @@ body {
     outline: 0 !important; /*removes default focus outline for accessibility */
 }
 
+.img-fade:hover img {
+    cursor: pointer;
+    opacity: .65;
+}
 a {
   color:#009edc;
 }
