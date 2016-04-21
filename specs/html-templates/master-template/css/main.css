@@ -781,3 +781,42 @@ button.slick-arrow:hover {
     max-width: 375px;
   }
 }
+
+
+/* ==========================================
+|| Multi Select Component
+===========================================*/
+.selectpicker-items-selected {
+  margin-top:20px;
+}
+.selectpicker-items-selected .alert-warning {
+    background-image: none;
+    background-color: #e6e7e8;;
+    border-color: #e6e7e8;
+    border-radius: 3px;
+}
+.selectpicker-items-selected .alert {
+  color:#868686;
+  font-size: 12px;
+    text-shadow: initial;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 5px 30px 5px 10px;
+    border: 1px solid transparent;
+    margin:0 10px 10px 0;
+}
+.alert-dismissible .close {
+  color: #333;
+  opacity: .5;
+}
+.white-button {
+  background-color:#fff;
+  border: 1px solid #d1d3d4;
+  color: #868686;
+}
+.dropdown-menu > li > a:hover, 
+.dropdown-menu > li > a:focus {
+    background-color: #009edc;
+    background-image: none;
+    color: #fff;
+}

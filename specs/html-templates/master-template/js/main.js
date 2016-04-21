@@ -110,5 +110,18 @@ $('.product-slider').slick({
     // settings: "unslick"
     // instead of a settings object
     ]
-});
+})
+})
+
+$(".selectpicker").change(function() {
+    var val = $('option', this).filter(':selected:last').val();
+    console.log("selected " + val.toString());
+        var htm = '';
+        htm = '<li><div class="alert alert-warning alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>' + val + '</strong></div></li>';
+        $('.selectpicker-items-selected').append(htm);
+        $('.selectpicker').multiselect('rebuild');
+        $('.selectpicker-items-selected').selectpicker('render');
+})
+$('.selectpicker').selectpicker({
+  noneSelectedText: 'Select one or more content pieces'
 });
