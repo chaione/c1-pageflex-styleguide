@@ -118,7 +118,7 @@ $(".selectpicker").change(function() {
     var lastSelected = $('.selectpicker option').index($('.selectpicker option:selected'))
     console.log("last selected " + lastSelected);
         var htm = '';
-        htm = '<li><label class="alert alert-warning alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close" data-id="' + val + '"<span aria-hidden="true">×</span></button> <strong>' + val + '</strong></label></li>';
+        htm = '<li><label class="alert alert-warning alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close" data-select-id="' + $(this).find(":selected").data("select-id") + '"<span aria-hidden="true">×</span></button> <strong>' + val + '</strong></label></li>';
         
         $('.selectpicker-items-selected').append(htm);
         $('.selectpicker-items-selected').selectpicker('render');
@@ -126,21 +126,5 @@ $(".selectpicker").change(function() {
 $('.selectpicker').selectpicker({
   noneSelectedText: 'Select one or more content pieces'
 });
-
-
-$('.close').click(function () {
-  $('.selectpicker').selectpicker('refresh');
-});
-
-//jQuery('#selectbox option').attr('selected', false);
-
-
-//$('#button').click(function() {
- //       $('this.parent').attr('selected', '');
-
-//});
-
-// $('.selectpicker option').index($('.selectpicker option:selected'))
-
 
 
