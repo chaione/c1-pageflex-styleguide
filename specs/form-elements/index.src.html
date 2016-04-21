@@ -74,18 +74,24 @@
       <code class="src-html source_visible">
       </code>
      <div class="source_example">
-        <div class="checkbox">
-            <label>
-                <input class="pf-checkbox" type="checkbox" value="">
-                Option one is this and that&mdash;be sure to include why it's great
-            </label>
-        </div>
-        <div class="checkbox disabled">
-            <label>
-                <input class="pf-checkbox" type="checkbox" value="" disabled>
-                Option two is disabled
-            </label>
-        </div>
+        <div class="form-group">
+    <div>
+        <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox" >
+        <label for="checkbox-1" class="checkbox-custom-label">Filter Label 1</label>
+    </div>
+    <div>
+        <input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox">
+        <label for="checkbox-2" class="checkbox-custom-label">Filter Label 2</label>
+    </div>
+    <div>
+        <input id="checkbox-3" class="checkbox-custom" name="checkbox-3" type="checkbox">
+        <label for="checkbox-3"class="checkbox-custom-label">Filter Label 3</label>    
+    </div>
+    <div>
+        <input id="checkbox-4" class="checkbox-custom" name="checkbox-4" type="checkbox">
+        <label for="checkbox-4"class="checkbox-custom-label">Filter Label 4</label>
+    </div>
+</div><!-- /form-group -->
     </div>
     
     <h3>Radio Input Types</h3>
@@ -96,24 +102,20 @@
       <code class="src-html source_visible">
       </code>
      <div class="source_example">
-        <div class="radio">
-            <label>
-                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                Option one is this and that&mdash;be sure to include why it's great
-            </label>
-            </div>
-            <div class="radio">
-            <label>
-                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                Option two can be something else and selecting it will deselect option one
-            </label>
-            </div>
-            <div class="radio disabled">
-            <label>
-                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-                Option three is disabled
-            </label>
+        <div class="form-group">
+                  <div>
+                    <input id="radio-1" class="radio-custom" name="radio-group" type="radio" checked>
+                    <label for="radio-1" class="radio-custom-label">First Choice</label>
+                </div>
+                <div>
+                    <input id="radio-2" class="radio-custom"name="radio-group" type="radio">
+                    <label for="radio-2" class="radio-custom-label">Second Choice</label>
+                </div>
+                <div>
+                    <input id="radio-3" class="radio-custom" name="radio-group" type="radio">
+                    <label for="radio-3" class="radio-custom-label">Third Choice</label>
         </div>
+                </div><!-- /form-group -->
     </div>
 </section>
 
