@@ -118,7 +118,8 @@ $(".selectpicker").change(function() {
     var lastSelected = $('.selectpicker option').index($('.selectpicker option:selected'))
     console.log("last selected " + lastSelected);
         var htm = '';
-        htm = '<li><div class="alert alert-warning alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close" data-id="' + val + '"<span aria-hidden="true">×</span></button> <strong>' + val + '</strong></div></li>';
+        htm = '<li><label class="alert alert-warning alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close" data-id="' + val + '"<span aria-hidden="true">×</span></button> <strong>' + val + '</strong></label></li>';
+        
         $('.selectpicker-items-selected').append(htm);
         $('.selectpicker-items-selected').selectpicker('render');
 })
@@ -128,8 +129,6 @@ $('.selectpicker').selectpicker({
 
 
 $('.close').click(function () {
-
-  $('.selectpicker select:last').attr('selected', '');
   $('.selectpicker').selectpicker('refresh');
 });
 
