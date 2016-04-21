@@ -8,11 +8,19 @@
 </div>
 
 <section class="source_section">
-    <h2>Live Search</h2>
+    <h2>Live Search - HTML</h2>
     <markdown>This is the form and JS code. You can view a live version of this on the <a href="../html-templates/master-template/template-master.html">master template</a>.
-    <code class="src-js source_visible">
+    <code class="src-html source_visible">
       <div class="search"><label class="sr-only" for="form-control">Search</label><input type="text" class="form-control" id="search-sidebar" aria-label="Search" placeholder="SEARCH" data-live-search="true"
         data-tokens="brochure flyer presentation"><div id="results"></div></div>
+    </code>
+    <div class="source_example">
+      <div class="search"><label class="sr-only" for="form-control">Search</label><input type="text" class="form-control" id="search-sidebar" aria-label="Search" placeholder="SEARCH" data-live-search="true"
+        data-tokens="brochure flyer presentation"><div id="results"></div></div>
+    </div>
+    <h3>Live Search - JS</h3>
+    <markdown>This is JS code. You can view a live version of this on the <a href="../html-templates/master-template/template-master.html">master template</a>.
+    <code class="src-js source_visible">
      //load json data and parse for live search functionality
       $(window).load(function(){
         $('#search-sidebar').keyup(function(){
