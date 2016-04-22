@@ -115,7 +115,7 @@ $('.product-slider').slick({
 $(".selectpicker").on('changed.bs.select', function (e, clickedIndex, newValue, oldValue) {
   var val = e.target[clickedIndex].text;
   if (newValue == true) {
-    var htm = '<li id="items-selected-' + clickedIndex + '"><label class="alert alert-warning alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close" data-id="' + val + '"<span aria-hidden="true">×</span></button> <strong>' + val + '</strong></label></li>';
+    var htm = '<li id="items-selected-' + clickedIndex + '"><label class="alert alert-warning alert-dismissible fade in" data-id="' + val + '" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>' + val + '</strong></label></li>';
     $('.selectpicker-items-selected').append(htm);
     $('.selectpicker-items-selected').selectpicker('render');
   } else {
@@ -123,9 +123,20 @@ $(".selectpicker").on('changed.bs.select', function (e, clickedIndex, newValue, 
   }
 });
 
-$('.close').click(function () {
-  $('.selectpicker').selectpicker('refresh');
+$('.selectpicker-items-selected').on('close.bs.alert', 'label', function () {
+  var val = $(this).data('id');
+  var items = $(".selectpicker").selectpicker('val');
+  $(".selectpicker").selectpicker('val', items.filter(function (e) {
+    return e != val;
+  }));
+  $(this).parent().remove();
 });
+
+// $('.close').click(function () {
+//   console.dir(this);
+//   console.log($('.selectpicker').selectpicker('val'));
+//   $('.selectpicker').selectpicker('refresh');
+// });
 
 //jQuery('#selectbox option').attr('selected', false);
 
