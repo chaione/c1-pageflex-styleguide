@@ -591,8 +591,8 @@ input[type=checkbox] {
     background-color: #8fc63e;
     padding-bottom: 56%;
 }
+/*
 @media (min-width:768px) {
-  
   .pop-image-small {
   width: 100%;
   max-width: 255px;
@@ -602,11 +602,9 @@ input[type=checkbox] {
   position:relative;
   background-color:#8fc63e;
   padding-bottom:115%
+  }
 }
-}
-
-
-  
+*/
 .link-over-image {
   position: absolute;
   margin: auto;
@@ -653,13 +651,35 @@ input[type=checkbox] {
 .products-row .col-sm-6:nth-child(2) {
     padding: 0;
 }
-
   .products-row .col-sm-6:nth-child(3) {
     padding:0;
   }
 
-.products-row .col-md-4:last-child {
-  padding-right:0;
+  .products-row .col-md-4:last-child {
+    padding-right:0;
+  }
+  /* iphone 6 landscape */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape) { 
+  .products-row .col-1-2 {
+    width:50%;
+  }
+  .products-row .col-2-2 {
+    width:50%;
+  }
+  .products-row .col-2-2 .pop-image-small {
+    float: right;
+}
+  .col-xs-12.landscape {
+    width:49%;
+    margin-bottom:20px;
+  }
+  .col-xs-12.landscape:nth-of-type(odd) {
+    padding-right:2%;
+  }
+  
 }
 @media screen and (min-width: 768px) {
   .products-row .col-md-4:first-child {
