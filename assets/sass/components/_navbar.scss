@@ -1,0 +1,96 @@
+/* TOP NAV CSS STYLE UPDATES 
+| move to a _topnav.scss file in modules
+|*/
+
+/* nav bar container */
+.container > .navbar-header {
+  padding-top:14px;
+}
+#navbar {
+  a {
+    color:rgba(255,255,255,1);
+    
+    :hover {
+      color:rgba(255,255,255,0.85);
+      text-decoration: none;
+    }
+  }
+}
+.navbar-inverse {
+    height: 100px;
+    background-color: $theme-primary-color;
+
+    .container {
+      height: 100px;
+      padding: 0;
+    }
+    .navbar-text {
+      color: $white;
+      float:right;
+    }
+    .navbar-toggle {
+      float: left;
+      background:
+        color: transparent;
+        image: none;
+      border: none;
+      border-radius: 0;
+      margin:
+        top: 8px;
+        right: 15px;
+        left: inherit;
+        bottom: 8px;
+      padding: 0;
+        &:hover &:focus 
+        {
+          background-color: rgba(0, 158, 220, 0.9);
+        }
+      .dropdown {
+        position:absolute;
+        left:0;
+        top: 99px;
+    }
+  }
+}
+/* nav bar component */
+#navbar {
+  a {
+  color:rgba(255,255,255,1);
+
+   &:hover {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+   }
+  }  
+  .navbar-top-dropdown {
+    list-style: none;
+    li {
+      font-size: 2.4rem;
+      font-weight: 300;
+      color:#fff;
+      padding:3rem 0;
+    }
+  }
+  .navbar-header {
+    width:100%;
+  }
+}
+.navbar-top-dropdown {
+  list-style:none;
+  li {
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: $white;
+    padding:3rem 0;
+  }
+}
+
+
+.icon-lt-blue {
+  color: #80cfee;
+  background: none;
+  border:0;
+  :hover {
+    color: $white;
+  }
+}

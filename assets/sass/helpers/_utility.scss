@@ -1,0 +1,35 @@
+/* Utility CSS STYLE UPDATES 
+| some utility helper classes 
+|*/
+
+.right-align {
+  float: right;
+}
+
+.strong-text {
+  font-weight: 700;
+}
+
+.collapse {
+  transition: background linear .25s;
+}
+.notification-pending {
+  background-color:#e09f30;
+  color:#fff;
+  font-size: 12px;
+  padding: 3px 7px;
+}
+.notification-shipped {
+  background-color:#009edc;
+  color:#fff;
+  font-size: 12px;
+  padding: 3px 7px;
+}
+
+.hover-effect {
+  background: rgba(255,255,255,0.3);
+  color: $theme-primary-color;
+  transition: background .25s ease-in-out;
+  -moz-transition: background .25s ease-in-out;
+  -webkit-transition: background .25s ease-in-out;
+}

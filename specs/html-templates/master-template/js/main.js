@@ -1,5 +1,5 @@
 // JAVASCRIPT CUSTOM
-      
+
 //toggle plus,minus icons for sidebar accordion headers
 $('.collapse').on('shown.bs.collapse', function(){
     $(this).parent().find(".glyphicon-plus").removeClass("glyphicon-plus").addClass("glyphicon-minus");
@@ -39,9 +39,9 @@ $('#search-sidebar').keyup(function(){
         });
         output += '</div>';
         $('#results').html(output);
-    }); 
+    });
     if (searchField == "") {
-        
+
         $("#results").css("display", "none");
         $(".search").css("padding-bottom",7);
     }
@@ -112,19 +112,27 @@ $('.product-slider').slick({
     ]
 })
 })
-
-$(".selectpicker").change(function() {
-    var val = $('option', this).filter(':selected:last').val();
-    var lastSelected = $('.selectpicker option').index($('.selectpicker option:selected'))
-    console.log("last selected " + lastSelected);
-        var htm = '';
-        htm = '<li><label class="alert alert-warning alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close" data-select-id="' + $(this).find(":selected").data("select-id") + '"<span aria-hidden="true">×</span></button> <strong>' + val + '</strong></label></li>';
-        
-        $('.selectpicker-items-selected').append(htm);
-        $('.selectpicker-items-selected').selectpicker('render');
-})
-$('.selectpicker').selectpicker({
-  noneSelectedText: 'Select one or more content pieces'
+$(".selectpicker").on('changed.bs.select', function (e, clickedIndex, newValue, oldValue) {
+  var val = e.target[clickedIndex].text;
+  if (newValue == true) {
+    var htm = '<li id="items-selected-' + clickedIndex + '"><label class="alert alert-warning alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close" data-id="' + val + '"<span aria-hidden="true">×</span></button> <strong>' + val + '</strong></label></li>';
+    $('.selectpicker-items-selected').append(htm);
+    $('.selectpicker-items-selected').selectpicker('render');
+  } else {
+    $('#items-selected-' + clickedIndex).remove();
+  }
 });
 
+$('.close').click(function () {
+  $('.selectpicker').selectpicker('refresh');
+});
 
+//jQuery('#selectbox option').attr('selected', false);
+
+
+//$('#button').click(function() {
+ //       $('this.parent').attr('selected', '');
+
+//});
+
+// $('.selectpicker option').index($('.selectpicker option:selected'))

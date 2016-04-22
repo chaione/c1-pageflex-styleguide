@@ -1,0 +1,23 @@
+/* Button and Image Links CSS STYLE UPDATES 
+| move to a _topnav.scss file in modules
+|*/
+.primary-links1 & .primary-links2 {
+  background-color:rgba(255,255,255,0);
+  color: $white;
+  opacity: 1;
+}
+
+.primary-links:hover {
+    opacity: 0.8;
+    background-blend-mode: darken;
+}
+
+
+.icon-lt-blue {
+  color: #80cfee;
+  background: none;
+  border:0;
+  :hover {
+    color: $white;
+  }
+}

@@ -1,0 +1,117 @@
+//Main color scheme
+$theme-primary-color: #00a9e6 !default;
+$theme-secondary-color: #9fcc3b !default;
+$theme-tertiary-color: #ff0000 !default;
+
+//Brand Gray Color Palette
+$gray-dark: #58595b;
+$gray-medium-dark: #868686;
+$gray-medium: #d1d3d4;
+$gray-light-medium: #e6e7e8;
+$gray-light: #f1f2f2;
+
+//General colors
+$white: #ffffff !default;
+$green: #ff0000 !default;
+$orange: #f37021 !default;
+$blue: #00a9e6 !default;
+$theme-bg--color: $gray-light !default;
+
+//Text
+$theme-font--face: 'Open Sans', Arial, sans-serif !default;
+$theme-font--size: 1.4rem !default;
+$theme-font--size-small: 1.2rem !default;
+$theme-font--size-large: 2.1rem !default;
+$theme-font--size-xlarge: 3rem !default;
+$theme-text--color: $theme-tertiary-color !default;
+
+//Form elements
+$input-select--width: 200px !default;
+$input-textbox--width: $input-select--width !default;
+$input-textbox--border-color: $theme-secondary-color !default;
+$input-textbox--border: 1px solid $theme-secondary-color !default;
+$input-textbox--bg-color: $white !default;
+$input-textbox--focus-border: rgba(119,119,119,.8) !default;
+$input-textbox--focus-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 102, 102, .6) !default;
+
+//Links
+$link--color: $theme-tertiary-color !default;
+$link--color-hover: $blue !default;
+$link--transition: .2s !default;
+$help-text--color: $green !default;
+$help-text--color-hover: $link--color-hover !default;
+
+//Spacing
+$column-gutter--width: 15px !default;
+$column-gutter--width-none: 0px !default;
+
+//Navigation
+$nav-bg--color: $theme-primary-color !default;
+$nav-link--color: $theme-tertiary-color !default;
+//$nav-link--color-hover: $theme-quaternary-color !default;
+$nav-bg--color-hover: $theme-secondary-color !default;
+$nav-bg--color-selected: $theme-tertiary-color !default;
+
+//Buttons
+$button-bg--color: $white !default;
+$button-bg--color-hover:  $white !default;
+$button-border--color: $theme-primary-color !default;
+$button-border: 1px solid $button-border--color !default;
+$button-text--color: $theme-primary-color !default;
+$button-text--color-hover: $gray-medium-dark !default;
+
+//Area headers on landing pages
+$header-bg--color: $theme-primary-color !default;
+$header-text--color: $theme-tertiary-color !default;
+$header-text--size: 16px !default;
+$header-icon--size: 28px !default;
+
+//Area comments on landing pages
+$comment-bg--color: $header-bg--color !default;
+$comment-text--color: $theme-tertiary-color !default;
+$comment-text--size: 14pt !default;
+
+//Area body on landing pages
+$area-bg--color: $header-bg--color !default;
+
+//Form fill steps overview
+/*$step-border-bottom: 1px solid $theme-quinary-color !default;
+$step-bg--color: $theme-quaternary-color !default;
+$step-text--color: $theme-tertiary-color !default;
+$step-text--color-selected: $theme-quaternary-color !default;
+$step-text--color-hover: $step-text--color !default;
+$step-bg--color-selected: $step-text--color-hover !default;
+$step-bg--color-selected: $step-bg--color-selected !default;
+$step-border-right: 2px solid $step-bg--color-selected !default;
+$step-border-right--hover: 2px solid $step-bg--color-selected !default;
+$step-border-right--selected: 2px solid $white !default;
+$step-bg--color-hover: $theme-secondary-color !default; */
+
+//Form fill process
+$icon-font--formfill-edit: normal normal normal 16pt "ui-icons" !default;
+$icon-content--formfill-edit: "\e041" !default;
+
+//Shopping Cart
+$cart-table--header-bg-color: #e0e0e0 !default;
+$cart-table--header-text-color: $theme-tertiary-color !default;
+$cart-table--bg-color-odd: #fff !default;
+$cart-table--bg-color-even: #f0f1f2 !default;
+
+//My library
+$assets-bg--color: #eee !default;
+
+//Approvals
+$icon-content--approval-pending: "\e052" !default;
+$billing-address-border: $button-border !default;
+
+//Helper classes
+$error-text--color: $red !default;
+$warning-bg--color: #f2c84b !default;
+$warning-text--color: $theme-tertiary-color !default;
+$warning-border: 1px solid #f2b705 !default;
+$warning-icon--content: "\f071" !default;
+$warning-icon--font: normal normal normal 14px/1 FontAwesome !default;
+
+//Checkout
+$checkout-border--color: #b1aaa6 !default;;
+$checkout-border: 1px solid  $checkout-border--color !default;

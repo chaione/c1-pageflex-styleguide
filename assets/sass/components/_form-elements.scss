@@ -1,0 +1,75 @@
+/* FORMS CSS STYLE UPDATES 
+| move to a _forms.scss file in modules
+|*/
+.form-control {
+  border: 1px solid $gray-medium;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-box-shadow:0;
+  margin-bottom: 0;
+}
+/* ----------- /_forms.scss */
+
+/* custom css for checkboxes and radio buttons */
+.checkbox-custom, .radio-custom {
+    opacity: 0;
+    position: absolute;   
+}
+
+.checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.checkbox-custom-label, .radio-custom-label {
+    font-weight: 300; /*change bootstrap bold to light */
+    position: relative;
+}
+
+.checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
+    content: '';
+    background: #fff;
+    border: 1px solid #58595b;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 3px;
+}
+.checkbox-custom-label:hover::before,
+.radio-custom-label:hover::before {
+  border: 1px solid #009edc;
+}
+.checkbox-custom:checked + .checkbox-custom-label:before {
+    content: "\e013";
+    font-family: 'Glyphicons Halflings';
+    background: #009edc;
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: .6;
+    /* margin-left: initial; */
+    padding-left: 0;
+    width: 20px;
+    height: 20px;
+    /* margin-left: -3px; */
+    padding-top: 5px;
+    border: 1px solid #009edc;
+}
+
+.radio-custom + .radio-custom-label:before {
+    border-radius: 50%;
+}
+
+
+.radio-custom:checked + .radio-custom-label:before {
+    background: #009edc;
+    box-shadow: inset 0px 0px 0px 4px #fff;
+}
+.checkbox-custom:focus + .checkbox-custom-label, .radio-custom:focus + .radio-custom-label {
+  outline: 1px solid #ddd; /* focus style */
+}
