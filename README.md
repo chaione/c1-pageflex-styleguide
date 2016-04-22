@@ -1,3 +1,5 @@
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 Initialized with [SourceJS](http://sourcejs.com) 0.5.3 - Living Style Guide Engine and Maintenance Environment for Front-end Components.
 
 ___
