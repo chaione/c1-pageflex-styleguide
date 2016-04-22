@@ -560,26 +560,36 @@ input[type=checkbox] {
 
 }
 .pop-image-large > a:hover,
-.pop-image-small > a:hover {
+.pop-image-small > a:hover,
+.pop-image-large > a:focus,
+.pop-image-small > a:focus {
   color:#fff;
+  font-weight: 700;
 }
 .pop-image-large > a > img,
 .pop-image-small > a > img {
   opacity: 0.2;
-  transition: opacity .5s ease-out;
-  -moz-transition: opacity .5s ease-out;
-  -webkit-transition: opacity .5s ease-out;
-  -o-transition: opacity .5s ease-out;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   margin: auto;
+    transition: opacity .25s ease-out;
+  -moz-transition: opacity .25s ease-out;
+  -webkit-transition: opacity .25s ease-out;
+  -o-transition: opacity .25s ease-out;
+  cursor: default;
 }
 .pop-image-large > a:hover > img,
 .pop-image-small > a:hover > img{
   opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
 }
 .pop-image-small {
     width: 100%;
