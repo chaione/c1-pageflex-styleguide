@@ -21,6 +21,12 @@ body {
 :focus {
     outline: 0 !important; /*removes default focus outline for accessibility */
 }
+.img-fade img {
+  opacity:1;
+    transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -webkit-transition: all .25s ease-in-out;
+}
 .img-fade:hover img {
     cursor: pointer;
     opacity: .65;
@@ -655,7 +661,7 @@ input[type=checkbox] {
 .products-row .col-md-4:last-child {
   padding-right:0;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .products-row .col-md-4:first-child {
     padding-left:0;
     padding-right: 15px;
@@ -690,15 +696,43 @@ input[type=checkbox] {
 }
   
 }
-@media (min-width:992px) {
+
+@media screen and (min-width:992px) and (orientation: landscape)  {
   .pops {
     height: 300px;
     margin-bottom: 40px;
+  }
+  .pop-image-small {
+    width: 100%;
+    max-width: 255px;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    background-color: #8fc63e;
+    padding-bottom: 100%;
+  }
+  .products-row .pops .col-sm-6:nth-child(2) {
+    padding-right: 0;
+  }
+  .products-row .col-sm-6:nth-child(2) {
+    padding-right: 15px;
+  }
+  .products-row .col-sm-6:nth-child(3) {
+    padding-left: 0;
+    padding-right: 15px;
+    padding-top:0;
   }
   .pop-image-large,
   .pop-image-small {
     height: 300px;
     padding-bottom:0;
+  }
+}
+@media screen and (min-width:992px) {
+  .pops {
+    height: 300px;
+    margin-bottom: 40px;
   }
   .pop-image-small {
     width: 100%;
@@ -721,40 +755,12 @@ input[type=checkbox] {
     padding-right: 15px;
     padding-top:0;
   }
-}
-@media (min-width:992px) and (orientation: landscape)  {
-  .pops {
-    height: 300px;
-    margin-bottom: 40px;
-  }
   .pop-image-large,
   .pop-image-small {
     height: 300px;
     padding-bottom:0;
   }
-  .pop-image-small {
-    width: 100%;
-    max-width: 255px;
-    height: auto;
-    margin: auto;
-    text-align: center;
-    position: relative;
-    background-color: #8fc63e;
-    padding-bottom: 100%;
 }
-  .products-row .pops .col-sm-6:nth-child(2) {
-    padding-right: 0;
-  }
-  .products-row .col-sm-6:nth-child(2) {
-    padding-right: 15px;
-  }
-  .products-row .col-sm-6:nth-child(3) {
-    padding-left: 0;
-    padding-right: 15px;
-    padding-top:0;
-  }
-}
-
 /*menu change - take off box shadow */
 #accordion .list-group {
   -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .075);
