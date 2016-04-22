@@ -829,56 +829,11 @@ button.slick-prev.slick-arrow {
   font-size: 2rem;
 }
 
-.icon-pf_btn_checkbox_selected .path1:before {
-    content: "\e90e";
-    color: rgb(0, 158, 220);
-}
-.icon-pf_btn_checkbox_selected .path2:before {
-    content: "\e90f";
-    margin-left: -1em;
-    color: rgb(255, 255, 255);
-}
-.icon-pf_btn_checkbox .path1:before {
-    content: "\e910";
-    color: rgb(255, 255, 255);
-}
-.icon-pf_btn_checkbox .path2:before {
-    content: "\e911";
-    margin-left: -1em;
-    color: rgb(134, 134, 134);
-}
-.icon-pf_btn_radio_selected .path1:before {
-    content: "\e912";
-    color: rgb(255, 255, 255);
-}
-.icon-pf_btn_radio_selected .path2:before {
-    content: "\e913";
-    margin-left: -1em;
-    color: rgb(0, 158, 220);
-}
-.icon-pf_btn_radio_selected .path3:before {
-    content: "\e914";
-    margin-left: -1em;
-    color: rgb(0, 158, 220);
-}
-.icon-pf_btn_radio .path1:before {
-    content: "\e915";
-    color: rgb(255, 255, 255);
-}
-.icon-pf_btn_radio .path2:before {
-    content: "\e916";
-    margin-left: -1em;
-    color: rgb(134, 134, 134);
-}
-.icon-pf_icn_menu:before {
-    content: "\e906";
-        color:#009edc;
-    font-size:1.8rem;
-}
-.icon-pf_btn_next_arrow:before {
+/* New Font Icons -- updated -4/21/16 */
+.icon-pf_btn_radio_selected:before {
     content: "\e900";
 }
-.icon-pf_btn_prv_arrow:before {
+.icon-pf_btn_radio_hover:before {
     content: "\e901";
 }
 .icon-pf_btn_remove:before {
@@ -887,35 +842,51 @@ button.slick-prev.slick-arrow {
 .icon-pf_icn_collapse:before {
     content: "\e903";
 }
-.icon-pf_icn_expand:before {
+.icon-pf_img_checkbox_hover:before {
     content: "\e904";
 }
-.icon-pf_icn_info:before {
+.icon-pf_img_checkbox_selected:before {
     content: "\e905";
 }
-.icon-pf_icn_cart:before {
+.icon-pf_img_dropdown_blue:before {
+    content: "\e906";
+}
+.icon-pf_btn_next_arrow:before {
     content: "\e907";
 }
-.icon-pf_icn_delete:before {
+.icon-pf_btn_prv_arrow:before {
     content: "\e908";
 }
-.icon-pf_icn_download:before {
+.icon-pf_icn_expand:before {
     content: "\e909";
 }
-.icon-pf_icn_hide_files:before {
+.icon-pf_icn_info_active:before {
     content: "\e90a";
 }
-.icon-pf_icn_notifications:before {
+.icon-pf_icn_menu:before {
     content: "\e90b";
 }
-.icon-pf_icn_upload:before {
+.icon-pf_icn_upload_blue:before {
     content: "\e90c";
 }
-.icon-pf_icn_rename:before {
+.icon-pf_icn_cart:before {
     content: "\e90d";
 }
-
-
+.icon-pf_icn_delete:before {
+    content: "\e90e";
+}
+.icon-pf_icn_download:before {
+    content: "\e90f";
+}
+.icon-pf_icn_hide_files:before {
+    content: "\e910";
+}
+.icon-pf_icn_notifications:before {
+    content: "\e911";
+}
+.icon-pf_icn_rename:before {
+    content: "\e912";
+}
    /* /Pageflex icon styles
 ---------------------------------------------------------------------------------- */
 
