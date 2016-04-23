@@ -1,0 +1,149 @@
+/* Photography & Image Related CSS STYLE UPDATES 
+| 
+|*/
+/*text over image for products */
+.product-overlay-image {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #009edc;
+  cursor: default;
+  width: 100%;
+}
+
+
+.product-module {
+  position: relative;
+  display:block;
+  margin: 0;
+  width: 100%;
+  height: 275px;
+  background-size: cover;
+  overflow: hidden;
+  
+}
+.product-module h3 {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 15px 10px;
+  color: #57585b;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  width: 100%;
+  margin: 0;
+  line-height: 2;
+}
+.product-module i {
+  font-size: 2.6rem;
+  float:right;
+}
+.pop-image-large {
+  width:100%;
+  max-width: 540px;
+  height:auto;
+  margin: auto;
+  text-align:center;
+  position:relative;
+  background-color:#009edc;
+  padding-bottom: 55.56%
+}
+.pop-image-large,
+.pop-image-small {
+  position: relative;
+  overflow: hidden;
+}
+.pop-image-large:first-child {
+  float:left;
+}
+.pop-image-large > a,
+.pop-image-small > a {
+
+}
+.pop-image-large > a:hover,
+.pop-image-small > a:hover,
+.pop-image-large > a:focus,
+.pop-image-small > a:focus {
+  color:#fff;
+  font-weight: 700;
+}
+.pop-image-large > a > img,
+.pop-image-small > a > img {
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+    transition: opacity .25s ease-out;
+  -moz-transition: opacity .25s ease-out;
+  -webkit-transition: opacity .25s ease-out;
+  -o-transition: opacity .25s ease-out;
+  cursor: default;
+}
+.pop-image-large > a:hover > img,
+.pop-image-small > a:hover > img{
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+.pop-image-small {
+    width: 100%;
+    max-width: 255px;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    background-color: #8fc63e;
+    padding-bottom: 56%;
+}
+/*
+@media (min-width:768px) {
+  .pop-image-small {
+  width: 100%;
+  max-width: 255px;
+  height:auto;
+  margin: auto;
+  text-align:center;
+  position:relative;
+  background-color:#8fc63e;
+  padding-bottom:115%
+  }
+}
+*/
+.link-over-image {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  height: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: none;
+  cursor: default;
+}
+.linked-image {
+  
+}
+.link-over-image > span {
+  border: 1px solid #fff;
+  font-size: 2.1rem;
+  font-weight: 700;
+  padding: 5px 30px;
+}
