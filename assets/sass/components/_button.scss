@@ -11,6 +11,7 @@ button, .btn {
   padding: 10px 15px;
   transition:All .7s ease;
   border-radius: 0;
+  border-width: 1px;
 }
 .btn-primary {
     color: $theme-primary-color; //#009edc;
@@ -20,6 +21,7 @@ button, .btn {
     &:hover,
     &:focus {
       background-color: $theme-primary-color;
+      border: $border-blue;
       color: $white;
     }
 }
@@ -32,6 +34,7 @@ button, .btn {
     &:focus {
       background-color: $gray-medium-dark;
       color: $white;
+      border-color: $gray-medium-dark;
     }
 }
 .btn-secondary {
