@@ -43,12 +43,12 @@
     <h3>Button - Text Link - Secondary Button with Shadow on Hover</h3>
 
     <markdown>
-        Change class to `<a class="btn btn-secondary-shadow">` to get smaller button with shadow.
+        Change class to `<a class="btn btn-secondary-white">` to get smaller button with shadow.
     </markdown>
       <code class="src-html source_visible">
       </code>
      <div class="source_example">
-        <a href="#777" class="btn btn-secondary-shadow">Secondary Button</a>
+        <a href="#777" class="btn btn-secondary-white">Secondary Button</a>
     </div>
 </section>
 
@@ -88,7 +88,6 @@ button, .btn {
   padding: 10px 15px;
   transition:All .7s ease;
   border-radius: 0;
-
 }
 .btn-primary {
   color: #009edc;
@@ -127,22 +126,20 @@ button, .btn {
   background-color:#868686;
 }
 
-.btn-secondary-shadow {
+.btn-secondary-white {
   color: #868686;
   background-color: #fff;
   border: 1px solid #fff;
-  -moz-box-shadow: 0px 0px 2px rgba(212,212,212,0.85);
-  -webkit-box-shadow: 0px 0px 2px rgba(212,212,212,0.85);
-  box-shadow: 0px 0px 2px rgba(212,212,212,0.85);
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.25);
   min-width: 100px;
 }
 
-.btn-secondary-shadow:hover {
+.btn-secondary-white:hover {
   color: #fff;
   background-color:#868686;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  border:1px solid #868686;
 }
 
 /* /Button

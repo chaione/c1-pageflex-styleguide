@@ -1,6 +1,66 @@
 /* Button and Image Links CSS STYLE UPDATES 
 | move to a _topnav.scss file in modules
 |*/
+button, .btn {
+  font-family: $theme-font--face; // 'Open Sans',Arial,Helvetica,sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 4rem;
+  padding: 10px 15px;
+  transition:All .7s ease;
+  border-radius: 0;
+}
+.btn-primary {
+    color: $theme-primary-color; //#009edc;
+    background-color: $white;
+    border-color: $theme-primary-color;
+    min-width: 150px;
+    &:hover,
+    &:focus {
+      background-color: $theme-primary-color;
+      color: $white;
+    }
+}
+.btn-primary-gray {
+    color: $gray-medium-dark; //#868686
+    background-color: $white;
+    border-color: $gray-medium-dark;
+    min-width: 150px;
+    &:hover,
+    &:focus {
+      background-color: $gray-medium-dark;
+      color: $white;
+    }
+}
+.btn-secondary {
+    color: $gray-dark; // #868686;
+    background-color: $gray-light-medium;
+    border-color: $gray-light-medium; // #e6e7e8;
+    min-width: 150px;
+    &:hover,
+    &:focus {
+      background-color: $gray-dark;
+      border-color: $gray-dark;
+      color: $white;
+    }
+}
+.btn-secondary-white {
+    color: $gray-dark; // #868686;
+    background-color: $white;
+    border-color: $gray-light-medium; // #e6e7e8;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.25);
+    min-width: 100px;
+    &:hover,
+    &:focus {
+      background-color: $gray-dark;
+      border-color: $gray-dark;
+      color: $white;
+    }
+}
 .primary-links1, .primary-links2 {
   display:block;
   background-color:rgba(255,255,255,0);

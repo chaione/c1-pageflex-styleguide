@@ -29,6 +29,7 @@ $theme-font--face: 'Open Sans', Arial, sans-serif !default;
 $theme-font--size: 1.4rem !default;
 $theme-font--size-xsmall: 1.2rem !default;
 $theme-font--size-small: 1.3rem !default;
+$theme-font--size-medium: 1.6rem !default;
 $theme-font--size-large: 2.1rem !default;
 $theme-font--size-xlarge: 3rem !default;
 $theme-text--color: $theme-tertiary-color !default; 
@@ -65,6 +66,7 @@ $button-bg--color: $white !default;
 $button-bg--color-hover:  $white !default;
 $button-border--color: $theme-primary-color !default;
 $button-border: 1px solid $button-border--color !default;
+$button-text--size: $theme-font--size-medium !default;
 $button-text--color: $theme-primary-color !default;
 $button-text--color-hover: $gray-medium-dark !default;
 
