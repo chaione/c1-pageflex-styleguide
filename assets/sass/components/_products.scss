@@ -1,3 +1,224 @@
 /* Product Related CSS STYLE UPDATES 
 | 
 |*/
+
+  
+.section-title {
+  font-size: 1.6rem;
+  color:#009edc;
+  text-transform: uppercase;
+}
+.product-title {
+    font-size: $theme-font--size; // 1.4rem;
+    color:#58595b;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.product-description {
+    font-size: $theme-font--size; // 1.4rem;
+    color: $gray-dark; //#58595b;
+}
+.product-price {
+    font-size: $theme-font--size; // 1.4rem;
+    color: $gray-dark; //#58595b;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.product-price-per-piece {
+    font-size: $theme-font--size; // 1.4rem;
+    color: $gray-dark; //#58595b;
+    margin-bottom: 0;
+}
+
+
+
+.product-title-overlay {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+.product-title-overlay > span {
+    font-size: 14px;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 30px;
+    text-transform: uppercase;
+}
+.product-text-overlay {
+  display: block;
+  padding: 65px 10px 20px 10px;
+  background: rgba(255,255,255,0.75);
+  height: 100%;
+  max-height: 275px;
+  p {
+    font-size: $theme-font--size-small; // 1.3rem;
+    color: $gray-dark; //#58595b;
+  }
+}
+
+
+.products-row {
+  margin: 0 0 70px 0;
+  overflow:hidden;
+    @media (min-width: 992px) {
+      margin-left: auto;
+      margin-right: auto;
+    } 
+  }
+  .product-module {
+    background-size: cover;
+    position: relative;
+    display:block; 
+    margin: 0;
+    width: 100%;
+    height: 275px;
+    overflow: hidden;
+    a {
+      color: $gray-dark; //#58595b;
+      &:hover {
+        color: $theme-primary-color; //#009edc;
+      }
+    }
+    h3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.75);
+      color: $gray-dark; // #58595b;
+      font-size: $theme-font--size; // 1.4rem;
+      line-height: 2;
+      margin: 0;
+      padding: 15px 10px;
+      text-transform: uppercase;
+      width: 100%; 
+      z-index: 999;
+    }
+    i {
+      font-size: 2.6rem;
+      float:right;
+    }
+} 
+.products-row {
+  .col-xs-12 {
+    padding:0;
+  }
+  .col-1-2 {
+    padding-left:0;
+    padding-right:0;
+  }
+  .col-2-2 {
+    padding-right:0;
+    float:right;
+    
+  }
+  .col-md-4 {
+    padding-right: 0;
+  } 
+  .col-sm-6:nth-child(2) {
+    padding: 0;
+  }
+  .col-sm-6:nth-child(3) {
+    padding:0;
+  }
+  .col-md-4:last-child {
+    padding-right:0;
+  }
+}
+//bootstrap well class update
+  .well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 14px;
+    margin-top: 58px;
+    background-image: none;
+    background-color: rgba(255,255,255,0.75);
+    border: none; 
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    position: absolute;
+    z-index: 999;
+    height: 100%;
+}
+/* iphone 6 landscape */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape) { 
+  .products-row .col-1-2 {
+    width:50%;
+  }
+  .products-row .col-2-2 {
+    width:50%;
+  }
+  .products-row .col-2-2 .pop-image-small {
+    float: right;
+  }
+  .col-xs-12.landscape {
+    width:49%;
+    margin-bottom:20px;
+  }
+  .col-xs-12.landscape:nth-of-type(odd) {
+    padding-right:2%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .products-row .col-md-4:first-child {
+    padding-left:0;
+    padding-right: 15px;
+  }
+  .products-row .col-md-4 {
+  padding-right: 10px;
+  }
+  .pops {
+    height: 200px;
+    margin-bottom: 30px;
+  }
+  .products-row .col-sm-6:nth-child(2) {
+    padding-right: 0;
+  }
+  .products-row .col-sm-6:nth-child(3) {
+    padding-left: 0;
+    padding-right: 15px;
+    padding-top: 30px;
+  }
+}
+@media screen and (min-width:992px) {
+  .pops {
+    height: 300px;
+    margin-bottom: 40px;
+  }
+  .products-row .pops .col-sm-6:nth-child(2) {
+    padding-right: 0;
+  }
+  .products-row .col-sm-6:nth-child(2) {
+    padding-right: 15px;
+  }
+  .products-row .col-sm-6:nth-child(3) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top:0;
+  }
+}
+
+@media screen and (min-width:992px) and (orientation: landscape)  {
+  .pops {
+    height: 300px;
+    margin-bottom: 40px;
+  }
+  .products-row .pops .col-sm-6:nth-child(2) {
+    padding-right: 0;
+  }
+  .products-row .col-sm-6:nth-child(2) {
+    padding-right: 15px;
+  }
+  .products-row .col-sm-6:nth-child(3) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top:0;
+  }
+
+}

@@ -1,70 +1,50 @@
-/* TOP NAV CSS STYLE UPDATES 
-| move to a _topnav.scss file in modules
+/* Slick Slider CSS STYLE UPDATES 
+| css updates for the slick slider js plugin
 |*/
 
-/* nav bar container */
-.products-row {
-  margin-bottom:70px;
+/*slick slide CSS */
+.slick-initialized .slick-slide {
+    display: block;
+    padding: 0 15px;
 }
-  @media (min-width: 992px) {
-    .products-row {
-      margin-left: auto;
-      margin-right: auto;
-    } 
+.slick-slide.slick-active,
+.slick-slide.slick-cloned {
+    padding-right: 27px;
+}
+.slick-slide.slick-current {
+    padding-left:10px;
+}
+.slick-slide.slick-current[first-child] {
+  padding-left:0;
+}
+.slick-slide img:hover {
+    cursor: pointer;
+    opacity: .65;
+}
+button.slick-next.slick-arrow,
+button.slick-prev.slick-arrow {
+    display: inline-block;
+    padding: 5px 14px;
+    background: $gray-light-medium; // #e6e7e8;
+    border: 0px solid #ddd;
+    border-radius: 0;
+    color: $gray-dark; //#58595b;
+}
+button.slick-arrow:hover {
+    color: $theme-primary-color; // #009edc;
+}
+.slick-slide.slick-current.slick-active {
+    padding-left: 0;
+}
+
+.slick-slide.slick-current.slick-active[data-slick-index="0"] {
+  padding-left:5px;
+}
+.slick-slide {
+  a {
+    color:$gray-dark;
+    &:hover {
+      color: $theme-primary-color;
+    }
   }
-  
-.section-title {
-  font-size: 1.6rem;
-  color:#009edc;
-  text-transform: uppercase;
-}
-.product-title {
-    font-size: 14px;
-    color:#58595b;
-    font-weight: 700;
-    margin-bottom: 0;
-}
-.product-description {
-    font-size: 14px;
-    color:#58595b;
-}
-.product-price {
-    font-size: 14px;
-    color:#58595b;
-    font-weight: 700;
-    margin-bottom: 0;
-}
-.product-price-per-piece {
-    font-size:14px;
-    color:#58595b;
-    margin-bottom: 0;
-}
-
-
-.product-text-overlay p {
-  font-size:1.3rem;
-  color:#58595b;
-}
-
-.product-title-overlay {
-  position: absolute;
-  top: 50%;
-  text-align: center;
-  width: 100%;
-  margin: 0;
-}
-.product-title-overlay > span {
-  font-size: 14px;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 10px 30px;
-  text-transform: uppercase;
-}
-.product-text-overlay {
-  display: block;
-  padding: 65px 10px 20px 10px;
-  background: rgba(255,255,255,0.75);
-  height: 100%;
-  max-height: 275px;
-  /*transition: all linear .25s;*/
-}
+} 

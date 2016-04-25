@@ -1,0 +1,32 @@
+/* Reset Styles - Global 
+| 
+|*/
+
+/*text over image for products */
+* {
+  outline:0;
+}
+body {
+  font-family: $theme-font--face; /* 'Open Sans', Arial, sans-serif */
+  overflow-x: hidden;
+  background-color: $gray-light; /* #f1f2f2 */
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0 !important; /*removes default focus outline for accessibility */
+}
+/* link resets */
+a {
+  color:$theme-primary-color; /* #009edc */
+}
+a:hover, a:focus {
+  color: $theme-primary-color; 
+  text-decoration: none;
+  outline: 0;
+}
+a:focus {
+  color: $black;
+}

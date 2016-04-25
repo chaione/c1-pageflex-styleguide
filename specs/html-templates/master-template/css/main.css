@@ -1,865 +1,1238 @@
-
-
-/* ==========================================================================
-   PAGEFLEX CUSTOM STYLES
-   AUTHOR: PAUL CONN
-   LAST UPDATE: 04/19/2016
-   
-   V 1.1 - current build, very messy. clean up and move to sass syntax
-   in next version
-   ========================================================================== */
+@charset "UTF-8";
+/* ----------- SASS ARCHITECTURE -------------- 
+sass/ 
+| 
+|– base/ 
+|   |– _base.scss        # load base styles 
+|   |– _ie.scss          # ie specific styles 
+|   |– _reset.scss       # Reset/normalize 
+|   |– _typography.scss  # Typography rules 
+|   ...                  # Etc… 
+| 
+|– components/ 
+|   |– _bootstrap-select.scss   # Bootstrap select styles 
+|   |– _buttons.scss            # Buttons 
+|   |– _carousel.scss           # Carousel 
+|   |– _form-elements.scss      # Form Elements 
+|   |– _navbar.scss             # Top Nav Bar 
+|   |– _photography.scss        # Photography/Images 
+|   |– _products.scss           # Products
+|   |– _search.scss             # Live search styles 
+|   |– _sidebar.scss            # Sidebar  
+| 
+|– helpers/ 
+|   |– _variables.scss            # Sass Variables 
+|   |– _functions.scss            # Sass Functions 
+|   |– _mixins.scss               # Sass Mixins 
+|   |– _pageflex-variables.scss   # Class & placeholders helpers 
+|   |– _utility.scss              # Utility classes 
+| 
+|– layout/ 
+|   |– _grid.scss        # Grid system 
+|   |– _header.scss      # Header 
+|   |– _footer.scss      # Footer 
+|   |– _sidebar.scss     # Sidebar 
+|   |– _forms.scss       # Forms 
+|   ...                  # Etc… 
+| 
+|– pages/ 
+|   |– _home.scss        # Home specific styles 
+|   |– _contact.scss     # Contact specific styles 
+|   ...                  # Etc… 
+| 
+|– themes/ 
+|   |– _pageflex.scss       # Default theme 
+|   |– _admin.scss          # Admin theme 
+|   ...                     # Etc… 
+| 
+|– vendors/ 
+|   |– _bootstrap-custom.scss   # Bootstrap 
+|   ...                  # Etc… 
+| 
+| 
+`– main.scss             # primary Sass file 
+---------------------------------------------------------*/
+/*$step-border-bottom: 1px solid $theme-quinary-color !default;
+$step-bg--color: $theme-quaternary-color !default;
+$step-text--color: $theme-tertiary-color !default;
+$step-text--color-selected: $theme-quaternary-color !default;
+$step-text--color-hover: $step-text--color !default;
+$step-bg--color-selected: $step-text--color-hover !default;
+$step-bg--color-selected: $step-bg--color-selected !default;
+$step-border-right: 2px solid $step-bg--color-selected !default;
+$step-border-right--hover: 2px solid $step-bg--color-selected !default;
+$step-border-right--selected: 2px solid $white !default;
+$step-bg--color-hover: $theme-secondary-color !default; */
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+/* Reset Styles - Global 
+| 
+|*/
+/*text over image for products */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+/* line 6, ../sass/base/_reset.scss */
 * {
-  outline:0;
+  outline: 0;
 }
+
+/* line 9, ../sass/base/_reset.scss */
 body {
-  font-family: "Open Sans",Helvetica,arial,sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
+  /* 'Open Sans', Arial, sans-serif */
   overflow-x: hidden;
   background-color: #f1f2f2;
+  /* #f1f2f2 */
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
-/*GLOBAL */
+
 /* remember to define focus styles! */
+/* line 18, ../sass/base/_reset.scss */
 :focus {
-    outline: 0 !important; /*removes default focus outline for accessibility */
+  outline: 0 !important;
+  /*removes default focus outline for accessibility */
 }
-.img-fade img {
-  opacity:1;
-    transition: all .25s ease-in-out;
-  -moz-transition: all .25s ease-in-out;
-  -webkit-transition: all .25s ease-in-out;
-}
-.img-fade:hover img {
-    cursor: pointer;
-    opacity: .65;
-}
+
+/* link resets */
+/* line 22, ../sass/base/_reset.scss */
 a {
-  color:#009edc;
+  color: #009edc;
+  /* #009edc */
 }
+
+/* line 25, ../sass/base/_reset.scss */
 a:hover, a:focus {
-  color: #868686;
+  color: #009edc;
   text-decoration: none;
   outline: 0;
 }
 
-input[type=checkbox] {
-	visibility: hidden;
+/* line 30, ../sass/base/_reset.scss */
+a:focus {
+  color: #000;
 }
 
-.form-control {
-  border: 1px solid #d1d3d4;
-  border-radius: 0;
-  box-shadow: none;
-  -webkit-box-shadow:0;
-  margin-bottom: 0;
-}
-.radio label, .checkbox label {
-    min-height: 20px;
-    padding-left: 20px;
-    margin-bottom: 0;
-    font-weight: normal;
-    cursor: pointer;
-    line-height: 2;
-}
-/* custom css for checkboxes and radio buttons */
-.checkbox-custom, .radio-custom {
-    opacity: 0;
-    position: absolute;   
+/* utility */
+/* line 6, ../sass/base/_typography.scss */
+.strong-text {
+  font-weight: 700;
 }
 
-.checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 5px;
-    cursor: pointer;
+/* line 9, ../sass/base/_typography.scss */
+.icon-pf_icn_info {
+  color: #6D6E71;
 }
 
-.checkbox-custom-label, .radio-custom-label {
-    font-weight: 300; /*change bootstrap bold to light */
-    position: relative;
+/* Button and Image Links CSS STYLE UPDATES 
+| move to a _topnav.scss file in modules
+|*/
+/* line 4, ../sass/components/_button.scss */
+.primary-links1, .primary-links2 {
+  display: block;
+  background-color: rgba(255, 255, 255, 0);
+  color: #ffffff;
+  opacity: 1;
 }
 
-.checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
-    content: '';
-    background: #fff;
-    border: 1px solid #58595b;
-    display: inline-block;
-    vertical-align: middle;
-    width: 20px;
-    height: 20px;
-    padding: 2px;
-    margin-right: 10px;
-    text-align: center;
-    border-radius: 3px;
-}
-.checkbox-custom-label:hover::before,
-.radio-custom-label:hover::before {
-  border: 1px solid #009edc;
-}
-.checkbox-custom:checked + .checkbox-custom-label:before {
-    content: "\e013";
-    font-family: 'Glyphicons Halflings';
-    background: #009edc;
-    color: #fff;
-    font-size: 1.3rem;
-    line-height: .6;
-    /* margin-left: initial; */
-    padding-left: 0;
-    width: 20px;
-    height: 20px;
-    /* margin-left: -3px; */
-    padding-top: 5px;
-    border: 1px solid #009edc;
-}
-
-.radio-custom + .radio-custom-label:before {
-    border-radius: 50%;
-}
-
-
-.radio-custom:checked + .radio-custom-label:before {
-    background: #009edc;
-    box-shadow: inset 0px 0px 0px 4px #fff;
-}
-.checkbox-custom:focus + .checkbox-custom-label, .radio-custom:focus + .radio-custom-label {
-  outline: 1px solid #ddd; /* focus style */
-}
-
-/* nav bar top */
-.container>.navbar-header {
-    padding-top: 14px;
-}
-#navbar a {
-  color:rgba(255,255,255,1);
-}
-#navbar a:hover {
-  color: rgba(255,255,255,0.85);
-  text-decoration: none;
-}
-.navbar-inverse {
-  height: 100px;
-  background-color: #009edc;
-}
-.navbar-inverse .navbar-text {
-  color: #fff;
-  float:right;
-}
-
-.navbar-inverse .navbar-toggle:hover, 
-.navbar-inverse .navbar-toggle:focus {
-  background-color: rgba(0, 158, 220, 0.9);
-}
-.navbar-toggle {
-  float: left;
-  padding: 0;
-  margin-right: 15px;
-  margin-bottom: 8px;
-  background-color: transparent;
-  background-image: none;
-  border: none;
-  border-radius: 4px;
-}
-.navbar-toggle.dropdown {
-  position: absolute;
-    left: 0;
-    top: 99px;
-}
-.navbar .container {
-  height: 100px;
-  padding: 0;
-}
-.navbar-header {
-  width:100%;
-}
-.primary-links1,.primary-links2 {
-    display: block;
-    height: 100%;
-    background-color:rgba(255,255,255,0);
-    color:#fff;
-    opacity: 1;
-}
+/* line 10, ../sass/components/_button.scss */
 .primary-links:hover {
-    opacity: 0.8;
-    background-blend-mode: darken;
+  background-blend-mode: darken;
+  opacity: 0.8;
 }
+
+/* line 14, ../sass/components/_button.scss */
+.icon-lt-blue {
+  color: #80cfee;
+  background: none;
+  border: 0;
+}
+/* line 18, ../sass/components/_button.scss */
+.icon-lt-blue:hover {
+  color: #ffffff;
+}
+
+/* line 22, ../sass/components/_button.scss */
 .hover-effect {
-  background: rgba(255,255,255,0.3);
+  background: rgba(255, 255, 255, 0.3);
   color: #009edc;
   transition: background .25s ease-in-out;
   -moz-transition: background .25s ease-in-out;
   -webkit-transition: background .25s ease-in-out;
 }
-.navbar-top-dropdown {
-  list-style:none;
-}
-.navbar-top-dropdown li {
-  font-size: 2.4rem;
-  font-weight: 300;
-  color:#fff;
-  padding:3rem 0;
-}
-/*----------------------------------*/
-.start-text {
-    float: right;
-    padding-top: 2px;
-    padding-left: 5px;
-}
+
+/* line 30, ../sass/components/_button.scss */
 .badge {
   background-color: #009edc;
   border-radius: 8px;
 }
-.panel-title {
-  font-size:1.4rem;
-  color:#009edc;
+
+/* line 35, ../sass/components/_button.scss */
+.pager li > a,
+.pager li > span {
+  display: inline-block;
+  padding: 5px 14px;
+  background: #e6e7e8;
+  border: 0px solid #ddd;
+  border-radius: 0;
+  color: #58595b;
+}
+
+/* line 44, ../sass/components/_button.scss */
+.white-button {
+  background-color: #ffffff;
+  border: 1px solid #d1d3d4;
+  color: #868686;
+}
+
+/* TOP NAV CSS STYLE UPDATES 
+| move to a _topnav.scss file in modules
+|*/
+/* nav bar container */
+/* line 6, ../sass/components/_navbar.scss */
+.navbar-header {
+  padding-top: 14px;
+  float: none;
+}
+@media screen and (min-width: 768px) {
+  /* line 6, ../sass/components/_navbar.scss */
+  .navbar-header {
+    float: none;
+  }
+}
+
+/* line 14, ../sass/components/_navbar.scss */
+#navbar a {
+  color: white;
+}
+/* line 17, ../sass/components/_navbar.scss */
+#navbar a:hover {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+}
+
+/* line 23, ../sass/components/_navbar.scss */
+.navbar-toggle-button {
+  background-color: transparent;
+  border: 0;
+}
+
+/* line 27, ../sass/components/_navbar.scss */
+.navbar-inverse {
+  height: 100px;
+  background-color: #009edc;
+}
+/* line 31, ../sass/components/_navbar.scss */
+.navbar-inverse .container {
+  height: 100px;
+  padding: 0;
+}
+/* line 35, ../sass/components/_navbar.scss */
+.navbar-inverse .navbar-text {
+  color: #ffffff;
+  float: right;
+}
+@media (min-width: 768px) {
+  /* line 35, ../sass/components/_navbar.scss */
+  .navbar-inverse .navbar-text {
+    margin-left: 0;
+  }
+}
+/* line 42, ../sass/components/_navbar.scss */
+.navbar-inverse .navbar-toggle {
+  float: left;
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-left: inherit;
+  margin-bottom: 8px;
+  padding: 0;
+}
+/* line 53, ../sass/components/_navbar.scss */
+.navbar-inverse .navbar-toggle.dropdown {
+  background-color: rgba(0, 158, 220, 0.9);
+  left: 0;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  top: 99px;
+  width: 100%;
+}
+/* line 62, ../sass/components/_navbar.scss */
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+  background-color: rgba(0, 158, 220, 0.9);
+}
+@media only screen and (min-width: 768px) {
+  /* line 42, ../sass/components/_navbar.scss */
+  .navbar-inverse .navbar-toggle {
+    display: block;
+  }
+}
+
+/* line 72, ../sass/components/_navbar.scss */
+.navbar-top-dropdown {
+  list-style: none;
+}
+/* line 74, ../sass/components/_navbar.scss */
+.navbar-top-dropdown li {
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: #fff;
+  padding: 3rem 0;
+}
+/* line 80, ../sass/components/_navbar.scss */
+.navbar-top-dropdown .navbar-header {
+  width: 100%;
+}
+
+/* line 85, ../sass/components/_navbar.scss */
+.icon-lt-blue {
+  color: #80cfee;
+  background: none;
+  border: 0;
+}
+/* line 89, ../sass/components/_navbar.scss */
+.icon-lt-blue:hover {
+  color: #ffffff;
+}
+
+/* line 93, ../sass/components/_navbar.scss */
+.start-text {
+  float: right;
+  padding-top: 2px;
+  padding-left: 5px;
+}
+
+/* line 99, ../sass/components/_navbar.scss */
+.popover-title {
+  color: #009edc;
+  font-size: 1.4rem;
+  text-align: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e6e7e8;
+  padding: 15px 0;
+}
+
+/* line 107, ../sass/components/_navbar.scss */
+.popover-content {
+  color: #868686;
+  padding: 9px 20px;
+}
+
+/* line 111, ../sass/components/_navbar.scss */
+.popover-content p {
+  margin: 10px 0;
+}
+
+/* line 114, ../sass/components/_navbar.scss */
+.notification-order-title {
+  color: #868686;
   text-transform: uppercase;
   font-weight: 700;
+  font-size: 1.2rem;
 }
-.panel-default>.panel-heading {
-  color: #333;
-  background-color: #fff;
-  border-color: #ddd;
+
+/* line 120, ../sass/components/_navbar.scss */
+.notification-pending {
+  background-color: #e09f30;
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 3px 7px;
+}
+
+/* line 126, ../sass/components/_navbar.scss */
+.notification-shipped {
+  background-color: #009edc;
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 3px 7px;
+}
+
+/* FORMS CSS STYLE UPDATES 
+| styles for form and input elements
+| could be broken down further by element - checkbox, radio, etc.
+|*/
+/* line 5, ../sass/components/_form-elements.scss */
+.form-control {
+  border: 1px solid #d1d3d4;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-box-shadow: 0;
+  margin-bottom: 0;
+}
+
+/* line 12, ../sass/components/_form-elements.scss */
+.radio label,
+.checkbox label {
+  min-height: 20px;
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+  line-height: 2;
+}
+
+/* custom css for checkboxes and radio buttons */
+/* line 23, ../sass/components/_form-elements.scss */
+.checkbox-custom,
+.radio-custom {
+  opacity: 0;
+  position: absolute;
+}
+
+/* line 29, ../sass/components/_form-elements.scss */
+.checkbox-custom,
+.checkbox-custom-label,
+.radio-custom,
+.radio-custom-label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* line 39, ../sass/components/_form-elements.scss */
+.checkbox-custom-label,
+.radio-custom-label {
+  font-weight: 300;
+  /*change bootstrap bold to light */
+  position: relative;
+}
+
+/* line 45, ../sass/components/_form-elements.scss */
+.checkbox-custom + .checkbox-custom-label:before,
+.radio-custom + .radio-custom-label:before {
+  content: '';
+  background: #ffffff;
+  border: 1px solid #58595b;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  margin-right: 10px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+/* line 59, ../sass/components/_form-elements.scss */
+.checkbox-custom-label:hover::before,
+.radio-custom-label:hover::before {
+  border: 1px solid #009edc;
+}
+
+/* line 63, ../sass/components/_form-elements.scss */
+.checkbox-custom:checked + .checkbox-custom-label:before {
+  content: "\e013";
+  font-family: 'Glyphicons Halflings';
+  background: #009edc;
+  color: #ffffff;
+  font-size: 1.3rem;
+  line-height: .6;
+  padding-left: 0;
+  width: 20px;
+  height: 20px;
+  padding-top: 5px;
+  border: 1px solid #009edc;
+}
+
+/* line 76, ../sass/components/_form-elements.scss */
+.radio-custom + .radio-custom-label:before {
+  border-radius: 50%;
+}
+
+/* line 79, ../sass/components/_form-elements.scss */
+.radio-custom:checked + .radio-custom-label:before {
+  background: #009edc;
+  box-shadow: inset 0px 0px 0px 4px #fff;
+}
+
+/* line 83, ../sass/components/_form-elements.scss */
+.checkbox-custom:focus + .checkbox-custom-label, .radio-custom:focus + .radio-custom-label {
+  outline: 1px solid #ddd;
+}
+
+/* Slick Slider CSS STYLE UPDATES 
+| css updates for the slick slider js plugin
+|*/
+/* ==========================================
+|| Multi Select Component
+===========================================*/
+/* line 8, ../sass/components/_bootstrap-select.scss */
+.selectpicker {
+  -webkit-appearance: menulist;
+}
+
+/* line 11, ../sass/components/_bootstrap-select.scss */
+.selectpicker-items-selected {
+  margin-top: 20px;
+}
+/* line 13, ../sass/components/_bootstrap-select.scss */
+.selectpicker-items-selected li {
+  padding-bottom: 5px;
+  padding-right: 0;
+}
+/* line 17, ../sass/components/_bootstrap-select.scss */
+.selectpicker-items-selected .alert-warning {
+  background-image: none;
+  background-color: #e6e7e8;
+  border-color: #e6e7e8;
+  border-radius: 3px;
+}
+/* line 23, ../sass/components/_bootstrap-select.scss */
+.selectpicker-items-selected .alert {
+  color: #58595b;
+  font-size: 1.2rem;
+  text-shadow: initial;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 5px 30px 5px 10px;
+  border: 1px solid transparent;
+  margin: 0 10px 10px 0;
+}
+
+/* line 34, ../sass/components/_bootstrap-select.scss */
+.alert-dismissible .close {
+  color: #333333;
+  opacity: .5;
+}
+
+/* Slick Slider CSS STYLE UPDATES 
+| css updates for the slick slider js plugin
+|*/
+/*slick slide CSS */
+/* line 6, ../sass/components/_carousel.scss */
+.slick-initialized .slick-slide {
+  display: block;
+  padding: 0 15px;
+}
+
+/* line 10, ../sass/components/_carousel.scss */
+.slick-slide.slick-active,
+.slick-slide.slick-cloned {
+  padding-right: 27px;
+}
+
+/* line 14, ../sass/components/_carousel.scss */
+.slick-slide.slick-current {
+  padding-left: 10px;
+}
+
+/* line 17, ../sass/components/_carousel.scss */
+.slick-slide.slick-current[first-child] {
+  padding-left: 0;
+}
+
+/* line 20, ../sass/components/_carousel.scss */
+.slick-slide img:hover {
+  cursor: pointer;
+  opacity: .65;
+}
+
+/* line 24, ../sass/components/_carousel.scss */
+button.slick-next.slick-arrow,
+button.slick-prev.slick-arrow {
+  display: inline-block;
+  padding: 5px 14px;
+  background: #e6e7e8;
+  border: 0px solid #ddd;
+  border-radius: 0;
+  color: #58595b;
+}
+
+/* line 33, ../sass/components/_carousel.scss */
+button.slick-arrow:hover {
+  color: #009edc;
+}
+
+/* line 36, ../sass/components/_carousel.scss */
+.slick-slide.slick-current.slick-active {
+  padding-left: 0;
+}
+
+/* line 40, ../sass/components/_carousel.scss */
+.slick-slide.slick-current.slick-active[data-slick-index="0"] {
+  padding-left: 5px;
+}
+
+/* line 44, ../sass/components/_carousel.scss */
+.slick-slide a {
+  color: #58595b;
+}
+/* line 46, ../sass/components/_carousel.scss */
+.slick-slide a:hover {
+  color: #009edc;
+}
+
+/* Photography & Image Related CSS STYLE UPDATES 
+| 
+|*/
+/*text over image for products */
+/* line 5, ../sass/components/_photography.scss */
+.img-fade img {
+  opacity: 1;
+  transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -webkit-transition: all .25s ease-in-out;
+}
+
+/* line 11, ../sass/components/_photography.scss */
+.img-fade:hover img {
+  cursor: pointer;
+  opacity: .65;
+}
+
+/* line 16, ../sass/components/_photography.scss */
+.product-overlay-image {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #009edc;
+  cursor: default;
+  width: 100%;
+}
+
+/* line 31, ../sass/components/_photography.scss */
+.pop-image-large {
+  background-color: #009edc;
+  height: auto;
+  margin: auto;
+  max-width: 540px;
+  overflow: hidden;
+  padding-bottom: 42%;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+/* line 41, ../sass/components/_photography.scss */
+.pop-image-large:first-child {
+  float: left;
+}
+@media screen and (min-width: 768px) {
+  /* line 31, ../sass/components/_photography.scss */
+  .pop-image-large {
+    padding-bottom: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  /* line 31, ../sass/components/_photography.scss */
+  .pop-image-large {
+    height: 300px;
+    padding-bottom: 0;
+  }
+}
+
+/* line 52, ../sass/components/_photography.scss */
+.pop-image-small {
+  background-color: #9fcc3b;
+  height: auto;
+  margin: auto;
+  margin-right: 0;
+  max-width: 255px;
+  overflow: hidden;
+  padding-bottom: 64%;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  /* line 52, ../sass/components/_photography.scss */
+  .pop-image-small {
+    float: right;
+    padding-bottom: 74%;
+  }
+}
+@media (min-width: 992px) {
+  /* line 52, ../sass/components/_photography.scss */
+  .pop-image-small {
+    float: right;
+    height: 300px;
+    padding-bottom: 0;
+  }
+}
+@media screen and (min-width: 992px) and (orientation: landscape) {
+  /* line 52, ../sass/components/_photography.scss */
+  .pop-image-small {
+    padding-bottom: 100%;
+  }
+}
+
+/* line 78, ../sass/components/_photography.scss */
+.pop-image-large > a:hover,
+.pop-image-small > a:hover,
+.pop-image-large > a:focus,
+.pop-image-small > a:focus {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* line 85, ../sass/components/_photography.scss */
+.pop-image-large > a > img,
+.pop-image-small > a > img {
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  transition: opacity .25s ease-out;
+  -moz-transition: opacity .25s ease-out;
+  -webkit-transition: opacity .25s ease-out;
+  -o-transition: opacity .25s ease-out;
+  cursor: default;
+}
+
+/* line 100, ../sass/components/_photography.scss */
+.pop-image-large > a:hover > img,
+.pop-image-small > a:hover > img {
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* line 110, ../sass/components/_photography.scss */
+.link-over-image {
+  position: absolute;
+  margin: auto;
+  top: 10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #ffffff;
+  height: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: none;
+  cursor: default;
+}
+/* line 123, ../sass/components/_photography.scss */
+.link-over-image > span {
+  border: 1px solid #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 5px 20px;
+}
+@media screen and (min-width: 768px) {
+  /* line 123, ../sass/components/_photography.scss */
+  .link-over-image > span {
+    font-size: 2.1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 110, ../sass/components/_photography.scss */
+  .link-over-image {
+    top: 0;
+  }
+}
+
+/* Product Related CSS STYLE UPDATES 
+| 
+|*/
+/* line 6, ../sass/components/_products.scss */
+.section-title {
+  font-size: 1.6rem;
+  color: #009edc;
+  text-transform: uppercase;
+}
+
+/* line 11, ../sass/components/_products.scss */
+.product-title {
+  font-size: 1.4rem;
+  color: #58595b;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+/* line 17, ../sass/components/_products.scss */
+.product-description {
+  font-size: 1.4rem;
+  color: #58595b;
+}
+
+/* line 21, ../sass/components/_products.scss */
+.product-price {
+  font-size: 1.4rem;
+  color: #58595b;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+/* line 27, ../sass/components/_products.scss */
+.product-price-per-piece {
+  font-size: 1.4rem;
+  color: #58595b;
+  margin-bottom: 0;
+}
+
+/* line 35, ../sass/components/_products.scss */
+.product-title-overlay {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+/* line 42, ../sass/components/_products.scss */
+.product-title-overlay > span {
+  font-size: 14px;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+}
+
+/* line 49, ../sass/components/_products.scss */
+.product-text-overlay {
+  display: block;
+  padding: 65px 10px 20px 10px;
+  background: rgba(255, 255, 255, 0.75);
+  height: 100%;
+  max-height: 275px;
+}
+/* line 55, ../sass/components/_products.scss */
+.product-text-overlay p {
+  font-size: 1.3rem;
+  color: #58595b;
+}
+
+/* line 62, ../sass/components/_products.scss */
+.products-row {
+  margin: 0 0 70px 0;
+  overflow: hidden;
+}
+@media (min-width: 992px) {
+  /* line 62, ../sass/components/_products.scss */
+  .products-row {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* line 70, ../sass/components/_products.scss */
+.product-module {
+  background-size: cover;
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 275px;
+  overflow: hidden;
+}
+/* line 78, ../sass/components/_products.scss */
+.product-module a {
+  color: #58595b;
+}
+/* line 80, ../sass/components/_products.scss */
+.product-module a:hover {
+  color: #009edc;
+}
+/* line 84, ../sass/components/_products.scss */
+.product-module h3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.75);
+  color: #58595b;
+  font-size: 1.4rem;
+  line-height: 2;
+  margin: 0;
+  padding: 15px 10px;
+  text-transform: uppercase;
+  width: 100%;
+  z-index: 999;
+}
+/* line 98, ../sass/components/_products.scss */
+.product-module i {
+  font-size: 2.6rem;
+  float: right;
+}
+
+/* line 104, ../sass/components/_products.scss */
+.products-row .col-xs-12 {
+  padding: 0;
+}
+/* line 107, ../sass/components/_products.scss */
+.products-row .col-1-2 {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 111, ../sass/components/_products.scss */
+.products-row .col-2-2 {
+  padding-right: 0;
+  float: right;
+}
+/* line 116, ../sass/components/_products.scss */
+.products-row .col-md-4 {
+  padding-right: 0;
+}
+/* line 119, ../sass/components/_products.scss */
+.products-row .col-sm-6:nth-child(2) {
+  padding: 0;
+}
+/* line 122, ../sass/components/_products.scss */
+.products-row .col-sm-6:nth-child(3) {
+  padding: 0;
+}
+/* line 125, ../sass/components/_products.scss */
+.products-row .col-md-4:last-child {
+  padding-right: 0;
+}
+
+/* line 130, ../sass/components/_products.scss */
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 14px;
+  margin-top: 58px;
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  position: absolute;
+  z-index: 999;
+  height: 100%;
+}
+
+/* iphone 6 landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+  /* line 150, ../sass/components/_products.scss */
+  .products-row .col-1-2 {
+    width: 50%;
+  }
+
+  /* line 153, ../sass/components/_products.scss */
+  .products-row .col-2-2 {
+    width: 50%;
+  }
+
+  /* line 156, ../sass/components/_products.scss */
+  .products-row .col-2-2 .pop-image-small {
+    float: right;
+  }
+
+  /* line 159, ../sass/components/_products.scss */
+  .col-xs-12.landscape {
+    width: 49%;
+    margin-bottom: 20px;
+  }
+
+  /* line 163, ../sass/components/_products.scss */
+  .col-xs-12.landscape:nth-of-type(odd) {
+    padding-right: 2%;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 169, ../sass/components/_products.scss */
+  .products-row .col-md-4:first-child {
+    padding-left: 0;
+    padding-right: 15px;
+  }
+
+  /* line 173, ../sass/components/_products.scss */
+  .products-row .col-md-4 {
+    padding-right: 10px;
+  }
+
+  /* line 176, ../sass/components/_products.scss */
+  .pops {
+    height: 200px;
+    margin-bottom: 30px;
+  }
+
+  /* line 180, ../sass/components/_products.scss */
+  .products-row .col-sm-6:nth-child(2) {
+    padding-right: 0;
+  }
+
+  /* line 183, ../sass/components/_products.scss */
+  .products-row .col-sm-6:nth-child(3) {
+    padding-left: 0;
+    padding-right: 15px;
+    padding-top: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  /* line 190, ../sass/components/_products.scss */
+  .pops {
+    height: 300px;
+    margin-bottom: 40px;
+  }
+
+  /* line 194, ../sass/components/_products.scss */
+  .products-row .pops .col-sm-6:nth-child(2) {
+    padding-right: 0;
+  }
+
+  /* line 197, ../sass/components/_products.scss */
+  .products-row .col-sm-6:nth-child(2) {
+    padding-right: 15px;
+  }
+
+  /* line 200, ../sass/components/_products.scss */
+  .products-row .col-sm-6:nth-child(3) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+  }
+}
+@media screen and (min-width: 992px) and (orientation: landscape) {
+  /* line 208, ../sass/components/_products.scss */
+  .pops {
+    height: 300px;
+    margin-bottom: 40px;
+  }
+
+  /* line 212, ../sass/components/_products.scss */
+  .products-row .pops .col-sm-6:nth-child(2) {
+    padding-right: 0;
+  }
+
+  /* line 215, ../sass/components/_products.scss */
+  .products-row .col-sm-6:nth-child(2) {
+    padding-right: 15px;
+  }
+
+  /* line 218, ../sass/components/_products.scss */
+  .products-row .col-sm-6:nth-child(3) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+  }
+}
+/* Live Search CSS STYLE UPDATES 
+| updates to live search plugin classes 
+|*/
+/* line 4, ../sass/components/_search.scss */
+#results {
+  z-index: 100000;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.075);
+  display: block;
+  padding: 5px 0;
+  position: relative;
+  top: 1px;
+  left: 0;
+  padding-top: 0;
+}
+/* line 13, ../sass/components/_search.scss */
+#results .row {
+  margin: 0;
+  background: rgba(255, 255, 255, 0.9);
+  padding-left: 15px;
+}
+
+/* Sidebar Component CSS STYLE UPDATES 
+| sidebar nav and design style updates */
+/* line 4, ../sass/components/_sidebar.scss */
+.panel-default > .panel-heading {
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #dddddd;
   background-image: none;
 }
+
+/* line 11, ../sass/components/_sidebar.scss */
+#accordion .list-group {
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.075);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.075);
+}
+/* line 15, ../sass/components/_sidebar.scss */
 #accordion .glyphicon {
   top: -1px;
   font-weight: 300;
   font-size: 1rem;
 }
 
+/* line 23, ../sass/components/_sidebar.scss */
+#accordion
 .panel-group .panel {
-    margin-bottom: 0;
-    border-radius: 0;
-    border: none;
+  margin-bottom: 0;
+  border-radius: 0;
+  border: none;
 }
-.panel-group .panel+.panel {
-    margin-top: 0;
-    border-top: 1px solid #ddd;
-    /* height: 50px; */
-    /* line-height: 50px; */
-    /*padding: 12px 0;*/
+/* line 27, ../sass/components/_sidebar.scss */
+#accordion
+.panel-group .panel + .panel {
+  margin-top: 0;
+  border-top: 1px solid #dddddd;
 }
-.panel-title>a:hover {
-    text-decoration: none;
-}
-.panel-heading {
-    padding: 22px 15px;
-    border-bottom: 1px solid transparent;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
-.categories-list a {
-  font-size: 1.2rem;
-  color:#58595b;
+/* line 31, ../sass/components/_sidebar.scss */
+#accordion
+.panel-group .panel .panel-title {
+  color: #009edc;
+  font-size: 1.4rem;
   text-transform: uppercase;
   font-weight: 700;
 }
+
+/* line 39, ../sass/components/_sidebar.scss */
+.panel-group .panel
+.panel-title > a:hover {
+  color: #009edc;
+  text-decoration: none;
+}
+
+/* line 44, ../sass/components/_sidebar.scss */
+.panel-heading {
+  padding: 22px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* line 53, ../sass/components/_sidebar.scss */
+.categories-list a {
+  font-size: 1.2rem;
+  color: #58595b;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+/* line 58, ../sass/components/_sidebar.scss */
 .categories-list a:hover {
   color: #009edc;
   text-decoration: none;
 }
+/* line 63, ../sass/components/_sidebar.scss */
 .categories-list .list-group-item {
   position: relative;
   display: block;
   padding: 10px 0px;
   margin-bottom: -1px;
-  background-color: #fff;
+  background-color: #ffffff;
   border: 0;
 }
-.input-group.filter-set1 {
+
+/* line 73, ../sass/components/_sidebar.scss */
+.input-group .filter-set1 {
   list-style: none;
   padding-left: 0;
 }
-.filter-set1 li {
+/* line 76, ../sass/components/_sidebar.scss */
+.input-group .filter-set1 li {
   padding: 10px 0;
 }
-.products-row {
-  margin-bottom:70px;
-}
-  @media (min-width: 992px) {
-    .products-row {
-      margin-left: auto;
-      margin-right: auto;
-    } 
-  }
-  
-.section-title {
-  font-size: 1.6rem;
-  color:#009edc;
-  text-transform: uppercase;
-}
-.product-title {
-    font-size: 14px;
-    color:#58595b;
-    font-weight: 700;
-    margin-bottom: 0;
-}
-.product-description {
-    font-size: 14px;
-    color:#58595b;
-}
-.product-price {
-    font-size: 14px;
-    color:#58595b;
-    font-weight: 700;
-    margin-bottom: 0;
-}
-.product-price-per-piece {
-    font-size:14px;
-    color:#58595b;
-    margin-bottom: 0;
-}
 
+/* Utility CSS STYLE UPDATES 
+| some utility helper classes 
+|*/
+/* line 5, ../sass/helpers/_utility.scss */
 .right-align {
   float: right;
 }
 
-.product-text-overlay p {
-  font-size:1.3rem;
-  color:#58595b;
-}
-
-.product-title-overlay {
-    position: absolute;
-    top: 50%;
-    text-align: center;
-    width: 100%;
-    margin: 0;
-}
-.product-title-overlay > span {
-    font-size: 14px;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 10px 30px;
-    text-transform: uppercase;
-}
-.product-text-overlay {
-  display: block;
-  padding: 65px 10px 20px 10px;
-  background: rgba(255,255,255,0.75);
-  height: 100%;
-  max-height: 275px;
-  /*transition: all linear .25s;*/
-}
-
-/*.product-module .product-text-overlay.collapse.in {
-  opacity: 1;
-  background: rgba(255,255,255,0.8);
-  height: 100%;
-  max-height: 275px;
-    
-}*/
-	/*a:hover{
-	    -webkit-transition: opacity 0.6s;
-	    -moz-transition: opacity 0.6s;
-	    transition: opacity 0.6s;
-	}*/
-  .overlay {
-    overflow: hidden;
-  }
-.overlay-lg-6:before{
-  position: absolute;
-  content:" ";
-  top:0;
-  left:15px;
-  width:100%;
-  height:100%;
-  max-width: 540px;
-  display: block;
-  z-index:0;
-  background-color: rgba(0,158,220,0.8);
-}
-.overlay-lg-3:before{
-  position: absolute;
-  content:" ";
-  top:0;
-  left:15px;
-  width:100%;
-  height:100%;
-  max-width: 255px;
-  display: block;
-  z-index:0;
-  background-color: rgba(143,198,62,0.8);
-}
-
-
-.well {
-    min-height: 20px;
-    padding: 19px;
-    margin-bottom: 14px;
-    margin-top: 58px;
-    background-image: none;
-    background-color: rgba(255,255,255,0.75);
-    border: none;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    position: absolute;
-    z-index: 999;
-    height: 100%;
-}
-
-
-.dropdown {
-  background-color: rgba(0, 158, 220, 0.9);
-  width: 100%;
-  text-align: center;
-  margin:0;
-}
-
-@media (min-width: 768px) {
-  .navbar-toggle {
-    display: block;
-  }
-}
-.pager li>a, .pager li>span {
-    display: inline-block;
-    padding: 5px 14px;
-    background: #e6e7e8;
-    border: 0px solid #ddd;
-    border-radius: 0;
-    color:#57585b;
-}
-.module {
-  margin: 0;
-  position: relative;
-  float: left;
-}
-/*
-.img-email-blasts,
-.img-brochures {
-     -webkit-transition: background linear 1s;
-  -moz-transition: background linear 1s;
-  transition: background linear 1s;
-}
-.img-email-blasts {
-  background: 
-    linear-gradient(
-      rgba(0, 158, 220, 0.9),
-      rgba(0, 158, 220, 0.9)
-    ),
-    url(../img/product-email-blasts.jpg);
-  background-size: cover;
-  width: 540px;
-  height: 300px;
-}
-.img-email-blasts:hover {
-    background-color: rgba(0,158,220,0.3);
-}
-.img-brochures {
-  background: 
-    linear-gradient(
-      rgba(143,198,62,0.8),
-      rgba(143, 198, 62, 0.9)
-    ),
-    url(../img/product-brochures.jpg);
-  background-size: cover;
-  width: 255px;
-  height: 300px;
-  -webkit-transition: background-color linear .25s;
-  -moz-transition: background-color linear .25s;
-  transition: background-color linear .25s;
-}
-.img-brochures:hover {
-    background-color: rgba(143,198,62,0.3);
-}
-.mid h3 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin:0;
-}
-.mid h3 span {
-  color: rgba(255,255,255,1);
-  border: 1px solid #fff;
-  font-size: 2.1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 5px 10px;
-}
-*/
-/*updated images */
-.primary-links1, .primary-links2 {
-    display: block;
-    height: 100%;
-    background-color: rgba(255,255,255,0);
-    color: #fff;
-    opacity: 1;
-}
-
-.primary-links:hover {
-    opacity: 0.8;
-    background-blend-mode: darken;
-}
-/*update - need to add to sass */
-
-
-.product-module h3 {
-    width: 100%;
-  }
-  .products-row .col-xs-12 {
-    padding:0;
-  }
-  .products-row .col-1-2 {
-    padding-left:0;
-  }
-  .products-row .col-2-2 {
-    padding-right:0;
-    float:right;
-  }
-  .products-row .col-2-2 .pop-image-small {
-    float: none;
-  }
- .products-row .col-md-4 {
-    padding-right: 0;
-} 
-.products-row .col-sm-6:nth-child(2) {
-    padding: 0;
-}
-  .products-row .col-sm-6:nth-child(3) {
-    padding:0;
-  }
-
-  .products-row .col-md-4:last-child {
-    padding-right:0;
-  }
-  /* iphone 6 landscape */
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 667px) 
-and (orientation : landscape) { 
-  .products-row .col-1-2 {
-    width:50%;
-  }
-  .products-row .col-2-2 {
-    width:50%;
-  }
-  .products-row .col-2-2 .pop-image-small {
-    float: right;
-}
-  .col-xs-12.landscape {
-    width:49%;
-    margin-bottom:20px;
-  }
-  .col-xs-12.landscape:nth-of-type(odd) {
-    padding-right:2%;
-  }
-  
-}
-@media screen and (min-width: 768px) {
-  .products-row .col-md-4:first-child {
-    padding-left:0;
-    padding-right: 15px;
-  }
-  .products-row .col-md-4 {
-  padding-right: 10px;
-}
-  .pops {
-    height: 200px;
-    margin-bottom: 30px;
-  }
-  .products-row .col-2-2 .pop-image-small {
-    float:right;
-  }
-  .products-row .col-sm-6:nth-child(2) {
-    padding-right: 0;
-  }
-  .products-row .col-sm-6:nth-child(3) {
-    padding-left: 0;
-    padding-right: 15px;
-    padding-top: 30px;
-  }
-  .pop-image-small {
-    width: 100%;
-    max-width: 255px;
-    height: auto;
-    margin: auto;
-    text-align: center;
-    position: relative;
-    background-color: #8fc63e;
-    padding-bottom: 56%;
-}
-  
-}
-
-@media screen and (min-width:992px) and (orientation: landscape)  {
-  .pops {
-    height: 300px;
-    margin-bottom: 40px;
-  }
-  .pop-image-small {
-    width: 100%;
-    max-width: 255px;
-    height: auto;
-    margin: auto;
-    text-align: center;
-    position: relative;
-    background-color: #8fc63e;
-    padding-bottom: 100%;
-  }
-  .products-row .pops .col-sm-6:nth-child(2) {
-    padding-right: 0;
-  }
-  .products-row .col-sm-6:nth-child(2) {
-    padding-right: 15px;
-  }
-  .products-row .col-sm-6:nth-child(3) {
-    padding-left: 0;
-    padding-right: 15px;
-    padding-top:0;
-  }
-  .pop-image-large,
-  .pop-image-small {
-    height: 300px;
-    padding-bottom:0;
-  }
-}
-@media screen and (min-width:992px) {
-  .pops {
-    height: 300px;
-    margin-bottom: 40px;
-  }
-  .pop-image-small {
-    width: 100%;
-    max-width: 255px;
-    height: auto;
-    margin: auto;
-    text-align: center;
-    position: relative;
-    background-color: #8fc63e;
-    padding-bottom: 115%;
-}
-  .products-row .pops .col-sm-6:nth-child(2) {
-    padding-right: 0;
-  }
-  .products-row .col-sm-6:nth-child(2) {
-    padding-right: 15px;
-  }
-  .products-row .col-sm-6:nth-child(3) {
-    padding-left: 0;
-    padding-right: 15px;
-    padding-top:0;
-  }
-  .pop-image-large,
-  .pop-image-small {
-    height: 300px;
-    padding-bottom:0;
-  }
-}
-/*menu change - take off box shadow */
-#accordion .list-group {
-  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .075);
-  box-shadow: 0 0 0 rgba(0, 0, 0, .075);
-}
-.popover-title {
-  color: #009edc;
-  font-size: 1.4rem;
-  text-align: center;
-  background-color: #fff;
-  border-bottom: 1px solid #e6e7e8;
-  padding: 15px 0;
-}
-.popover-content {
-  color:#868686;
-  padding: 9px 20px;
-}
-.popover-content p {
-  margin:10px 0;
-}
-.notification-order-title {
-  color:#868686;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-
-/* utility */
+/* line 9, ../sass/helpers/_utility.scss */
 .strong-text {
   font-weight: 700;
 }
 
+/* line 13, ../sass/helpers/_utility.scss */
 .collapse {
   transition: background linear .25s;
 }
-.notification-pending {
-  background-color:#e09f30;
-  color:#fff;
-  font-size: 12px;
-  padding: 3px 7px;
+
+/* line 16, ../sass/helpers/_utility.scss */
+.hover-effect {
+  background: rgba(255, 255, 255, 0.3);
+  color: #009edc;
+  transition: background .25s ease-in-out;
+  -moz-transition: background .25s ease-in-out;
+  -webkit-transition: background .25s ease-in-out;
 }
-.notification-shipped {
-  background-color:#009edc;
-  color:#fff;
-  font-size: 12px;
-  padding: 3px 7px;
-}
-.icon-lt-blue {
-  color: #80cfee;
-  background: none;
-  border:0;
-}
-.icon-lt-blue:hover {
-    color: #fff;
-}
-/*live search display fix */
-#results {
-    /* border: 1px solid #ccc; */
-    /* border-radius: 5px; */
-    z-index: 100000;
-    box-shadow: 0 0 1px rgba(0, 0, 0, .075);
-    display: block;
-    padding: 5px 0;
-    position: relative;
-    top: 1px;
-    left: 0;
-    padding-top: 0;
-    /* border-top: 0; */
-    /* border-top-left-radius: 0; */
-    /* border-top-right-radius: 0; */
-    /*background: #ebebeb;*/
-}
-#results .row {
-      margin: 0;
-    background: rgba(255,255,255,0.9);
-    padding-left: 15px;
-}
+
+/* line 23, ../sass/helpers/_utility.scss */
 .pad-title-align-to-sidebar {
   padding-top: 40px;
 }
 
-.icon-pf_icn_info {
-  color: #6D6E71;
+/* line 26, ../sass/helpers/_utility.scss */
+.overlay {
+  overflow: hidden;
 }
 
-/*slick slide CSS */
-.slick-initialized .slick-slide {
-    display: block;
-    padding: 0 15px;
+/* line 29, ../sass/helpers/_utility.scss */
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background-color: #009edc;
+  background-image: none;
+  color: #fff;
 }
-.slick-slide.slick-active,
-.slick-slide.slick-cloned {
-    padding-right: 27px;
-}
-.slick-slide.slick-current {
-    padding-left:10px;
-}
-.slick-slide.slick-current[first-child] {
-  padding-left:0;
-}
-.slick-slide img:hover {
-    cursor: pointer;
-    opacity: .65;
-}
-button.slick-next.slick-arrow,
-button.slick-prev.slick-arrow {
-    display: inline-block;
-    padding: 5px 14px;
-    background: #e6e7e8;
-    border: 0px solid #ddd;
-    border-radius: 0;
-    color:#57585b;
-}
-button.slick-arrow:hover {
-    color: #009edc;
-}
-@media (min-width: 768px) {
-  .navbar-inverse .navbar-text {
-    margin-left:0;
-  }
-}
-@media (max-width:768px) {
+
+/* General Media Queries CSS STYLE UPDATES 
+| 
+|*/
+@media (max-width: 768px) {
+  /* line 6, ../sass/layout/_media-queries.scss */
   .products-row .col-sm-4 {
     overflow: hidden;
   }
 
-  .container>.navbar-header {
-    margin:0;
+  /* line 10, ../sass/layout/_media-queries.scss */
+  .container > .navbar-header {
+    margin: 0;
   }
+
+  /* line 13, ../sass/layout/_media-queries.scss */
   nav .list-inline {
     width: 100%;
     padding: 23px 0 0 0;
     text-align: right;
   }
+
+  /* line 18, ../sass/layout/_media-queries.scss */
   .navbar-top-dropdown {
     padding-left: 0;
   }
-  
- 
 }
-@media (max-width:414px) {
-  .container>.navbar-header>.col-xs-4 {
-    padding-left:10px;
+@media (max-width: 414px) {
+  /* line 23, ../sass/layout/_media-queries.scss */
+  .container > .navbar-header > .col-xs-4 {
+    padding-left: 10px;
   }
+
+  /* line 26, ../sass/layout/_media-queries.scss */
   .navbar-toggle.dropdown {
     width: 100%;
     max-width: 414px;
   }
+
+  /* line 30, ../sass/layout/_media-queries.scss */
   .col-1-2 {
-    margin-bottom:25px;
+    margin-bottom: 25px;
   }
+
+  /* line 33, ../sass/layout/_media-queries.scss */
   .product-module {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
   }
 }
-
-@media (max-width:375px) {
+@media (max-width: 375px) {
+  /* line 41, ../sass/layout/_media-queries.scss */
   .navbar-toggle.dropdown {
     width: 100%;
     max-width: 375px;
   }
 }
 
-
-/* ==========================================
-|| Multi Select Component
-===========================================*/
-.selectpicker {
-  -webkit-appearance: menulist;
-}
-.selectpicker-items-selected {
-  margin-top:20px;
-}
-.selectpicker-items-selected .alert-warning {
-    background-image: none;
-    background-color: #e6e7e8;;
-    border-color: #e6e7e8;
-    border-radius: 3px;
-}
-.selectpicker-items-selected .alert {
-  color:#868686;
-  font-size: 12px;
-    text-shadow: initial;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    padding: 5px 30px 5px 10px;
-    border: 1px solid transparent;
-    margin:0 10px 10px 0;
-}
-.alert-dismissible .close {
-  color: #333;
-  opacity: .5;
-}
-.white-button {
-  background-color:#fff;
-  border: 1px solid #d1d3d4;
-  color: #868686;
-}
-.dropdown-menu > li > a:hover, 
-.dropdown-menu > li > a:focus {
-    background-color: #009edc;
-    background-image: none;
-    color: #fff;
-}
-.row .products-row {
-  margin-left:0;
-  margin-right:0;
-}
-
-.slick-slide.slick-current.slick-active {
-    padding-left: 0;
-}
-
-.slick-slide.slick-current.slick-active[data-slick-index="0"] {
-  padding-left:5px;
-}
+/*# sourceMappingURL=main.css.map */

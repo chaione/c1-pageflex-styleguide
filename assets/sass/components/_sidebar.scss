@@ -1,105 +1,36 @@
 /* Sidebar Component CSS STYLE UPDATES 
-| sidebar nav and design style updates
-****         VARIABLES (from helpers/_pageflex-variables.scss)     ****
-//Main color scheme
-$theme-primary-color: #00a9e6 !default;
-$theme-secondary-color: #9fcc3b !default;
-$theme-tertiary-color: #ff0000 !default;
+| sidebar nav and design style updates */
 
-//Brand Gray Color Palette
-$gray-dark: #58595b;
-$gray-medium-dark: #868686;
-$gray-medium: #d1d3d4;
-$gray-light-medium: #e6e7e8;
-$gray-light: #f1f2f2;
-
-//General colors
-$white: #fff !default;
-$green: #ff0000 !default;
-$orange: #f37021 !default;
-$blue: #00a9e6 !default;
-$theme-bg--color: $gray-light !default;
-
-//Text
-$theme-font--face: 'Open Sans', Arial, sans-serif !default;
-$theme-font--size: 1.4rem !default;
-$theme-font--size-small: 1.2rem !default;
-$theme-font--size-large: 2.1rem !default;
-$theme-font--size-xlarge: 3rem !default;
-$theme-text--color: $theme-tertiary-color !default;
-
-//Form elements
-$input-select--width: 200px !default;
-$input-textbox--width: $input-select--width !default;
-$input-textbox--border-color: $theme-secondary-color !default;
-$input-textbox--border: 1px solid $theme-secondary-color !default;
-$input-textbox--bg-color: $white !default;
-$input-textbox--focus-border: rgba(119,119,119,.8) !default;
-$input-textbox--focus-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 102, 102, .6) !default;
-
-//Links
-$link--color: $theme-tertiary-color !default;
-$link--color-hover: $blue !default;
-$link--transition: .2s !default;
-$help-text--color: $green !default;
-$help-text--color-hover: $link--color-hover !default;
-
-//Spacing
-$column-gutter--width: 15px !default;
-$column-gutter--width-none: 0px !default;
-
-//Navigation
-$nav-bg--color: $theme-primary-color !default;
-$nav-link--color: $theme-tertiary-color !default;
-$nav-link--color-hover: $theme-quaternary-color !default;
-$nav-bg--color-hover: $theme-secondary-color !default;
-$nav-bg--color-selected: $theme-tertiary-color !default;
-
-//Buttons
-$button-bg--color: $white !default;
-$button-bg--color-hover:  $white !default;
-$button-border--color: $theme-primary-color !default;
-$button-border: 1px solid $button-border--color !default;
-$button-text--color: $theme-primary-color !default;
-$button-text--color-hover: $gray-medium-dark !default;
-|*/
-.start-text {
-    float: right;
-    padding-top: 2px;
-    padding-left: 5px;
-}
-.badge {
-  background-color: #009edc;
-  border-radius: 8px;
-}
-.panel-title {
-  
-
-}
 .panel-default>.panel-heading {
-  color: #333;
-  background-color: #fff;
-  border-color: #ddd;
+  color: $gray-dark-2; // #333;
+  background-color: $white; // #fff;
+  border-color: $gray-light-2; // #ddd;
   background-image: none;
 }
-#accordion .glyphicon {
-  top: -1px;
-  font-weight: 300;
-  font-size: 1rem;
+#accordion {
+  .list-group {
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .075);
+    box-shadow: 0 0 0 rgba(0, 0, 0, .075);
+  }
+  .glyphicon {
+    top: -1px;
+    font-weight: 300;
+    font-size: 1rem;
+  }
 }
-
+#accordion 
 .panel-group {
   .panel {
     margin-bottom: 0;
     border-radius: 0;
     border: none;
-    +.panel {
+    +.panel { //.panel-group .panel+.panel
       margin-top: 0;
-      border-top: 1px solid #ddd;
+      border-top: $border-gray-light-2;
     }
     .panel-title {
-      color:#009edc;
-      font-size:1.4rem;
+      color: $theme-primary-color; //#009edc;
+      font-size: $theme-font--size;
       text-transform: uppercase;
       font-weight: 700;
       }
@@ -107,6 +38,7 @@ $button-text--color-hover: $gray-medium-dark !default;
 } 
 .panel-group .panel
 .panel-title>a:hover {
+    color: $theme-primary-color; //#009edc
     text-decoration: none;
 }
 .panel-heading {
@@ -115,3 +47,35 @@ $button-text--color-hover: $gray-medium-dark !default;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
+//category style updates for sidebar ie filters,categories, etc.
+.categories-list {
+    a {
+      font-size: $theme-font--size-xsmall; //1.2rem;
+      color: $gray-dark; //#58595b;
+      text-transform: uppercase;
+      font-weight: 700;
+      &:hover {
+        color: $theme-primary-color; //#009edc;
+        text-decoration: none; //removes underline - maybe don't need
+      }
+    }
+    .list-group-item {
+      position: relative;
+      display: block;
+      padding: 10px 0px;
+      margin-bottom: -1px;
+      background-color: $white;
+      border: 0;
+    }
+}
+.input-group {
+  .filter-set1 {
+  list-style: none;
+  padding-left: 0;
+    li {
+      padding: 10px 0;
+    }
+  }
+}
+

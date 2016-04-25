@@ -1,0 +1,37 @@
+/* Slick Slider CSS STYLE UPDATES 
+| css updates for the slick slider js plugin
+|*/
+
+/* ==========================================
+|| Multi Select Component
+===========================================*/
+.selectpicker {
+  -webkit-appearance: menulist;
+}
+.selectpicker-items-selected {
+  margin-top:20px;
+  li {
+      padding-bottom: 5px;
+      padding-right:0;
+  }
+  .alert-warning {
+    background-image: none;
+    background-color: $gray-light-medium; // #e6e7e8;;
+    border-color: $gray-light-medium; // #e6e7e8;
+    border-radius: 3px;
+    }
+  .alert {
+    color: $gray-dark; //#868686;
+    font-size: $theme-font--size-xsmall; // 1.2rem;
+    text-shadow: initial;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 5px 30px 5px 10px;
+    border: 1px solid transparent;
+    margin:0 10px 10px 0;
+  }
+}
+.alert-dismissible .close {
+  color: $gray-dark-2; // #333;
+  opacity: .5;
+}

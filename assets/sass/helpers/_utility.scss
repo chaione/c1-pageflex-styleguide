@@ -13,19 +13,6 @@
 .collapse {
   transition: background linear .25s;
 }
-.notification-pending {
-  background-color:#e09f30;
-  color:#fff;
-  font-size: 12px;
-  padding: 3px 7px;
-}
-.notification-shipped {
-  background-color:#009edc;
-  color:#fff;
-  font-size: 12px;
-  padding: 3px 7px;
-}
-
 .hover-effect {
   background: rgba(255,255,255,0.3);
   color: $theme-primary-color;
@@ -33,3 +20,17 @@
   -moz-transition: background .25s ease-in-out;
   -webkit-transition: background .25s ease-in-out;
 }
+.pad-title-align-to-sidebar {
+  padding-top: 40px;
+}
+  .overlay {
+    overflow: hidden;
+  }
+.dropdown-menu > li > a:hover, 
+.dropdown-menu > li > a:focus {
+    background-color: #009edc;
+    background-image: none;
+    color: #fff;
+}
+  
+  

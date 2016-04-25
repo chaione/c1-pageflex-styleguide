@@ -2,25 +2,29 @@
 sass/ 
 | 
 |– base/ 
-|   |– _base.scss       # load base styles 
+|   |– _base.scss        # load base styles 
+|   |– _ie.scss          # ie specific styles 
 |   |– _reset.scss       # Reset/normalize 
 |   |– _typography.scss  # Typography rules 
 |   ...                  # Etc… 
 | 
 |– components/ 
-|   |– _buttons.scss        # Buttons 
-|   |– _carousel.scss       # Carousel 
-|   |– _form-elements.scss  # Cover 
-|   |– _navbar.scss         # Top Nav Bar 
-|   |– _navigation.scss  # Navigation 
-|   ...                  # Etc… 
+|   |– _bootstrap-select.scss   # Bootstrap select styles 
+|   |– _buttons.scss            # Buttons 
+|   |– _carousel.scss           # Carousel 
+|   |– _form-elements.scss      # Form Elements 
+|   |– _navbar.scss             # Top Nav Bar 
+|   |– _photography.scss        # Photography/Images 
+|   |– _products.scss           # Products
+|   |– _search.scss             # Live search styles 
+|   |– _sidebar.scss            # Sidebar  
 | 
 |– helpers/ 
-|   |– _variables.scss   # Sass Variables 
-|   |– _functions.scss   # Sass Functions 
-|   |– _mixins.scss      # Sass Mixins 
-|   |– _helpers.scss     # Class & placeholders helpers 
-|   ...                  # Etc… 
+|   |– _variables.scss            # Sass Variables 
+|   |– _functions.scss            # Sass Functions 
+|   |– _mixins.scss               # Sass Mixins 
+|   |– _pageflex-variables.scss   # Class & placeholders helpers 
+|   |– _utility.scss              # Utility classes 
 | 
 |– layout/ 
 |   |– _grid.scss        # Grid system 
@@ -42,17 +46,23 @@ sass/
 | 
 |– vendors/ 
 |   |– _bootstrap-custom.scss   # Bootstrap 
-|   |– _jquery-ui.scss   # jQuery UI 
 |   ...                  # Etc… 
 | 
 | 
 `– main.scss             # primary Sass file 
 ---------------------------------------------------------*/
-@import "vendors/bootstrap-custom";
+//@import "vendors/bootstrap-custom"; 
+@import "helpers/pageflex-variables"; 
 @import "base/base";
-@import "helpers/pageflex-variables";
+@import "components/button";
 @import "components/navbar";
 @import "components/form-elements";
+@import "components/bootstrap-select";
 @import "components/carousel";
+@import "components/photography";
+@import "components/products";
+@import "components/search";
+@import "components/sidebar";
 @import "helpers/utility";
+@import "layout/media-queries";
 

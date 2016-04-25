@@ -1,23 +1,48 @@
 /* Button and Image Links CSS STYLE UPDATES 
 | move to a _topnav.scss file in modules
 |*/
-.primary-links1 & .primary-links2 {
+.primary-links1, .primary-links2 {
+  display:block;
   background-color:rgba(255,255,255,0);
   color: $white;
   opacity: 1;
 }
-
 .primary-links:hover {
-    opacity: 0.8;
     background-blend-mode: darken;
+    opacity: 0.8;
 }
-
-
 .icon-lt-blue {
   color: #80cfee;
   background: none;
   border:0;
-  :hover {
+  &:hover {
     color: $white;
   }
+}
+.hover-effect {
+  background: rgba(255,255,255,0.3);
+  color: $theme-primary-color; // #009edc;
+  transition: background .25s ease-in-out;
+  -moz-transition: background .25s ease-in-out;
+  -webkit-transition: background .25s ease-in-out;
+}
+//background for a badge to indicate an update or number of items
+.badge {
+  background-color: $theme-primary-color; // #009edc;
+  border-radius: 8px;
+}
+//page numbering for product pages
+.pager li>a, 
+.pager li>span {
+    display: inline-block;
+    padding: 5px 14px;
+    background: $gray-light-medium; // #e6e7e8;
+    border: 0px solid #ddd;
+    border-radius: 0;
+    color: $gray-dark; //#58595b;
+}
+.white-button {
+  background-color: $white; // #fff;
+  border: $border-gray-medium; // 1px solid #d1d3d4;
+  color: $gray-medium-dark; // #868686;
 }

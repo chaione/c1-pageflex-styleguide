@@ -131,19 +131,3 @@ $('.selectpicker-items-selected').on('close.bs.alert', 'label', function () {
   }));
   $(this).parent().remove();
 });
-
-// $('.close').click(function () {
-//   console.dir(this);
-//   console.log($('.selectpicker').selectpicker('val'));
-//   $('.selectpicker').selectpicker('refresh');
-// });
-
-//jQuery('#selectbox option').attr('selected', false);
-
-
-//$('#button').click(function() {
- //       $('this.parent').attr('selected', '');
-
-//});
-
-// $('.selectpicker option').index($('.selectpicker option:selected'))

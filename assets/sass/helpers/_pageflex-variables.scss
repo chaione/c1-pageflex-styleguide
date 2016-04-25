@@ -1,29 +1,37 @@
 //Main color scheme
-$theme-primary-color: #00a9e6 !default;
+$theme-primary-color: #009edc !default;
 $theme-secondary-color: #9fcc3b !default;
-$theme-tertiary-color: #ff0000 !default;
+$theme-tertiary-color: #d9443f !default;
 
-//Brand Gray Color Palette
+//Brand Gray Color Palette  
 $gray-dark: #58595b;
+$gray-dark-2: #333333;
 $gray-medium-dark: #868686;
-$gray-medium: #d1d3d4;
+$gray-medium: #d1d3d4; 
 $gray-light-medium: #e6e7e8;
 $gray-light: #f1f2f2;
+$gray-light-2: #dddddd;
 
 //General colors
+$black: #000 !default;
 $white: #ffffff !default;
-$green: #ff0000 !default;
+$red: #d9443f !default;
+$green: #8fc63e !default;
 $orange: #f37021 !default;
-$blue: #00a9e6 !default;
-$theme-bg--color: $gray-light !default;
+$blue: #009edc !default; 
+$yellow: #e09f30 !default;
 
+//Background colors
+$theme-bg--color: $gray-light !default;
+ 
 //Text
 $theme-font--face: 'Open Sans', Arial, sans-serif !default;
 $theme-font--size: 1.4rem !default;
-$theme-font--size-small: 1.2rem !default;
+$theme-font--size-xsmall: 1.2rem !default;
+$theme-font--size-small: 1.3rem !default;
 $theme-font--size-large: 2.1rem !default;
 $theme-font--size-xlarge: 3rem !default;
-$theme-text--color: $theme-tertiary-color !default;
+$theme-text--color: $theme-tertiary-color !default; 
 
 //Form elements
 $input-select--width: 200px !default;
@@ -35,8 +43,8 @@ $input-textbox--focus-border: rgba(119,119,119,.8) !default;
 $input-textbox--focus-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 102, 102, .6) !default;
 
 //Links
-$link--color: $theme-tertiary-color !default;
-$link--color-hover: $blue !default;
+$link--color: $gray-dark !default;
+$link--color-hover: $theme-primary-color !default;
 $link--transition: .2s !default;
 $help-text--color: $green !default;
 $help-text--color-hover: $link--color-hover !default;
@@ -74,6 +82,13 @@ $comment-text--size: 14pt !default;
 //Area body on landing pages
 $area-bg--color: $header-bg--color !default;
 
+//Borders
+$border-gray-medium: 1px solid $gray-medium; //#d1d3d4
+$border-gray-dark: 1px solid $gray-dark; //#58595b
+$border-blue:1px solid $theme-primary-color; //#009edc
+$border-gray-light-2:1px solid $gray-light-2; //#ddd;
+$border-gray-light-medium: 1px solid $gray-light-medium; //#e6e7e8;
+$border-white:1px solid $white; //#fff
 //Form fill steps overview
 /*$step-border-bottom: 1px solid $theme-quinary-color !default;
 $step-bg--color: $theme-quaternary-color !default;

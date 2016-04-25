@@ -1,37 +1,52 @@
 /* FORMS CSS STYLE UPDATES 
-| move to a _forms.scss file in modules
+| styles for form and input elements
+| could be broken down further by element - checkbox, radio, etc.
 |*/
 .form-control {
-  border: 1px solid $gray-medium;
+  border: $border-gray-medium; //1px solid #d1d3d4
   border-radius: 0;
   box-shadow: none;
   -webkit-box-shadow:0;
   margin-bottom: 0;
 }
-/* ----------- /_forms.scss */
+.radio label, 
+.checkbox label {
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+    line-height: 2;
+}
 
 /* custom css for checkboxes and radio buttons */
-.checkbox-custom, .radio-custom {
+.checkbox-custom, 
+.radio-custom {
     opacity: 0;
     position: absolute;   
 }
 
-.checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
+.checkbox-custom, 
+.checkbox-custom-label, 
+.radio-custom, 
+.radio-custom-label {
     display: inline-block;
     vertical-align: middle;
     margin: 5px;
     cursor: pointer;
 }
 
-.checkbox-custom-label, .radio-custom-label {
+.checkbox-custom-label, 
+.radio-custom-label {
     font-weight: 300; /*change bootstrap bold to light */
     position: relative;
 }
 
-.checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
+.checkbox-custom + .checkbox-custom-label:before, 
+.radio-custom + .radio-custom-label:before {
     content: '';
-    background: #fff;
-    border: 1px solid #58595b;
+    background: $white;
+    border: $border-gray-dark; //1px solid #58595b
     display: inline-block;
     vertical-align: middle;
     width: 20px;
@@ -43,33 +58,28 @@
 }
 .checkbox-custom-label:hover::before,
 .radio-custom-label:hover::before {
-  border: 1px solid #009edc;
+  border: $border-blue; //1px solid #009edc;
 }
 .checkbox-custom:checked + .checkbox-custom-label:before {
     content: "\e013";
     font-family: 'Glyphicons Halflings';
-    background: #009edc;
-    color: #fff;
-    font-size: 1.3rem;
+    background: $theme-primary-color; //#009edc;
+    color: $white;
+    font-size: $theme-font--size-small; //1.3rem;
     line-height: .6;
-    /* margin-left: initial; */
     padding-left: 0;
     width: 20px;
     height: 20px;
-    /* margin-left: -3px; */
     padding-top: 5px;
-    border: 1px solid #009edc;
+    border: $border-blue; // 1px solid #009edc;
 }
-
 .radio-custom + .radio-custom-label:before {
     border-radius: 50%;
 }
-
-
 .radio-custom:checked + .radio-custom-label:before {
-    background: #009edc;
+    background: $theme-primary-color; //#009edc;
     box-shadow: inset 0px 0px 0px 4px #fff;
 }
 .checkbox-custom:focus + .checkbox-custom-label, .radio-custom:focus + .radio-custom-label {
-  outline: 1px solid #ddd; /* focus style */
+  outline: 1px solid #ddd; //focus style - check to see if can delete
 }
