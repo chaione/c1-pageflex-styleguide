@@ -6,11 +6,11 @@
 
 @font-face {
     font-family: 'pageflex';
-    src:    url('../fonts/pageflex-icons.eot?381xsd');
-    src:    url('../fonts/pageflex-icons.eot?381xsd#iefix') format('embedded-opentype'),
-        url('../fonts/pageflex-icons.ttf?381xsd') format('truetype'),
-        url('../fonts/pageflex-icons.woff?381xsd') format('woff'),
-        url('../fonts/pageflex-icons.svg?381xsd#icomoon') format('svg');
+    src:    url('../fonts/pageflex-icons.eot?5dpdie');
+    src:    url('../fonts/pageflex-icons.eot?5dpdie#iefix') format('embedded-opentype'),
+        url('../fonts/pageflex-icons.ttf?5dpdie') format('truetype'),
+        url('../fonts/pageflex-icons.woff?5dpdie') format('woff'),
+        url('../fonts/pageflex-icons.svg?5dpdie#pageflex') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -18,7 +18,7 @@
 [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'pageflex' !important;
-    font-size: 24px;
+    font-size: 2.4rem;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -31,7 +31,6 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* New Font Icons -- updated -4/21/16 */
 .icon-pf_btn_radio_selected:before {
     content: "\e900";
 }
@@ -89,20 +88,4 @@
 .icon-pf_icn_rename:before {
     content: "\e912";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
