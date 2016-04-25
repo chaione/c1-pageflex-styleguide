@@ -116,12 +116,12 @@ a:focus {
 }
 
 /* utility */
-/* line 6, ../sass/base/_typography.scss */
+/* line 5, ../sass/base/_typography.scss */
 .strong-text {
   font-weight: 700;
 }
 
-/* line 9, ../sass/base/_typography.scss */
+/* line 8, ../sass/base/_typography.scss */
 .icon-pf_icn_info {
   color: #6D6E71;
 }
