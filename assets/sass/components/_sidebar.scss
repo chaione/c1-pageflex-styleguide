@@ -1,11 +1,33 @@
 /* Sidebar Component CSS STYLE UPDATES 
 | sidebar nav and design style updates */
 
-.panel-default>.panel-heading {
-  color: $gray-dark-2; // #333;
-  background-color: $white; // #fff;
-  border-color: $gray-light-2; // #ddd;
+.panel-active>.panel-heading {
+  color: $white; // #fff;
+  background-color: $theme-primary-color; // #009edc;
+  border-color:  $theme-primary-color; // #009edc;
   background-image: none;
+}
+.panel-inactive>.panel-heading {
+  color: $gray-dark; //#58595b
+  background-color: $gray-light-3; // #e5e5e5;
+  border-color: $gray-light-3; // #ddd;
+  background-image: none;
+}
+.panel-active {
+  opacity:1;
+  transform: scale(1);
+  transform-origin: top left;
+  transition:
+      opacity 0.5s 2s,
+      transform 0.5s 0.5s;
+}
+.panel-inactive {
+  transform: scale(0.5);
+  opacity:0.9;
+  transform-origin: top left;
+  transition:
+      opacity 0.5s 2s,
+      transform 0.5s 0.5s;
 }
 #accordion {
   .list-group {
