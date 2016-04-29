@@ -131,3 +131,22 @@ $('.selectpicker-items-selected').on('close.bs.alert', 'label', function () {
   }));
   $(this).parent().remove();
 });
+
+$(document).ready(function() {
+    $(".panel-1").addClass("panel-active");
+    
+
+  
+  $('.panel-group').on('click', '.panel-inactive', function(e) {
+   if( $(this).hasClass( "panel-active" )) {
+           e.preventDefault();
+       }
+       else {
+           $(this).removeClass('panel-inactive');
+            $('.panel-active')
+                .removeClass('panel-active')
+                .addClass('panel-inactive');
+            $(this).addClass('panel-active');
+       }
+    })
+});
