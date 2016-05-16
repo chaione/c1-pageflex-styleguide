@@ -1098,7 +1098,7 @@ button.slick-arrow:hover {
 |*/
 /* line 4, ../sass/components/_search.scss */
 #results {
-  z-index: 100000;
+  z-index: 10;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.075);
   display: block;
   padding: 5px 0;
