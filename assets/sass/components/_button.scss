@@ -90,9 +90,16 @@ button, .btn {
   -webkit-transition: background .25s ease-in-out;
 }
 //background for a badge to indicate an update or number of items
-.badge {
-  background-color: $theme-primary-color; // #009edc;
-  border-radius: 8px;
+.shopping-cart .badge {
+  background-color: $white;
+  border:1px solid $theme-primary-color; // #009edc;
+  border-radius: 50%;
+  color: $theme-primary-color;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-left: -.7rem;
+  margin-top: -.6rem;
+  vertical-align: top;
 }
 //page numbering for product pages
 .pager li>a, 

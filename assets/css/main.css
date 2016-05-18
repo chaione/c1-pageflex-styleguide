@@ -237,12 +237,19 @@ button, .btn {
 }
 
 /* line 93, ../sass/components/_button.scss */
-.badge {
-  background-color: #009edc;
-  border-radius: 8px;
+.shopping-cart .badge {
+  background-color: #ffffff;
+  border: 1px solid #009edc;
+  border-radius: 50%;
+  color: #009edc;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-left: -.7rem;
+  margin-top: -.6rem;
+  vertical-align: top;
 }
 
-/* line 98, ../sass/components/_button.scss */
+/* line 105, ../sass/components/_button.scss */
 .pager li > a,
 .pager li > span {
   display: inline-block;
@@ -253,7 +260,7 @@ button, .btn {
   color: #58595b;
 }
 
-/* line 107, ../sass/components/_button.scss */
+/* line 114, ../sass/components/_button.scss */
 .white-button {
   background-color: #ffffff;
   border: 1px solid #d1d3d4;
@@ -1098,7 +1105,7 @@ button.slick-arrow:hover {
 |*/
 /* line 4, ../sass/components/_search.scss */
 #results {
-  z-index: 10;
+  z-index: 9;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.075);
   display: block;
   padding: 5px 0;
