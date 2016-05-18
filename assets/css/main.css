@@ -237,7 +237,7 @@ button, .btn {
 }
 
 /* line 93, ../sass/components/_button.scss */
-.shopping-cart .badge {
+.badge {
   background-color: #ffffff;
   border: 1px solid #009edc;
   border-radius: 50%;
