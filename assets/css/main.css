@@ -537,6 +537,30 @@ button, .btn {
   outline: 1px solid #ddd;
 }
 
+/*select box for dropdown with images */
+/* line 87, ../sass/components/_form-elements.scss */
+.dd-select {
+  border-radius: 0;
+  border: solid 1px #d1d3d4;
+  cursor: pointer;
+  position: relative;
+}
+
+/* line 93, ../sass/components/_form-elements.scss */
+label.dd-selected-text,
+label.dd-option-text {
+  color: #868686;
+  font-weight: normal;
+  padding-left: 2rem;
+  /*padding-top: 2.7rem;*/
+  text-transform: uppercase;
+}
+
+/* line 101, ../sass/components/_form-elements.scss */
+.dd-selected {
+  height: 84px;
+}
+
 /* Slick Slider CSS STYLE UPDATES 
 | css updates for the slick slider js plugin
 |*/

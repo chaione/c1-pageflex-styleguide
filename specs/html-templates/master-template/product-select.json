@@ -1,0 +1,31 @@
+//Dropdown plugin data
+var ddData = [
+    {
+        text: "Product Name / Label here...(100 QTY)",
+        value: 1,
+        selected: false,
+        description: null,
+        imageSrc: "img/thmb-product-01.jpg"
+    },
+    {
+        text: "Product Name / Label here...(120 QTY)",
+        value: 2,
+        selected: false,
+        description: null,
+        imageSrc: "img/thmb-product-01.jpg"
+    },
+    {
+        text: "Product Name / Label here...(150 QTY)",
+        value: 3,
+        selected: true,
+        description: null,
+        imageSrc: "img/thmb-product-01.jpg"
+    },
+    {
+        text: "Product Name / Label here...(200 QTY)",
+        value: 4,
+        selected: false,
+        description: null,
+        imageSrc: "img/thmb-product-01.jpg"
+    }
+];

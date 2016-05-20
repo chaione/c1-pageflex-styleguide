@@ -1,0 +1,171 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link rel="apple-touch-icon" href="apple-touch-icon.png">-->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/pageflex-icons.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <style>
+    body {
+      padding-top: 50px;
+      padding-bottom: 20px;
+    }
+    .panel-inactive {
+    transform: scale(0.5);
+    transform-origin: left;
+    }
+    .panel-active {
+      transform:scale(1);
+      transform-origin: left;
+      
+    }
+    .vertical-center {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+  </style>
+  <link rel="stylesheet" href="css/bootstrap-theme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body>
+  <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+  <header>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="col-xs-4">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+          aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <p class="nav navbar-text"><span class="icon-pf_icn_menu"></span><span class="start-text"> START</span> </p>
+          </button>
+          </div>
+          <div class="col-xs-8 pull-left">
+          <ul class="list-inline right-align" style="padding-top: 23px;">
+            <li>
+              <button type="button" class="icon-lt-blue icon-pf_icn_notifications" data-html=true data-toggle="popover" data-placement=bottom
+              title="RECENT ORDERS" data-template='<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content" style="width:350px;"></div></div>'
+              data-content="<h4 class='notification-order-title'>ORDER NAME HERE...</h4>
+              <p>$ 300.00 USD<br>
+              30 ITEMS<br>
+              FEBRUARY 12, 2016</p><p><span class='notification-pending'>PENDING APPROVAL</span></p>
+              <HR>
+              <h4 class='notification-order-title'>ORDER NAME HERE...</h4>
+              <p>$ 300.00 USD<br>
+              30 ITEMS<br>
+              FEBRUARY 12, 2016</p><p><span class='notification-shipped'>SHIPPED</span></p>
+              <hr>
+              <h4 class='notification-order-title'>ORDER NAME HERE...</h4>
+              <p>$ 300.00 USD<br>
+              30 ITEMS<br>
+              FEBRUARY 12, 2016</p><p><span class='notification-pending'>PENDING APPROVAL</span></p>">
+              </button>
+            </li>
+            <li><a href="#"><i class="icon-lt-blue icon-pf_icn_cart"></i></a></li>
+          </ul>
+          <div class="popover show-menu-arrow" role="popover" data-placement='top'>
+            <div class="arrow"></div>
+            <h3 class="popover-title"></h3>
+            <div class="popover-content">
+            </div>
+          </div>
+        </div>
+        </div>
+        <div id="navbar" class="navbar-toggle collapse dropdown">
+          <ul class="navbar-top-dropdown" style="list-style:none;">
+            <li><a href="">START</a></li>
+            <li><a href="">FILES</a></li>
+            <li><a href="">ORDERS</a></li>
+            <li><a href="">APPROVALS</a></li>
+            <li><a href="">PROFILE</a></li>
+          </ul>
+        </div>
+        <!--/.navbar-collapse -->
+      </div>
+    </nav>
+  </header>
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <main class="container" style="padding-top:75px;">
+    <div class="row">
+    <aside class="col-lg-5">
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-1">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                SECTION
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+              <!-- /form -->
+              <div id="productSelect"></div>
+            </div>
+          </div>
+          
+        </div>
+      </div><!-- ./ panel group -->
+    </aside>
+
+    <!-- body -->
+    <div class="col-sm-12 col-lg-7">
+        <div class="row ">
+          <div class="col-lg-12">
+            [TEMPLATE TO SHOW HOW PRODUCT SELECT WORKS IN CHECKOUT ]
+            <img src="img/page-builder-sample-image-1.gif" class="img-responsive">
+
+      </div><!-- ./row -->
+      </div></div></main>
+  <div class="container">
+    <!-- Example row of columns -->
+
+    <hr>
+
+    <footer>
+      <p>&copy; Company 2015</p>
+    </footer>
+  </div>
+  <!-- /container -->
+  <script src="js/vendor/jquery-1.11.2.min.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/vendor/bootstrap-select.min.js"></script>
+  <script src="js/vendor/slick.min.js"></script>
+  <script src="js/main.js"></script>
+  <script type="text/javascript" src="product-select.json"></script>
+  <script src="js/vendor/jquery.ddslick.js"></script>
+    <script>
+      
+
+      $('#productSelect').ddslick({
+        data: ddData,
+        width: "100%",
+        imagePosition: "left",
+        selectText: "Select a product",
+        onSelected: function (data) {
+            console.log(data);
+        }
+    });
+    </script>
+</body>
+</html>
+<script>
+  
+  
