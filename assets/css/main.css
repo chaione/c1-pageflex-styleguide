@@ -1148,7 +1148,15 @@ button.slick-arrow:hover {
 
 /* Sidebar Component CSS STYLE UPDATES 
 | sidebar nav and design style updates */
-/* line 4, ../sass/components/_sidebar.scss */
+/* line 3, ../sass/components/_sidebar.scss */
+.panel-default > .panel-heading {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #009edc;
+  text-transform: uppercase;
+}
+
+/* line 10, ../sass/components/_sidebar.scss */
 .panel-active > .panel-heading {
   color: #ffffff;
   background-color: #009edc;
@@ -1156,7 +1164,7 @@ button.slick-arrow:hover {
   background-image: none;
 }
 
-/* line 10, ../sass/components/_sidebar.scss */
+/* line 16, ../sass/components/_sidebar.scss */
 .panel-inactive > .panel-heading {
   color: #58595b;
   background-color: #e5e5e5;
@@ -1164,7 +1172,7 @@ button.slick-arrow:hover {
   background-image: none;
 }
 
-/* line 16, ../sass/components/_sidebar.scss */
+/* line 22, ../sass/components/_sidebar.scss */
 .panel-active {
   opacity: 1;
   transform: scale(1);
@@ -1172,7 +1180,7 @@ button.slick-arrow:hover {
   transition: opacity 0.5s 2s, transform 0.5s 0.5s;
 }
 
-/* line 24, ../sass/components/_sidebar.scss */
+/* line 30, ../sass/components/_sidebar.scss */
 .panel-inactive {
   transform: scale(0.5);
   opacity: 0.9;
@@ -1180,32 +1188,32 @@ button.slick-arrow:hover {
   transition: opacity 0.5s 2s, transform 0.5s 0.5s;
 }
 
-/* line 33, ../sass/components/_sidebar.scss */
+/* line 39, ../sass/components/_sidebar.scss */
 #accordion .list-group {
   -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.075);
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.075);
 }
-/* line 37, ../sass/components/_sidebar.scss */
+/* line 43, ../sass/components/_sidebar.scss */
 #accordion .glyphicon {
   top: -1px;
   font-weight: 300;
   font-size: 1rem;
 }
 
-/* line 45, ../sass/components/_sidebar.scss */
+/* line 51, ../sass/components/_sidebar.scss */
 #accordion
 .panel-group .panel {
   margin-bottom: 0;
   border-radius: 0;
   border: none;
 }
-/* line 49, ../sass/components/_sidebar.scss */
+/* line 55, ../sass/components/_sidebar.scss */
 #accordion
 .panel-group .panel + .panel {
   margin-top: 0;
   border-top: 1px solid #dddddd;
 }
-/* line 53, ../sass/components/_sidebar.scss */
+/* line 59, ../sass/components/_sidebar.scss */
 #accordion
 .panel-group .panel .panel-title {
   color: #009edc;
@@ -1214,14 +1222,14 @@ button.slick-arrow:hover {
   font-weight: 700;
 }
 
-/* line 61, ../sass/components/_sidebar.scss */
+/* line 67, ../sass/components/_sidebar.scss */
 .panel-group .panel
 .panel-title > a:hover {
   color: #009edc;
   text-decoration: none;
 }
 
-/* line 66, ../sass/components/_sidebar.scss */
+/* line 72, ../sass/components/_sidebar.scss */
 .panel-heading {
   padding: 22px 15px;
   border-bottom: 1px solid transparent;
@@ -1229,19 +1237,19 @@ button.slick-arrow:hover {
   border-top-right-radius: 0;
 }
 
-/* line 75, ../sass/components/_sidebar.scss */
+/* line 81, ../sass/components/_sidebar.scss */
 .categories-list a {
   font-size: 1.2rem;
   color: #58595b;
   text-transform: uppercase;
   font-weight: 700;
 }
-/* line 80, ../sass/components/_sidebar.scss */
+/* line 86, ../sass/components/_sidebar.scss */
 .categories-list a:hover {
   color: #009edc;
   text-decoration: none;
 }
-/* line 85, ../sass/components/_sidebar.scss */
+/* line 91, ../sass/components/_sidebar.scss */
 .categories-list .list-group-item {
   position: relative;
   display: block;
@@ -1251,12 +1259,12 @@ button.slick-arrow:hover {
   border: 0;
 }
 
-/* line 95, ../sass/components/_sidebar.scss */
+/* line 101, ../sass/components/_sidebar.scss */
 .input-group .filter-set1 {
   list-style: none;
   padding-left: 0;
 }
-/* line 98, ../sass/components/_sidebar.scss */
+/* line 104, ../sass/components/_sidebar.scss */
 .input-group .filter-set1 li {
   padding: 10px 0;
 }

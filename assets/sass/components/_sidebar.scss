@@ -1,5 +1,11 @@
 /* Sidebar Component CSS STYLE UPDATES 
 | sidebar nav and design style updates */
+.panel-default>.panel-heading {
+    background-color: $white;
+    border-color: $white;
+    color: $theme-primary-color; //#009edc;
+    text-transform: uppercase;
+}
 
 .panel-active>.panel-heading {
   color: $white; // #fff;
@@ -100,4 +106,3 @@
     }
   }
 }
-
