@@ -2,6 +2,7 @@
 | sidebar nav and design style updates */
 .panel-default>.panel-heading {
     background-color: $white;
+    background-image: none;
     border-color: $white;
     color: $theme-primary-color; //#009edc;
     text-transform: uppercase;
