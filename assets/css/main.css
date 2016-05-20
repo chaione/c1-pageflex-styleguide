@@ -246,10 +246,11 @@ button, .btn {
   font-weight: 500;
   margin-left: -.7rem;
   margin-top: -.6rem;
+  padding: .3rem;
   vertical-align: top;
 }
 
-/* line 105, ../sass/components/_button.scss */
+/* line 106, ../sass/components/_button.scss */
 .pager li > a,
 .pager li > span {
   display: inline-block;
@@ -260,7 +261,7 @@ button, .btn {
   color: #58595b;
 }
 
-/* line 114, ../sass/components/_button.scss */
+/* line 115, ../sass/components/_button.scss */
 .white-button {
   background-color: #ffffff;
   border: 1px solid #d1d3d4;
