@@ -31,6 +31,15 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-pf_icn_duplicate:before {
+    content: "\e913";
+}
+.icon-pf_icn_preview_doc:before {
+    content: "\e914";
+}
+.icon-pf_icn_save_for_later:before {
+    content: "\e915";
+}
 .icon-pf_btn_radio_selected:before {
     content: "\e900";
 }
@@ -88,4 +97,5 @@
 .icon-pf_icn_rename:before {
     content: "\e912";
 }
+
 
