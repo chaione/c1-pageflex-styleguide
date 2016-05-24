@@ -75,9 +75,10 @@ button, .btn {
     opacity: 0.8;
 }
 .icon-lt-blue {
-  color: #80cfee;
   background: none;
   border:0;
+  color: #80cfee;
+  padding: 0 1.5rem;
   &:hover {
     color: $white;
   }

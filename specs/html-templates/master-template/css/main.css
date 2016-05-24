@@ -218,16 +218,17 @@ button, .btn {
 
 /* line 77, ../sass/components/_button.scss */
 .icon-lt-blue {
-  color: #80cfee;
   background: none;
   border: 0;
+  color: #80cfee;
+  padding: 0 1.5rem;
 }
-/* line 81, ../sass/components/_button.scss */
+/* line 82, ../sass/components/_button.scss */
 .icon-lt-blue:hover {
   color: #ffffff;
 }
 
-/* line 85, ../sass/components/_button.scss */
+/* line 86, ../sass/components/_button.scss */
 .hover-effect {
   background: rgba(255, 255, 255, 0.3);
   color: #009edc;
@@ -236,7 +237,7 @@ button, .btn {
   -webkit-transition: background .25s ease-in-out;
 }
 
-/* line 93, ../sass/components/_button.scss */
+/* line 94, ../sass/components/_button.scss */
 .badge {
   background-color: #ffffff;
   border: 1px solid #009edc;
@@ -250,7 +251,7 @@ button, .btn {
   vertical-align: top;
 }
 
-/* line 106, ../sass/components/_button.scss */
+/* line 107, ../sass/components/_button.scss */
 .pager li > a,
 .pager li > span {
   display: inline-block;
@@ -261,7 +262,7 @@ button, .btn {
   color: #58595b;
 }
 
-/* line 115, ../sass/components/_button.scss */
+/* line 116, ../sass/components/_button.scss */
 .white-button {
   background-color: #ffffff;
   border: 1px solid #d1d3d4;
@@ -374,24 +375,13 @@ button, .btn {
 }
 
 /* line 87, ../sass/components/_navbar.scss */
-.icon-lt-blue {
-  color: #80cfee;
-  background: none;
-  border: 0;
-}
-/* line 91, ../sass/components/_navbar.scss */
-.icon-lt-blue:hover {
-  color: #ffffff;
-}
-
-/* line 95, ../sass/components/_navbar.scss */
 .start-text {
   float: right;
   padding-top: 2px;
   padding-left: 5px;
 }
 
-/* line 101, ../sass/components/_navbar.scss */
+/* line 93, ../sass/components/_navbar.scss */
 .popover-title {
   color: #009edc;
   font-size: 1.4rem;
@@ -401,18 +391,18 @@ button, .btn {
   padding: 15px 0;
 }
 
-/* line 109, ../sass/components/_navbar.scss */
+/* line 101, ../sass/components/_navbar.scss */
 .popover-content {
   color: #868686;
   padding: 9px 20px;
 }
 
-/* line 113, ../sass/components/_navbar.scss */
+/* line 105, ../sass/components/_navbar.scss */
 .popover-content p {
   margin: 10px 0;
 }
 
-/* line 116, ../sass/components/_navbar.scss */
+/* line 108, ../sass/components/_navbar.scss */
 .notification-order-title {
   color: #868686;
   text-transform: uppercase;
@@ -420,7 +410,7 @@ button, .btn {
   font-size: 1.2rem;
 }
 
-/* line 122, ../sass/components/_navbar.scss */
+/* line 114, ../sass/components/_navbar.scss */
 .notification-pending {
   background-color: #e09f30;
   color: #ffffff;
@@ -428,7 +418,7 @@ button, .btn {
   padding: 3px 7px;
 }
 
-/* line 128, ../sass/components/_navbar.scss */
+/* line 120, ../sass/components/_navbar.scss */
 .notification-shipped {
   background-color: #009edc;
   color: #ffffff;
