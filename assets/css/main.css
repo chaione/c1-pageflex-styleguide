@@ -298,30 +298,32 @@ button, .btn {
 .navbar-toggle-button {
   background-color: transparent;
   border: 0;
+  height: 50px;
+  height: 5rem;
 }
 
-/* line 27, ../sass/components/_navbar.scss */
+/* line 29, ../sass/components/_navbar.scss */
 .navbar-inverse {
   height: 100px;
   background-color: #009edc;
 }
-/* line 31, ../sass/components/_navbar.scss */
+/* line 33, ../sass/components/_navbar.scss */
 .navbar-inverse .container {
   height: 100px;
   padding: 0;
 }
-/* line 35, ../sass/components/_navbar.scss */
+/* line 37, ../sass/components/_navbar.scss */
 .navbar-inverse .navbar-text {
   color: #ffffff;
   float: right;
 }
 @media (min-width: 768px) {
-  /* line 35, ../sass/components/_navbar.scss */
+  /* line 37, ../sass/components/_navbar.scss */
   .navbar-inverse .navbar-text {
     margin-left: 0;
   }
 }
-/* line 42, ../sass/components/_navbar.scss */
+/* line 44, ../sass/components/_navbar.scss */
 .navbar-inverse .navbar-toggle {
   float: left;
   background-color: transparent;
@@ -334,7 +336,7 @@ button, .btn {
   margin-bottom: 8px;
   padding: 0;
 }
-/* line 53, ../sass/components/_navbar.scss */
+/* line 55, ../sass/components/_navbar.scss */
 .navbar-inverse .navbar-toggle.dropdown {
   background-color: rgba(0, 158, 220, 0.9);
   left: 0;
@@ -344,52 +346,52 @@ button, .btn {
   top: 99px;
   width: 100%;
 }
-/* line 62, ../sass/components/_navbar.scss */
+/* line 64, ../sass/components/_navbar.scss */
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
   background-color: rgba(0, 158, 220, 0.9);
 }
 @media only screen and (min-width: 768px) {
-  /* line 42, ../sass/components/_navbar.scss */
+  /* line 44, ../sass/components/_navbar.scss */
   .navbar-inverse .navbar-toggle {
     display: block;
   }
 }
 
-/* line 72, ../sass/components/_navbar.scss */
+/* line 74, ../sass/components/_navbar.scss */
 .navbar-top-dropdown {
   list-style: none;
 }
-/* line 74, ../sass/components/_navbar.scss */
+/* line 76, ../sass/components/_navbar.scss */
 .navbar-top-dropdown li {
   font-size: 2.4rem;
   font-weight: 300;
   color: #fff;
   padding: 3rem 0;
 }
-/* line 80, ../sass/components/_navbar.scss */
+/* line 82, ../sass/components/_navbar.scss */
 .navbar-top-dropdown .navbar-header {
   width: 100%;
 }
 
-/* line 85, ../sass/components/_navbar.scss */
+/* line 87, ../sass/components/_navbar.scss */
 .icon-lt-blue {
   color: #80cfee;
   background: none;
   border: 0;
 }
-/* line 89, ../sass/components/_navbar.scss */
+/* line 91, ../sass/components/_navbar.scss */
 .icon-lt-blue:hover {
   color: #ffffff;
 }
 
-/* line 93, ../sass/components/_navbar.scss */
+/* line 95, ../sass/components/_navbar.scss */
 .start-text {
   float: right;
   padding-top: 2px;
   padding-left: 5px;
 }
 
-/* line 99, ../sass/components/_navbar.scss */
+/* line 101, ../sass/components/_navbar.scss */
 .popover-title {
   color: #009edc;
   font-size: 1.4rem;
@@ -399,18 +401,18 @@ button, .btn {
   padding: 15px 0;
 }
 
-/* line 107, ../sass/components/_navbar.scss */
+/* line 109, ../sass/components/_navbar.scss */
 .popover-content {
   color: #868686;
   padding: 9px 20px;
 }
 
-/* line 111, ../sass/components/_navbar.scss */
+/* line 113, ../sass/components/_navbar.scss */
 .popover-content p {
   margin: 10px 0;
 }
 
-/* line 114, ../sass/components/_navbar.scss */
+/* line 116, ../sass/components/_navbar.scss */
 .notification-order-title {
   color: #868686;
   text-transform: uppercase;
@@ -418,7 +420,7 @@ button, .btn {
   font-size: 1.2rem;
 }
 
-/* line 120, ../sass/components/_navbar.scss */
+/* line 122, ../sass/components/_navbar.scss */
 .notification-pending {
   background-color: #e09f30;
   color: #ffffff;
@@ -426,7 +428,7 @@ button, .btn {
   padding: 3px 7px;
 }
 
-/* line 126, ../sass/components/_navbar.scss */
+/* line 128, ../sass/components/_navbar.scss */
 .notification-shipped {
   background-color: #009edc;
   color: #ffffff;
