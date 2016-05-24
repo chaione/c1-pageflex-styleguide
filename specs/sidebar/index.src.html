@@ -21,6 +21,7 @@
     <h3>Live Search - JS</h3>
     <markdown>This is JS code. You can view a live version of this on the <a href="../html-templates/master-template/template-master.html">master template</a>.
     <code class="src-js source_visible">
+     <script>
      //load json data and parse for live search functionality
       $(window).load(function(){
         $('#search-sidebar').keyup(function(){
@@ -43,6 +44,7 @@
             }); 
         });
       });
+      </script>
     </code>
 </section>
 
@@ -75,6 +77,7 @@
     </div>
     
     <code class="src-js source_visible">
+      <script>
       $('#productSelect').ddslick({
         data: ddData,
         width: "100%",
@@ -84,10 +87,9 @@
             console.log(data);
         }
     });
+    </script>
     </code>
-    <div class="source_example">
-        <div id="productSelect"></div>
-    </div>
+   
       </section>
 
 
